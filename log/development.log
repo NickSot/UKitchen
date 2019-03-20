@@ -6872,3 +6872,110 @@ NoMethodError - undefined method `username' for nil:NilClass:
   app/controllers/session_controller.rb:7:in `create'
 
 Started POST "/__better_errors/0b8b957eb563c1c9/variables" for 127.0.0.1 at 2019-03-20 16:54:58 +0200
+Started POST "/login" for 127.0.0.1 at 2019-03-20 17:03:29 +0200
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/parti/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/9usJk+ZrsKq/0XOpzhbmcRKJt9+OMn4EW04h/UStt52BHWhLWAJZs6TeqHWkqSF/dl51EdqQiYfzyceGKEq4g==", "username"=>"Mar.penev@gmail.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Mar.penev@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:6
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 4.8ms)
+
+
+
+NoMethodError - undefined method `username' for nil:NilClass:
+  app/controllers/session_controller.rb:7:in `create'
+
+Started POST "/__better_errors/10081c4ab3e3ebcf/variables" for 127.0.0.1 at 2019-03-20 17:03:29 +0200
+Started POST "/login" for 127.0.0.1 at 2019-03-20 17:03:49 +0200
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/9usJk+ZrsKq/0XOpzhbmcRKJt9+OMn4EW04h/UStt52BHWhLWAJZs6TeqHWkqSF/dl51EdqQiYfzyceGKEq4g==", "username"=>"Mar.penev@gmail.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Mar.penev@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:6
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+Completed 200 OK in 441ms (Views: 426.2ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-03-20 17:04:39 +0200
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_navbar.html.erb (1.6ms)
+Completed 200 OK in 95ms (Views: 93.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-03-20 17:05:19 +0200
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_navbar.html.erb (1.2ms)
+Completed 200 OK in 86ms (Views: 84.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-03-20 17:05:39 +0200
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_navbar.html.erb (0.8ms)
+Completed 200 OK in 75ms (Views: 73.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-03-20 17:07:06 +0200
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_navbar.html.erb (1.1ms)
+Completed 200 OK in 28ms (Views: 26.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-03-20 17:09:04 +0200
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+Completed 200 OK in 34ms (Views: 32.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-03-20 17:09:07 +0200
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"URp9kPh+nZS2lrfbUiuAefhts2jDI/gsZxgb8mThIluixu1hVL14uTVkdiFrBTtmgXTfoXsEd/femkfLRVWCTQ==", "username"=>"Mar.penev@gmail.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Mar.penev@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:6
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+Completed 200 OK in 37ms (Views: 32.2ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-03-20 17:09:14 +0200
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MO6dgz2N+3QCh5n8ehWub66UeLLHZCbTSvFwN4bZ4065MUQEX3Rc0GbrppMLv1Fzlwcnuf42rQ1EU2+ua2p/cg==", "username"=>"Mar.penev@gmail.com", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "Mar.penev@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:6
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+Completed 200 OK in 28ms (Views: 25.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-03-20 17:09:22 +0200
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DT0an5mQ5T+ER8LjplVFjamtjs35agLYqyd2z/OBnDmE4sMY+2lCm+Ar/YzX/7qRkD7RxsA4iQalhWlWHjIABQ==", "username"=>"asdf", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "asdf"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:6
+Redirected to http://localhost:3000/
+Completed 302 Found in 139ms (ActiveRecord: 37.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-03-20 17:09:22 +0200
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.7ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered layouts/_navbar.html.erb (5.0ms)
+Completed 200 OK in 32ms (Views: 29.8ms | ActiveRecord: 0.8ms)
+
+

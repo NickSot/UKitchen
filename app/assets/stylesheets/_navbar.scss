@@ -3,7 +3,7 @@ $navbar_background_color: rgba(0, 0, 0, 0.568);
 $navbar_height: 80px;
 $navbar-padding: 20px;
 $navbar-corners-size: 60vh;
-$gradient-color: linear-gradient(to bottom right, red, green);
+// $gradient-color: linear-gradient(to bottom right, red, green);
 
 
 nav{
@@ -26,15 +26,15 @@ ul{
 
     a{        
         font-size: 3vh;
-        color: $gradient-color;
+        // color: $gradient-color;
         // mix-blend-mode: difference;
         // filter: drop-shadow(.01em .05em rgb(60, 255, 0));
 
-        &:hover{
-            background-color: transparent ;
-            color: yellowgreen;
-            // filter: drop-shadow(.03em .07em rgb(255, 238, 0));
-        }
+        // &:hover{
+        //     background-color: transparent ;
+        //     color: yellowgreen;
+        //     // filter: drop-shadow(.03em .07em rgb(255, 238, 0));
+        // }
     }
         
     align-items: center;

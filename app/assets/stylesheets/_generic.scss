@@ -12,16 +12,16 @@ body{
 }
     
 a{
-    color: black;
+    color: yellowgreen;
     text-decoration: none;
     
     &:visited {
-      color: green;
+      color: yellowgreen;
     }
   
     &:hover {
-      color: green * 0.5;
-      background-color: #ffffff;
+      color: yellowgreen * 1.5;
+      background-color: transparent;
     }
 }
 
