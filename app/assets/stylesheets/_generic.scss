@@ -1,0 +1,42 @@
+$background-color: #ffffff;
+$font-color: green;
+
+body{
+    background-color: $background-color;
+    color: $font-color;
+    margin: 0;
+    font: 900 2vh cookie, cursive;    
+    line-height: 18px;
+    height: 100%;
+    width:  100%;
+}
+    
+a{
+    color: black;
+    text-decoration: none;
+    
+    &:visited {
+      color: green;
+    }
+  
+    &:hover {
+      color: green * 0.5;
+      background-color: #ffffff;
+    }
+}
+
+div.field{
+    margin: 20px;
+}
+
+div.notice{
+    color: yellowgreen;
+    padding: 20px;
+    border-style: solid ;
+}
+
+div.alert{
+    color: red;
+    padding: 20px;
+    border-style: solid ;
+}

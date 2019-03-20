@@ -1,0 +1,35 @@
+<nav>
+    <ul>
+        <span id="nav-logo">
+            <%# <img src='ugh' alt="LOGO"> %>
+            <p>LOGO</p>
+        </span>
+
+        <span id="nav-center">
+            <li>
+                <a href="/" >Lists</a>
+            </li>
+            <li id="home-span">
+                <a href="/" id="home">Home</a>
+            </li>
+            <li>
+                <a href="#">Families</a>
+            </li>
+        </span>
+
+        <span id="nav-user-control">
+            <% if(current_user) %>
+                <li>
+                    Logged in as <%= current_user.username %>
+                </li>
+                <li>
+                    <a href="/logout">Logout</a>
+                </li>
+            <% else %>
+                <li>
+                    <a href="/login">Login</a>
+                </li>
+            <% end %>
+        </span>
+    </ul>
+</nav>
