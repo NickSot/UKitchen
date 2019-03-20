@@ -37,15 +37,14 @@ ul{
     }
     
     #nav-center{
-        li{
-            display:flex;
-            align-content: center;
-        }
+        // li{
+            
+        // }
         a{
             margin: auto;
             text-align: center;
         }
-        width: 150vh; 
+        width: 130vh; 
     }
     
     #nav-logo{
@@ -65,15 +64,21 @@ ul{
     }
     
     li{
+        display:flex;
+        align-content: center;
         padding: 10px;
         list-style-type: none;
         margin: 5px;
         
-        a{        
+        a{      
+            text-align: center;
+            vertical-align: middle;  
             font-size: $link_size;
             background: $gradient-color;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            margin-top: auto;
+            margin-bottom: auto;
             letter-spacing: .5px;
             padding: .8vh;
 
