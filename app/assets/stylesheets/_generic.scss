@@ -1,8 +1,8 @@
-$background-color: #ffffff;
+$background-color: rgb(165, 101, 42);
 $font-color: green;
+$body-image-background: url('cutting-board-large');
 
 body{
-    background-color: $background-color;
     color: $font-color;
     margin: 0;
     font: 900 2vh cookie, cursive;    
@@ -23,6 +23,13 @@ a{
       color: yellowgreen * 1.5;
       background-color: transparent;
     }
+}
+
+div#body{
+    padding-top: 20px;
+    min-height: -webkit-fill-available;
+    background-image: $body-image-background;
+    // background-attachment: fixed;
 }
 
 div.field{

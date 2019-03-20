@@ -1,20 +1,20 @@
 
 $navbar_background_color: rgba(0, 0, 0, 0.568);
-$navbar_height: 80px;
-$navbar-padding: 20px;
+$link_size: 3vh;
+$navbar-padding: 4vh;
 $navbar-corners-size: 60vh;
-// $gradient-color: linear-gradient(to bottom right, red, green);
+$gradient-color:-webkit-linear-gradient(bottom right, pink, yellowgreen, green);
 
 
 nav{
-    height: $navbar_height;
+    height: fit-content;
     padding: $navbar-padding;
-    transition: padding 0.7s;
+    transition: padding 0.5s;
     background-image: url('fruits_background.jpg');
 }
 
 nav:hover{
-    padding: $navbar-padding+30px;
+    padding: $navbar-padding+7vh;
 }
 
 ul{
@@ -23,30 +23,24 @@ ul{
     display: flex;
     justify-content: space-between;
     margin: auto;
-
-    a{        
-        font-size: 3vh;
-        // color: $gradient-color;
-        // mix-blend-mode: difference;
-        // filter: drop-shadow(.01em .05em rgb(60, 255, 0));
-
-        // &:hover{
-        //     background-color: transparent ;
-        //     color: yellowgreen;
-        //     // filter: drop-shadow(.03em .07em rgb(255, 238, 0));
-        // }
-    }
-        
+    vertical-align: middle;
     align-items: center;
-    padding: 5px;
-
+    padding: 0 5px 5px 5px;
+    
     span{
         display: flex;
         justify-content: center;
     }
-
+    
     #nav-center{
-        width: 90vh; 
+        li{
+            display:flex;
+            align-content: center;
+        }
+        a{
+            margin: auto;
+        }
+        width: 110vh; 
     }
     
     #nav-logo{
@@ -59,22 +53,43 @@ ul{
             width: 50px;
         }    
     }    
-
+    
     #nav-user-control{
         justify-content: flex-end;
         width: $navbar-corners-size;
     }
-
+    
     li{
         padding: 10px;
         list-style-type: none;
         margin: 5px;
+        
+        a{        
+            font-size: $link_size;
+            background: $gradient-color;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            letter-spacing: .5px;
+            padding: .8vh;
+
+            transition: font-size 0.6s; 
+
+            &:hover{
+                filter: drop-shadow(30px 30px .1em  );
+                
+            }
+        }
+        
         &#home-span{
+            border: 5px double yellowgreen;
+            border-radius: 150%;
+            padding: 3vh;
             margin: auto;
         }
         #home {
-            font-size: 6vh;
+            padding: 3vh;
+            font-size: $link_size+4vh;
         }
-
+        
     }
 }
