@@ -3,6 +3,11 @@ $font-color: green;
 $body-image-background: url('cutting-board-large');
 
 body{
+    background: $body-image-background no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
     color: $font-color;
     margin: 0;
     font: 900 2vh cookie, cursive;    
@@ -27,9 +32,8 @@ a{
 
 div#body{
     padding-top: 20px;
-    min-height: -webkit-fill-available;
-    background-image: $body-image-background;
-    // background-attachment: fixed;
+    width: 100%;
+    height: -webkit-fill-available;
 }
 
 div.field{
