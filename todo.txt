@@ -1,0 +1,7 @@
+1. Family(NickSot):
+	-> CRUD
+	->Relations(1 user, many families)
+2. Shopping list:
+	-> CRUD
+	-> belongs to family
+	-> Many lists
