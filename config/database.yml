@@ -1,16 +1,16 @@
 development:
   adapter: postgresql
   database: ukitchen_development
-  username: cool_user
-  password: 123
+  username: rails_dev
+  password: asdf
   encoding: unicode
   host: localhost
   pool: 5
 test:
   adapter: postgresql
   database: ukitchen_test
-  username: cool_user
-  password: 123
+  username: rails_dev
+  password: asdf
   encoding: unicode
   host: localhost
   pool: 5
