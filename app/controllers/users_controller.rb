@@ -5,6 +5,16 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     @users = User.all
+
+    @families = []
+
+    if session[:user_id] != nil
+      user = User.find session[:user_id]
+
+      puts user.email
+
+      @families = user.families
+    end
   end
 
   # GET /users/1

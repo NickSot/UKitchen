@@ -1,3 +1,13 @@
 <p id="notice"><%= notice %></p>
 
-<%= link_to 'New User', new_user_path %>
+<%= link_to 'Create a family!', '/families/new' %>
+
+<%if @families != []%>
+	<ul>
+		<%@families.each do |f|%>
+			<li>
+				<%= link_to f.name, 'families/show/' + String(f.id)%>
+			</li>
+		<%end%>
+	</ul>
+<%end%>

@@ -1,0 +1,7 @@
+<h1>Families#show</h1>
+
+<ul>
+	<%@members.each do |m|%>
+		<%=link_to m.username, '/users/' + String(m.id)%>
+	<%end%>
+</ul>
