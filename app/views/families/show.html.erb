@@ -5,3 +5,5 @@
 		<%=link_to m.username, '/users/' + String(m.id)%>
 	<%end%>
 </ul>
+
+<%=link_to 'Edit the family', '/families/edit/' + String(@family.id)%>

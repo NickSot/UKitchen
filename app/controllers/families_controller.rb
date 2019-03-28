@@ -18,7 +18,15 @@ class FamiliesController < ApplicationController
   end
 
   def edit
+    @family = Family.find params[:id]
+  end
 
+  def update
+    family = Family.find params[:id]
+
+    family.update_attributes family_params
+
+    redirect_to '/families/edit/' + String(family.id)
   end
 
   def show
@@ -27,6 +35,24 @@ class FamiliesController < ApplicationController
   	@members = @family.users
 
   	render 'show'
+  end
+
+  def add_member
+    @user_to_add = User.find params[:user_id]
+
+    user = User.find session[:user_id]
+
+    @families = user.families
+  end
+
+  def do_add_member
+    user = User.find params[:user_id]
+
+    family = Family.find params[:family_id]
+
+    family.users << user
+
+    redirect_to '/', notice: 'Successfully added a user to your family!'
   end
 
   def family_params

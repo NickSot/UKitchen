@@ -2,12 +2,10 @@
 
 <%= link_to 'Create a family!', '/families/new' %>
 
-<%if @families != []%>
-	<ul>
-		<%@families.each do |f|%>
-			<li>
-				<%= link_to f.name, 'families/show/' + String(f.id)%>
-			</li>
-		<%end%>
-	</ul>
-<%end%>
+<ul>
+	<%@users.each do |u|%>
+		<li>
+			<%=link_to u.username, '/users/show/' + String(u.id)%>
+		</li>
+	<%end%>
+</ul>
