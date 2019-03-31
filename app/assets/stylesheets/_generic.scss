@@ -10,8 +10,11 @@ body{
     background-size: cover;
     color: $font-color;
     margin: 0;
-    font: 900 2vh cookie, cursive;    
-    line-height: 18px;
+    // font: 900 2vh  cursive;    
+    font-family: cursive;
+    font-size: 30px;
+    // font-style: normal;
+    font-weight: 500;
     height: 100%;
     width:  100%;
 }
@@ -40,14 +43,17 @@ div.field{
     margin: 20px;
 }
 
-div.notice{
-    color: yellowgreen;
+div.alert{
     padding: 20px;
+    margin: 0 20px 0 20px;
+    text-align: center;
     border-style: solid ;
 }
 
-div.alert{
+div.alert-error{
     color: red;
-    padding: 20px;
-    border-style: solid ;
+}
+
+div.alert-success{
+    color: yellowgreen;
 }

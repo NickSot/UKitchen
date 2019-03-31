@@ -9,6 +9,8 @@
 
 3. Inner site notifications or mail confirmations ???
 	Marto: -> mail confirmation - po-lesno e
+	Long term: both...
 	
 4. Mailers:
 	-> Family member notification mailer
+	-> User authentication mailer
