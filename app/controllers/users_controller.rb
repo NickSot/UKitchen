@@ -5,11 +5,38 @@ class UsersController < ApplicationController
   # GET /users.json
   def index
     @users = User.all
+
+    @families = []
+
+    if session[:user_id] != nil
+      user = User.find session[:user_id]
+
+      puts user.email
+
+      @families = user.families
+    end
   end
 
   # GET /users/1
   # GET /users/1.json
   def show
+
+    @show = false
+    if session[:user_id] != nil
+      if Integer(session[:user_id]) == Integer(params[:id])
+        @show = true
+      end
+    end
+
+    @families = []
+
+    if session[:user_id] != nil
+      user = User.find session[:user_id]
+
+      puts user.email
+
+      @families = user.families
+    end
   end
 
   # GET /users/new

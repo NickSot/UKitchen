@@ -1,0 +1,9 @@
+<ul>
+	<%@families.each do |f|%>
+		<%if not f.users.include? @user_to_add%>
+			<li>
+				<%=link_to f.name, '/families/do_add_member/' + String(@user_to_add.id) + '/' + String(f.id)%>
+			</li>
+		<%end%>
+	<%end%>
+</ul>
