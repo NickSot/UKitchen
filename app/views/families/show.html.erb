@@ -12,7 +12,7 @@
 	<ul>
 		<%@family.shopping_lists.each do |sl|%>
 			<li>
-				<%=link_to sl.name, "/families/{@family.id}/shopping_lists/{sl.id}"%>
+				<%=link_to sl.name, "/families/" + String(@family.id) + "/shopping_lists/" + String(sl.id)%>
 			</li>
 		<%end%>	
 	</ul>

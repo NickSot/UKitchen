@@ -15,6 +15,6 @@
 
 	<h2><%=link_to 'Add members!', users_path%></h2>
 
-	<h2><%=link_to 'Add shopping list!', "/families/{@family.id}/shopping_lists/new"%></h2>
+	<h2><%=link_to 'Add shopping list!', '/families/' + String(@family.id) + '/shopping_lists/new'%></h2>
 </body>
 </html>

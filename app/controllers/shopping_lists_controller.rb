@@ -1,6 +1,6 @@
 class ShoppingListsController < ApplicationController
 	def index
-		@list = Family.find(params[:family_id]).shopping_lists[params[:id]]
+		@list = Family.find(params[:family_id]).shopping_lists[Integer(params[:id]) - 1]
 
 		render 'index'
 	end
@@ -10,7 +10,11 @@ class ShoppingListsController < ApplicationController
 	end
 
 	def create
+		family = Family.find(params[:family_id])
 
+		family.shopping_lists << ShoppingList.create(sl_params)
+
+		redirect_to '/families/show/' + String(family.id)
 	end
 
 	def delete
@@ -18,7 +22,7 @@ class ShoppingListsController < ApplicationController
 	end
 
 	def edit
-
+		render 'edit'
 	end
 
 	def update
