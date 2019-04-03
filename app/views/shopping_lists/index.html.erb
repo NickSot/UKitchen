@@ -1,0 +1,16 @@
+<%=@list.name%>
+
+<%if @list.items != []%>
+	<h1>Items of shopping list:</h1>
+	
+	<%@list.items.each do |item|%>
+		<ul>
+			<li>
+				<%=item.name%> - <%=item.price%>
+			</li>
+		</ul>
+	<%end%>
+
+<%else%>
+	<h1>There are not items in this list yet...</h1>
+<%end%>

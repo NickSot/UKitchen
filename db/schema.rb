@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_03_27_160803) do
+ActiveRecord::Schema.define(version: 2019_04_03_102107) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -32,6 +32,24 @@ ActiveRecord::Schema.define(version: 2019_03_27_160803) do
   create_table "family_users", id: false, force: :cascade do |t|
     t.integer "user_id"
     t.integer "family_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "items", force: :cascade do |t|
+    t.string "name"
+    t.string "price"
+    t.string "double"
+    t.string "shopping_list_id"
+    t.string "integer"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "shopping_lists", force: :cascade do |t|
+    t.string "name"
+    t.string "family_id"
+    t.string "integer"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

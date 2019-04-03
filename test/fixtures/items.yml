@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: 
+  price: MyString
+  double,: MyString
+  shopping_list_id: MyString
+  integer: MyString
+
+two:
+  name: 
+  price: MyString
+  double,: MyString
+  shopping_list_id: MyString
+  integer: MyString

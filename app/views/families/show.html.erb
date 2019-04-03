@@ -7,3 +7,13 @@
 </ul>
 
 <%=link_to 'Edit the family', '/families/edit/' + String(@family.id)%>
+
+<%if @family.shopping_lists != []%>
+	<ul>
+		<%@family.shopping_lists.each do |sl|%>
+			<li>
+				<%=link_to sl.name, "/families/{@family.id}/shopping_lists/{sl.id}"%>
+			</li>
+		<%end%>	
+	</ul>
+<%end%>

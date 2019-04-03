@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   get 'families/add_member/:user_id' => 'families#add_member'
   get 'families/do_add_member/:user_id/:family_id' => 'families#do_add_member'
   
+  get 'families/:family_id/shopping_lists/:id' => 'shopping_lists#index'
+  get 'families/:family_id/shopping_lists/new' => 'shopping_lists#new'
+
   get 'users/show/:id' => 'users#show'
   
   resources :users
