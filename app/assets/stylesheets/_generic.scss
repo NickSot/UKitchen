@@ -1,19 +1,19 @@
 $background-color: rgb(165, 101, 42);
 $font-color: green;
-$body-image-background: image-url('cutting-board-large');
+$body-image-background: image-url('wooden-table5');
+$gradient-color:-webkit-linear-gradient(bottom right, pink, yellowgreen, green);
+$gradient-color2:-webkit-linear-gradient(bottom right, white, yellowgreen, green);
 
 body{
     background: $body-image-background no-repeat center center fixed;
-    -webkit-background-size: cover;
+    -webkit-background-size: cover; 
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     color: $font-color;
     margin: 0;
-    // font: 900 2vh  cursive;    
     font-family: cursive;
     font-size: 30px;
-    // font-style: normal;
     font-weight: 500;
     height: 100%;
     width:  100%;
@@ -44,16 +44,20 @@ div.field{
 }
 
 div.alert{
-    padding: 20px;
-    margin: 0 20px 0 20px;
+    margin: 10px;
     text-align: center;
-    border-style: solid ;
+    border-radius: 25px;
+    // transition: opacity 2s;
 }
 
 div.alert-error{
-    color: red;
+    color: white;
+    background-color: rgba(255, 0, 0, 0.651);
+    border-color: rgb(255, 0, 0);
 }
 
 div.alert-success{
-    color: yellowgreen;
+    color: white;
+    background-color: rgba(18, 211, 18, 0.651);
+    border-color: rgb(31, 187, 31);
 }

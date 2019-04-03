@@ -1,9 +1,8 @@
 
 $navbar_background_color: rgba(0, 0, 0, 0.568);
 $link_size: 30px;
-$navbar-padding: 1.2vh;
+$navbar-padding: 10px;
 $navbar-corners-size: 15%;
-$gradient-color:-webkit-linear-gradient(bottom right, pink, yellowgreen, green);
 
 
 nav{
@@ -20,14 +19,15 @@ nav{
 }
 
 nav:hover{
-    padding: $navbar-padding+7vh;
+    padding: $navbar-padding+30px;
 }
 
 ul{
+    line-height: 1;
     background-color: $navbar_background_color;
-    border-radius: 20px;
+    border-radius: 40px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: auto;
     vertical-align: middle;
     align-items: center;
@@ -60,6 +60,9 @@ ul{
     #nav-user-control{
         justify-content: flex-end;
         width: $navbar-corners-size + 5%;
+        a{
+            margin: 0 10px 0 10px;
+        }
     }
     
     li{
@@ -85,8 +88,9 @@ ul{
 
             &:hover{
                 filter: drop-shadow(30px 30px .1em  );
-                
+                text-decoration: none;
             }
+
         }
         
         &#home-span{
