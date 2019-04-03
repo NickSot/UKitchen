@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<%=form_for :shopping_list, url: {action: 'new', method: 'POST'} do |f|
+	%>
+		Shopping list name: <%=f.text_field :name%>
+		<br>
+		<br>
+		<%=f.submit 'Submit'%>
+	<%end%>
+</body>
+</html>

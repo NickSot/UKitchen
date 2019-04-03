@@ -1,0 +1,37 @@
+<nav>
+    <ul class = "nav">
+        <span id="nav-logo">
+            <p>LOGO</p>
+        </span>
+
+        <span id="nav-center">
+            <li class = "nav-item">
+                <a href="#" >Shopping List</a>
+            </li>
+            <li class = "nav-item" id="home-span">
+                <a href="/" id="home">Home</a>
+            </li>
+            <li class = "nav-item">
+                <a href="#">Let's Cook</a>
+            </li>
+        </span>
+
+        <span id="nav-user-control">
+            <% if(current_user) %>
+                <li class = "nav-item">
+                    <a href="#" id="username"><%= current_user.username %></a>
+                </li>
+                <li class = "nav-item">
+                    <a href="/logout">Logout</a>
+                </li>
+            <% else %>
+                <li class = "nav-item">
+                    <a href="/register">Register</a>
+                </li>
+                <li class = "nav-item">
+                    <a href="/login">Login</a>
+                </li>
+            <% end %>
+        </span>
+    </ul>
+</nav>

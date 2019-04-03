@@ -1,0 +1,21 @@
+1. Family(NickSot):
+	-> CRUD x
+	->Relations(1 user, many families) x
+
+2. Shopping list:
+	-> CRUD
+	-> belongs to family x
+	-> Many lists
+
+2.1 Item:
+	-> belongs to shopping list x
+	-> CRUD
+	-> many, many items
+
+3. Inner site notifications or mail confirmations ???
+	Marto: -> mail confirmation - po-lesno e
+	Long term: both...
+	
+4. Mailers:
+	-> Family member notification mailer
+	-> User authentication mailer

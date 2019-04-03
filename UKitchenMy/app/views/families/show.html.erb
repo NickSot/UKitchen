@@ -1,0 +1,19 @@
+<h1>Families#show</h1>
+
+<ul>
+	<%@members.each do |m|%>
+		<%=link_to m.username, '/users/' + String(m.id)%>
+	<%end%>
+</ul>
+
+<%=link_to 'Edit the family', '/families/edit/' + String(@family.id)%>
+
+<%if @family.shopping_lists != []%>
+	<ul>
+		<%@family.shopping_lists.each do |sl|%>
+			<li>
+				<%=link_to sl.name, "/families/" + String(@family.id) + "/shopping_lists/" + String(sl.id)%>
+			</li>
+		<%end%>	
+	</ul>
+<%end%>
