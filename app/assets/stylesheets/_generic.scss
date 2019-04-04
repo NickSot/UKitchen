@@ -57,11 +57,10 @@ h1{
 }
 
 div.form-label{
-    font-size: 200%;
     text-align: center;
 }
 
-div.form{
+form{
     background-color: rgba(0, 0, 0, 0.560);
     border: 5px solid yellowgreen;
     border-radius: 25px;
@@ -77,6 +76,7 @@ div.form{
         font-size: 125%;
         font-weight: 600;
         margin-top: 20px;
+        width: 100px;
         padding: 7px;
 
         background-image: linear-gradient(to right, #009245, #FCEE21, #00A8C5, #D9E021);
@@ -97,6 +97,9 @@ div.form{
             -webkit-transition: all .4s ease-in-out;
             transition: all .4s ease-in-out;
         }
+        &:focus{
+            outline: none;
+        }
     }
 }
 
@@ -116,6 +119,6 @@ div.alert-error{
 
 div.alert-success{
     color: white;
-    background-color: rgb(3, 185, 3);
+    background-color: yellowgreen;
     border-color: rgb(31, 187, 31);
 }
