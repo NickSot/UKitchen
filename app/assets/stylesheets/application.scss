@@ -2,4 +2,8 @@
 @import 'generic';
 @import 'navbar';
 
-
+div#body{
+    padding: 2%;    
+    min-height: 100%;
+    width: auto;
+}

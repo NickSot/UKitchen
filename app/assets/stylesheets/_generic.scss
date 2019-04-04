@@ -1,18 +1,16 @@
 $background-color: rgb(165, 101, 42);
-$font-color: green;
+$font-color: white;
 $body-image-background: image-url('wooden-table5');
 $gradient-color:-webkit-linear-gradient(bottom right, pink, yellowgreen, green);
 $gradient-color2:-webkit-linear-gradient(bottom right, white, yellowgreen, green);
 
 // @media only screen and (max-device-height: ) 
 html{
-    overflow: hidden;
     height: 100%;
     width: 100%;
 }
 
 body{
-    overflow: hidden;
     // background: $body-image-background no-repeat center center fixed;
     // -webkit-background-size: cover; 
     // -moz-background-size: cover;
@@ -22,14 +20,14 @@ body{
     color: $font-color;
     margin: 0;
     font-family: cursive;
-    font-size: 30px;
+    font-size: 100%;
     font-weight: 500;
     height: 100%;
     width:  100%;
 }
 
 #background{
-    position: absolute;
+    position: fixed;
 
     object-fit: cover;
     object-position: 50% 50%;
@@ -53,17 +51,57 @@ a{
     }
 }
 
-div#body{
-    padding-top: 20px;
-    width: 100%;
-    height: -webkit-fill-available;
+h1{
+    font-weight: 900;
+    font-size: 300%;
 }
 
-div.field{
-    margin: 20px;
+div.form-label{
+    font-size: 200%;
+    text-align: center;
+}
+
+div.form{
+    background-color: rgba(0, 0, 0, 0.560);
+    border: 5px solid yellowgreen;
+    border-radius: 25px;
+    padding: 2%;
+    
+    input[type=text], input[type=password] {
+        font-size: 150%;
+        width: 100%;
+        margin-bottom: 1%;
+    } 
+    input[type=submit]{
+        color: white;
+        font-size: 125%;
+        font-weight: 600;
+        margin-top: 20px;
+        padding: 7px;
+
+        background-image: linear-gradient(to right, #009245, #FCEE21, #00A8C5, #D9E021);
+        box-shadow: 0 4px 15px 0 rgba(83, 176, 57, 0.75);
+        background-size: 300% 100%;
+        border-radius: 50px;
+        border:none; 
+
+        moz-transition: all .4s ease-in-out;
+        -o-transition: all .4s ease-in-out;
+        -webkit-transition: all .4s ease-in-out;
+        transition: all .4s ease-in-out;
+
+        &:hover{
+            background-position: 100% 0;
+            moz-transition: all .4s ease-in-out;
+            -o-transition: all .4s ease-in-out;
+            -webkit-transition: all .4s ease-in-out;
+            transition: all .4s ease-in-out;
+        }
+    }
 }
 
 div.alert{
+    font-size: 200%;
     margin: 10px;
     text-align: center;
     border-radius: 25px;
@@ -72,12 +110,12 @@ div.alert{
 
 div.alert-error{
     color: white;
-    background-color: rgba(255, 0, 0, 0.651);
+    background-color: rgb(255, 0, 0);
     border-color: rgb(255, 0, 0);
 }
 
 div.alert-success{
     color: white;
-    background-color: rgba(18, 211, 18, 0.651);
+    background-color: rgb(3, 185, 3);
     border-color: rgb(31, 187, 31);
 }

@@ -1,35 +1,58 @@
 <%= form_with(model: user, local: true) do |form| %>
+
+
   <% if user.errors.any? %>
     <div class="alert alert-error">
       <ul>
-      <% user.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
+        <% user.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
       </ul>
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.text_field :email %>
-  </div>
 
-  <div class="field">
-    <%= form.label :username %>
-    <%= form.text_field :username %>
-  </div>
+  <div class = "container-fluid justify-content-sm-center form">
+    <div class="row justify-content-sm-center">
+      
+      <div class = "col-12 form-label">
+        <%= form.label :email %>
+      </div>
+      <div class = "col-12 justify-content-sm-center">
+        <%= form.text_field :email %>
+      </div>
+    </div>
 
-  <div class="field">
-    <%= form.label :password %>
-    <%= form.password_field :password %>
-  </div>
+    <div class="row justify-content-sm-center">
+      <div class = "col-12 form-label">
+        <%= form.label :username %>
+      </div>
+      <div class = "col-12 justify-content-sm-center">
+        <%= form.text_field :username %>
+      </div>
+    </div>
 
-  <div class="field">
-    <%= form.label :password_confirmation %>
-    <%= form.password_field :password_confirmation %>
-  </div>
+    <div class="row justify-content-sm-center">
+      <div class = "col-12 form-label">
+        <%= form.label :password %>
+      </div>
+      <div class = "col-12 justify-content-sm-center">
+        <%= form.password_field :password %>
+      </div>
+    </div>
 
-  <div class="actions">
-    <%= form.submit %>
+    <div class="row justify-content-sm-center">
+      <div class = "col-12 form-label">
+        <%= form.label :password_confirmation %>
+      </div>
+      <div class = "col-12 justify-content-sm-center">
+        <%= form.password_field :password_confirmation %>
+      </div>
+    </div>
+
+    <div class="row justify-content-sm-center">
+        <%= form.submit "Register" %>
+    </div>
+
   </div>
 <% end %>
