@@ -4,13 +4,21 @@ $body-image-background: image-url('wooden-table5');
 $gradient-color:-webkit-linear-gradient(bottom right, pink, yellowgreen, green);
 $gradient-color2:-webkit-linear-gradient(bottom right, white, yellowgreen, green);
 
+// @media only screen and (max-device-height: ) 
+html{
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+
 body{
-    background: $body-image-background no-repeat center center fixed;
-    -webkit-background-size: cover; 
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: auto 100%;
-    background-color: orangered;
+    overflow: hidden;
+    // background: $body-image-background no-repeat center center fixed;
+    // -webkit-background-size: cover; 
+    // -moz-background-size: cover;
+    // -o-background-size: cover;
+    // background-size: cover;
+    background-color:white;
     color: $font-color;
     margin: 0;
     font-family: cursive;
@@ -19,7 +27,18 @@ body{
     height: 100%;
     width:  100%;
 }
-    
+
+#background{
+    position: absolute;
+
+    object-fit: cover;
+    object-position: 50% 50%;
+
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+
 a{
     color: yellowgreen;
     text-decoration: none;
