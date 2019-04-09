@@ -6,7 +6,7 @@
 <body>
 	<%=@list.name%>
 
-	<%=link_to 'Add items to shopping list!', '/families/' + String(@family.id) + '/shopping_lists/:id/edit'%>
+	<%=link_to 'Add items to shopping list!', '/families/' + String(@family.id) + '/shopping_lists/' + String(@list.id) + '/edit'%>
 
 	<%if @list.items != []%>
 		<h1>Items of shopping list:</h1>

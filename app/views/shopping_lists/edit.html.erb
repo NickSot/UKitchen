@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<h1>ShoppingList#edit</h1>
+
+    <%if @items_enum != []%>
+        <h2>
+            Items to add to the shopping list!
+        </h2>
+
+        <ul>
+            <%@items_enum.each do |item|%>
+                <li>
+                    <%=link_to item.name, "/families/" + String(@family.id) + "/shopping_lists/" + String(@list.id) + "/add_item/" + String(item.id)%>
+                </li>
+            <%end%>
+        </ul>
+    <%end%>
+</body>
+</html>

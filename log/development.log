@@ -15653,3 +15653,1926 @@ Processing by ShoppingListsController#index as HTML
 Completed 200 OK in 113ms (Views: 56.5ms | ActiveRecord: 16.4ms)
 
 
+Started GET "/" for 127.0.0.1 at 2019-04-09 11:01:34 +0300
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/nicksot/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#show as HTML
+  Rendering welcome/show.html.erb within layouts/application
+  Rendered welcome/show.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_navbar.html.erb (0.8ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 515ms (Views: 502.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-09 11:01:37 +0300
+Processing by WelcomeController#show as HTML
+  Rendering welcome/show.html.erb within layouts/application
+  Rendered welcome/show.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navbar.html.erb (0.8ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 34ms (Views: 32.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-09 11:01:38 +0300
+Processing by WelcomeController#show as HTML
+  Rendering welcome/show.html.erb within layouts/application
+  Rendered welcome/show.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navbar.html.erb (0.8ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+Completed 200 OK in 36ms (Views: 34.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-09 11:01:39 +0300
+Processing by WelcomeController#show as HTML
+  Rendering welcome/show.html.erb within layouts/application
+  Rendered welcome/show.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 44ms (Views: 42.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-09 11:01:40 +0300
+Processing by WelcomeController#show as HTML
+  Rendering welcome/show.html.erb within layouts/application
+  Rendered welcome/show.html.erb within layouts/application (0.6ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+  Rendered layouts/_messages.html.erb (12.7ms)
+Completed 200 OK in 56ms (Views: 54.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-04-09 11:01:41 +0300
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 43ms (Views: 40.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-04-09 11:01:43 +0300
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jMy+b7YpMq7qJMCnnp6TREZy+FCCRa+VZCogh7iK9RdO5Q82eftCQfNKs5aoFTmB28D323Uq3nsjpcbF6G5u5g==", "username"=>"NickSot", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "NickSot"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:6
+Redirected to http://localhost:3000/
+Completed 302 Found in 136ms (ActiveRecord: 12.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-09 11:01:43 +0300
+Processing by WelcomeController#show as HTML
+  Rendering welcome/show.html.erb within layouts/application
+  Rendered welcome/show.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered layouts/_navbar.html.erb (3.9ms)
+  Rendered layouts/_messages.html.erb (1.1ms)
+Completed 200 OK in 40ms (Views: 37.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-09 11:01:48 +0300
+Processing by WelcomeController#show as HTML
+  Rendering welcome/show.html.erb within layouts/application
+  Rendered welcome/show.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered layouts/_navbar.html.erb (2.3ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 41ms (Views: 39.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-04-09 11:01:51 +0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:12
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:6
+  Rendered users/index.html.erb within layouts/application (3.6ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered layouts/_navbar.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 70ms (Views: 39.6ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/show/1" for 127.0.0.1 at 2019-04-09 11:01:56 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:94
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:34
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mFamily Load (2.3ms)[0m  [1m[34mSELECT "families".* FROM "families" INNER JOIN "families_users" ON "families"."id" = "families_users"."family_id" WHERE "families_users"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:12
+  Rendered users/show.html.erb within layouts/application (54.9ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered layouts/_navbar.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 90ms (Views: 75.7ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/families/show/1" for 127.0.0.1 at 2019-04-09 11:01:59 +0300
+Processing by FamiliesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFamily Load (0.5ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/families_controller.rb:33
+  Rendering families/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "families_users" ON "users"."id" = "families_users"."user_id" WHERE "families_users"."family_id" = $1[0m  [["family_id", 1]]
+  ↳ app/views/families/show.html.erb:4
+  [1m[36mShoppingList Load (1.3ms)[0m  [1m[34mSELECT "shopping_lists".* FROM "shopping_lists" WHERE "shopping_lists"."family_id" = $1[0m  [["family_id", "1"]]
+  ↳ app/views/families/show.html.erb:11
+  Rendered families/show.html.erb within layouts/application (36.9ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered layouts/_navbar.html.erb (2.7ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+Completed 200 OK in 81ms (Views: 67.4ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/families/1/shopping_lists/1" for 127.0.0.1 at 2019-04-09 11:02:02 +0300
+Processing by ShoppingListsController#index as HTML
+  Parameters: {"family_id"=>"1", "id"=>"1"}
+  [1m[36mFamily Load (0.6ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:3
+  [1m[36mShoppingList Load (0.7ms)[0m  [1m[34mSELECT "shopping_lists".* FROM "shopping_lists" WHERE "shopping_lists"."family_id" = $1[0m  [["family_id", "1"]]
+  ↳ app/controllers/shopping_lists_controller.rb:3
+  Rendering shopping_lists/index.html.erb within layouts/application
+  Rendered shopping_lists/index.html.erb within layouts/application (5.6ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 1.3ms)
+
+
+
+NoMethodError - undefined method `id' for nil:NilClass:
+  app/views/shopping_lists/index.html.erb:9:in `_app_views_shopping_lists_index_html_erb__3626772203325917096_70113711738060'
+  app/controllers/shopping_lists_controller.rb:5:in `index'
+
+Started POST "/__better_errors/95a8803526ac51b7/variables" for 127.0.0.1 at 2019-04-09 11:02:03 +0300
+Started GET "/families/show/1" for 127.0.0.1 at 2019-04-09 11:02:14 +0300
+Processing by FamiliesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFamily Load (0.7ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/families_controller.rb:33
+  Rendering families/show.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "families_users" ON "users"."id" = "families_users"."user_id" WHERE "families_users"."family_id" = $1[0m  [["family_id", 1]]
+  ↳ app/views/families/show.html.erb:4
+  [1m[36mShoppingList Load (0.8ms)[0m  [1m[34mSELECT "shopping_lists".* FROM "shopping_lists" WHERE "shopping_lists"."family_id" = $1[0m  [["family_id", "1"]]
+  ↳ app/views/families/show.html.erb:11
+  Rendered families/show.html.erb within layouts/application (7.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered layouts/_navbar.html.erb (2.2ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 54ms (Views: 47.6ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/families/edit/1" for 127.0.0.1 at 2019-04-09 11:02:17 +0300
+Processing by FamiliesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFamily Load (0.7ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/families_controller.rb:21
+  Rendering families/edit.html.erb within layouts/application
+  Rendered families/edit.html.erb within layouts/application (8.1ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered layouts/_navbar.html.erb (2.5ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 51ms (Views: 45.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-04-09 11:02:19 +0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:12
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:6
+  Rendered users/index.html.erb within layouts/application (2.9ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered layouts/_navbar.html.erb (2.0ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 45ms (Views: 40.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/families/1/shopping_lists/1" for 127.0.0.1 at 2019-04-09 11:02:30 +0300
+Processing by ShoppingListsController#index as HTML
+  Parameters: {"family_id"=>"1", "id"=>"1"}
+  [1m[36mFamily Load (0.5ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:3
+  [1m[36mShoppingList Load (0.5ms)[0m  [1m[34mSELECT "shopping_lists".* FROM "shopping_lists" WHERE "shopping_lists"."family_id" = $1[0m  [["family_id", "1"]]
+  ↳ app/controllers/shopping_lists_controller.rb:3
+  Rendering shopping_lists/index.html.erb within layouts/application
+  Rendered shopping_lists/index.html.erb within layouts/application (3.6ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 1.1ms)
+
+
+
+NoMethodError - undefined method `id' for nil:NilClass:
+  app/views/shopping_lists/index.html.erb:9:in `_app_views_shopping_lists_index_html_erb__3626772203325917096_70113710846020'
+  app/controllers/shopping_lists_controller.rb:5:in `index'
+
+Started POST "/__better_errors/1f2cdc3a9bb160c0/variables" for 127.0.0.1 at 2019-04-09 11:02:30 +0300
+Started GET "/families/show/1" for 127.0.0.1 at 2019-04-09 11:04:27 +0300
+Processing by FamiliesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFamily Load (1.7ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/families_controller.rb:33
+  Rendering families/show.html.erb within layouts/application
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "families_users" ON "users"."id" = "families_users"."user_id" WHERE "families_users"."family_id" = $1[0m  [["family_id", 1]]
+  ↳ app/views/families/show.html.erb:4
+  [1m[36mShoppingList Load (0.7ms)[0m  [1m[34mSELECT "shopping_lists".* FROM "shopping_lists" WHERE "shopping_lists"."family_id" = $1[0m  [["family_id", "1"]]
+  ↳ app/views/families/show.html.erb:11
+  Rendered families/show.html.erb within layouts/application (8.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered layouts/_navbar.html.erb (2.6ms)
+  Rendered layouts/_messages.html.erb (1.1ms)
+Completed 200 OK in 57ms (Views: 49.0ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/families/1/shopping_lists/1" for 127.0.0.1 at 2019-04-09 11:04:32 +0300
+Processing by ShoppingListsController#index as HTML
+  Parameters: {"family_id"=>"1", "id"=>"1"}
+  [1m[36mFamily Load (0.5ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:3
+  [1m[36mShoppingList Load (0.5ms)[0m  [1m[34mSELECT "shopping_lists".* FROM "shopping_lists" WHERE "shopping_lists"."family_id" = $1[0m  [["family_id", "1"]]
+  ↳ app/controllers/shopping_lists_controller.rb:3
+  Rendering shopping_lists/index.html.erb within layouts/application
+  Rendered shopping_lists/index.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 1.0ms)
+
+
+
+NoMethodError - undefined method `id' for nil:NilClass:
+  app/views/shopping_lists/index.html.erb:9:in `_app_views_shopping_lists_index_html_erb__3626772203325917096_70113713492340'
+  app/controllers/shopping_lists_controller.rb:5:in `index'
+
+Started POST "/__better_errors/4a36153bc584dac1/variables" for 127.0.0.1 at 2019-04-09 11:04:32 +0300
+Started GET "/families/1/shopping_lists/1" for 127.0.0.1 at 2019-04-09 11:05:45 +0300
+Processing by ShoppingListsController#index as HTML
+  Parameters: {"family_id"=>"1", "id"=>"1"}
+  [1m[36mFamily Load (0.4ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:3
+  [1m[36mCACHE Family Load (0.0ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:4
+  [1m[36mShoppingList Load (0.4ms)[0m  [1m[34mSELECT "shopping_lists".* FROM "shopping_lists" WHERE "shopping_lists"."family_id" = $1[0m  [["family_id", "1"]]
+  ↳ app/controllers/shopping_lists_controller.rb:4
+  Rendering shopping_lists/index.html.erb within layouts/application
+  [1m[36mItem Load (1.2ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."shopping_list_id" = $1[0m  [["shopping_list_id", "1"]]
+  ↳ app/views/shopping_lists/index.html.erb:11
+  Rendered shopping_lists/index.html.erb within layouts/application (17.6ms)
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered layouts/_navbar.html.erb (22.2ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 161ms (Views: 84.8ms | ActiveRecord: 17.8ms)
+
+
+Started GET "/families/1/shopping_lists/:id/edit" for 127.0.0.1 at 2019-04-09 11:05:50 +0300
+Processing by ShoppingListsController#edit as HTML
+  Parameters: {"family_id"=>"1", "id"=>":id"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+
+ActionView::MissingTemplate - Missing template shopping_lists/edit, application/edit with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "/home/nicksot/Desktop/UKitchen/app/views"
+:
+  app/controllers/shopping_lists_controller.rb:26:in `edit'
+
+Started POST "/__better_errors/84c199f5f6e89db2/variables" for 127.0.0.1 at 2019-04-09 11:05:50 +0300
+Started GET "/families/1/shopping_lists/:id/edit" for 127.0.0.1 at 2019-04-09 11:17:52 +0300
+Processing by ShoppingListsController#edit as HTML
+  Parameters: {"family_id"=>"1", "id"=>":id"}
+  [1m[36mFamily Load (0.5ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:26
+  [1m[36mCACHE Family Load (0.0ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:28
+Completed 500 Internal Server Error in 32ms (ActiveRecord: 7.7ms)
+
+
+
+ArgumentError - invalid value for Integer(): ":id":
+  app/controllers/shopping_lists_controller.rb:28:in `Integer'
+  app/controllers/shopping_lists_controller.rb:28:in `edit'
+
+Started POST "/__better_errors/0310deb00e854b3c/variables" for 127.0.0.1 at 2019-04-09 11:17:52 +0300
+Started GET "/families/1/shopping_lists/:id/edit" for 127.0.0.1 at 2019-04-09 11:18:56 +0300
+Processing by ShoppingListsController#edit as HTML
+  Parameters: {"family_id"=>"1", "id"=>":id"}
+  [1m[36mFamily Load (1.2ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:26
+  [1m[36mCACHE Family Load (0.0ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:28
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 1.3ms)
+
+
+
+ArgumentError - invalid value for Integer(): ":id":
+  app/controllers/shopping_lists_controller.rb:28:in `Integer'
+  app/controllers/shopping_lists_controller.rb:28:in `edit'
+
+Started POST "/__better_errors/403501fc0caec58b/variables" for 127.0.0.1 at 2019-04-09 11:18:56 +0300
+Started GET "/families/1/shopping_lists/1/edit" for 127.0.0.1 at 2019-04-09 11:19:03 +0300
+Processing by ShoppingListsController#edit as HTML
+  Parameters: {"family_id"=>"1", "id"=>"1"}
+  [1m[36mFamily Load (0.6ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:26
+  [1m[36mCACHE Family Load (0.0ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:28
+  [1m[36mShoppingList Load (1.4ms)[0m  [1m[34mSELECT "shopping_lists".* FROM "shopping_lists" WHERE "shopping_lists"."family_id" = $1[0m  [["family_id", "1"]]
+  ↳ app/controllers/shopping_lists_controller.rb:28
+  Rendering shopping_lists/edit.html.erb within layouts/application
+  [1m[36mItem Load (0.8ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/shopping_lists/edit.html.erb:9
+  Rendered shopping_lists/edit.html.erb within layouts/application (7.6ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered layouts/_navbar.html.erb (21.1ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 105ms (Views: 58.6ms | ActiveRecord: 15.1ms)
+
+
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/nicksot/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /home/nicksot/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/nicksot/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /home/nicksot/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/nicksot/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  ↳ /home/nicksot/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (115.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "ukitchen_development"[0m
+  ↳ /home/nicksot/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (112.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "ukitchen_test"[0m
+  ↳ /home/nicksot/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (369.8ms)[0m  [1m[35mCREATE DATABASE "ukitchen_development" ENCODING = 'unicode'[0m
+  ↳ /home/nicksot/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (267.6ms)[0m  [1m[35mCREATE DATABASE "ukitchen_test" ENCODING = 'unicode'[0m
+  ↳ /home/nicksot/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35mSQL (0.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "families" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (11.1ms)[0m  [1m[35mCREATE TABLE "families" ("id" bigserial primary key, "name" character varying, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "families_users" CASCADE[0m
+  ↳ db/schema.rb:25
+  [1m[35m (5.5ms)[0m  [1m[35mCREATE TABLE "families_users" ("id" bigserial primary key, "user_id" integer, "family_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:25
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "family_users" CASCADE[0m
+  ↳ db/schema.rb:32
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "family_users" ("user_id" integer, "family_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:32
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "items" CASCADE[0m
+  ↳ db/schema.rb:39
+  [1m[35m (6.4ms)[0m  [1m[35mCREATE TABLE "items" ("id" bigserial primary key, "name" character varying, "price" decimal(10,2), "shopping_list_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:39
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "shopping_lists" CASCADE[0m
+  ↳ db/schema.rb:47
+  [1m[35m (6.6ms)[0m  [1m[35mCREATE TABLE "shopping_lists" ("id" bigserial primary key, "name" character varying, "family_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:47
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:54
+  [1m[35m (7.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying, "username" character varying, "password_digest" character varying, "family_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:54
+  [1m[35m (3.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/schema.rb:54
+  [1m[35m (5.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190403102107)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190327160803),
+(20190319094930),
+(20190327151807),
+(20190403102040);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (7.7ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-04-09 08:20:59.053918"], ["updated_at", "2019-04-09 08:20:59.053918"]]
+  ↳ db/schema.rb:13
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/nicksot/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/nicksot/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/nicksot/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35mSQL (0.5ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  ↳ db/schema.rb:16
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "families" CASCADE[0m
+  ↳ db/schema.rb:18
+  [1m[35m (11.1ms)[0m  [1m[35mCREATE TABLE "families" ("id" bigserial primary key, "name" character varying, "user_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:18
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "families_users" CASCADE[0m
+  ↳ db/schema.rb:25
+  [1m[35m (5.5ms)[0m  [1m[35mCREATE TABLE "families_users" ("id" bigserial primary key, "user_id" integer, "family_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:25
+  [1m[35m (0.3ms)[0m  [1m[35mDROP TABLE IF EXISTS "family_users" CASCADE[0m
+  ↳ db/schema.rb:32
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "family_users" ("user_id" integer, "family_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:32
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "items" CASCADE[0m
+  ↳ db/schema.rb:39
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE TABLE "items" ("id" bigserial primary key, "name" character varying, "price" decimal(10,2), "shopping_list_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:39
+  [1m[35m (0.6ms)[0m  [1m[35mDROP TABLE IF EXISTS "shopping_lists" CASCADE[0m
+  ↳ db/schema.rb:47
+  [1m[35m (7.9ms)[0m  [1m[35mCREATE TABLE "shopping_lists" ("id" bigserial primary key, "name" character varying, "family_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:47
+  [1m[35m (0.4ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  ↳ db/schema.rb:54
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying, "username" character varying, "password_digest" character varying, "family_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:54
+  [1m[35m (3.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  ↳ db/schema.rb:54
+  [1m[35m (6.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20190403102107)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20190327160803),
+(20190319094930),
+(20190327151807),
+(20190403102040);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (6.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-04-09 08:20:59.177216"], ["updated_at", "2019-04-09 08:20:59.177216"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/nicksot/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/nicksot/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Update (0.4ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2019-04-09 08:20:59.182348"], ["key", "environment"]]
+  ↳ /home/nicksot/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/nicksot/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/nicksot/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5735346160239392655)[0m
+  ↳ /home/nicksot/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/nicksot/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/nicksot/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/nicksot/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/nicksot/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(5735346160239392655)[0m
+  ↳ /home/nicksot/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/nicksot/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+Started GET "/" for 127.0.0.1 at 2019-04-09 11:24:02 +0300
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/nicksot/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#show as HTML
+  Rendering welcome/show.html.erb within layouts/application
+  Rendered welcome/show.html.erb within layouts/application (0.9ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered layouts/_navbar.html.erb (21.6ms)
+Completed 500 Internal Server Error in 347ms (ActiveRecord: 6.3ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find User with 'id'=1:
+  app/controllers/application_controller.rb:7:in `current_user'
+  app/views/layouts/_navbar.html.erb:20:in `_app_views_layouts__navbar_html_erb___2896358057599066922_69935809380640'
+  app/views/layouts/application.html.erb:27:in `_app_views_layouts_application_html_erb___1103863570894049791_32877740'
+
+Started POST "/__better_errors/a7388e584975ecb2/variables" for 127.0.0.1 at 2019-04-09 11:24:03 +0300
+Started GET "/" for 127.0.0.1 at 2019-04-09 11:24:13 +0300
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/nicksot/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+Processing by WelcomeController#show as HTML
+  Rendering welcome/show.html.erb within layouts/application
+  Rendered welcome/show.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_navbar.html.erb (0.5ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 312ms (Views: 303.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-04-09 11:24:16 +0300
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_navbar.html.erb (0.8ms)
+  Rendered layouts/_messages.html.erb (1.2ms)
+Completed 200 OK in 39ms (Views: 37.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-04-09 11:24:18 +0300
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"g6J2/wcZcE+m0Xan0x+RHArzdmiYFPZBWHpnKMU18oZ2TsH/KZ2JeHgnc3fSQ0d/z7BhSAzOy/NuGtXSBdbj7w==", "username"=>"NickSot", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "NickSot"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:6
+Redirected to http://localhost:3000/login
+Completed 302 Found in 24ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-04-09 11:24:18 +0300
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.7ms)
+  Rendered layouts/_navbar.html.erb (0.9ms)
+  Rendered layouts/_messages.html.erb (1.1ms)
+Completed 200 OK in 34ms (Views: 32.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/register" for 127.0.0.1 at 2019-04-09 11:24:20 +0300
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (12.2ms)
+  Rendered users/new.html.erb within layouts/application (14.7ms)
+  Rendered layouts/_navbar.html.erb (0.8ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 77ms (Views: 56.2ms | ActiveRecord: 4.9ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2019-04-09 11:24:37 +0300
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lSKk6D07x4LcIzKQ9K9vEUTFiVs6QOcu+yiRtFUWsJfDSg1gqxtcSPUaDr8/K50SQHy6PsF/rJi1SiPUhj9m3g==", "user"=>{"email"=>"nikola.s.sotirov@gmail.com", "username"=>"NickSot", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Register"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:57
+  [1m[36mUser Exists (0.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "nikola.s.sotirov@gmail.com"], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:57
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "username", "password_digest", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "nikola.s.sotirov@gmail.com"], ["username", "NickSot"], ["password_digest", "$2a$10$N1YbywysFKBqon95IxbuoOQqMyEIc721bJTlwW8KOlH7/9jeSIM.a"], ["created_at", "2019-04-09 08:24:37.299015"], ["updated_at", "2019-04-09 08:24:37.299015"]]
+  ↳ app/controllers/users_controller.rb:57
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:57
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 90ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2019-04-09 11:24:37 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:94
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_navbar.html.erb (0.7ms)
+  Rendered layouts/_messages.html.erb (1.2ms)
+Completed 200 OK in 44ms (Views: 38.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2019-04-09 11:24:39 +0300
+Processing by SessionController#new as HTML
+  Rendering session/new.html.erb within layouts/application
+  Rendered session/new.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_navbar.html.erb (0.6ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 58ms (Views: 56.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2019-04-09 11:24:41 +0300
+Processing by SessionController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wuIKDWntaKZtmb1AeHI8PYzp5BCWML7wDpi0Qo+Gq483Dr0NR2mRkbNvuJB5LupeSarzMALqg0I4+Aa4T2W65g==", "username"=>"NickSot", "password"=>"[FILTERED]", "commit"=>"Login"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "NickSot"], ["LIMIT", 1]]
+  ↳ app/controllers/session_controller.rb:6
+Redirected to http://localhost:3000/
+Completed 302 Found in 80ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-09 11:24:41 +0300
+Processing by WelcomeController#show as HTML
+  Rendering welcome/show.html.erb within layouts/application
+  Rendered welcome/show.html.erb within layouts/application (0.6ms)
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered layouts/_navbar.html.erb (6.2ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 45ms (Views: 41.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-09 11:24:43 +0300
+Processing by WelcomeController#show as HTML
+  Rendering welcome/show.html.erb within layouts/application
+  Rendered welcome/show.html.erb within layouts/application (0.5ms)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered layouts/_navbar.html.erb (3.4ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 40ms (Views: 37.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-04-09 11:24:45 +0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:12
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:6
+  Rendered users/index.html.erb within layouts/application (3.1ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered layouts/_navbar.html.erb (2.1ms)
+  Rendered layouts/_messages.html.erb (1.1ms)
+Completed 200 OK in 70ms (Views: 41.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/show/1" for 127.0.0.1 at 2019-04-09 11:24:49 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:94
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:34
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mFamily Load (4.0ms)[0m  [1m[34mSELECT "families".* FROM "families" INNER JOIN "families_users" ON "families"."id" = "families_users"."family_id" WHERE "families_users"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:12
+  Rendered users/show.html.erb within layouts/application (21.5ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered layouts/_navbar.html.erb (2.0ms)
+  Rendered layouts/_messages.html.erb (1.1ms)
+Completed 200 OK in 67ms (Views: 50.9ms | ActiveRecord: 11.2ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-04-09 11:24:51 +0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:12
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:6
+  Rendered users/index.html.erb within layouts/application (3.1ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered layouts/_navbar.html.erb (1.9ms)
+  Rendered layouts/_messages.html.erb (1.3ms)
+Completed 200 OK in 60ms (Views: 55.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/families/new" for 127.0.0.1 at 2019-04-09 11:24:52 +0300
+Processing by FamiliesController#new as HTML
+  Rendering families/new.html.erb within layouts/application
+  Rendered families/new.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered layouts/_navbar.html.erb (13.7ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 63ms (Views: 52.1ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/families/new?method=POST" for 127.0.0.1 at 2019-04-09 11:24:55 +0300
+Processing by FamiliesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"s6VOGsNG5rh/9xf8fJHaOeSAVrXnHf8708lux7ejb49QNrYu7Bkr45syxHh6X5aLY+/G9X1jC2rchea3nR++Ag==", "family"=>{"name"=>"Sotirovi"}, "commit"=>"Submit", "method"=>"POST"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/families_controller.rb:11
+  [1m[36mFamily Create (1.1ms)[0m  [1m[32mINSERT INTO "families" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Sotirovi"], ["created_at", "2019-04-09 08:24:55.109297"], ["updated_at", "2019-04-09 08:24:55.109297"]]
+  ↳ app/controllers/families_controller.rb:11
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/families_controller.rb:11
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/families_controller.rb:13
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/families_controller.rb:15
+  [1m[36mUser::HABTM_Families Create (1.0ms)[0m  [1m[32mINSERT INTO "families_users" ("user_id", "family_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["user_id", 1], ["family_id", 1], ["created_at", "2019-04-09 08:24:55.131588"], ["updated_at", "2019-04-09 08:24:55.131588"]]
+  ↳ app/controllers/families_controller.rb:15
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/families_controller.rb:15
+Redirected to http://localhost:3000/
+Completed 302 Found in 32ms (ActiveRecord: 9.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-09 11:24:55 +0300
+Processing by WelcomeController#show as HTML
+  Rendering welcome/show.html.erb within layouts/application
+  Rendered welcome/show.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered layouts/_navbar.html.erb (2.2ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 38ms (Views: 36.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2019-04-09 11:24:58 +0300
+Processing by WelcomeController#show as HTML
+  Rendering welcome/show.html.erb within layouts/application
+  Rendered welcome/show.html.erb within layouts/application (0.4ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered layouts/_navbar.html.erb (2.9ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 42ms (Views: 40.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2019-04-09 11:25:02 +0300
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:12
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:6
+  Rendered users/index.html.erb within layouts/application (5.0ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered layouts/_navbar.html.erb (2.0ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 52ms (Views: 46.3ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/users/show/1" for 127.0.0.1 at 2019-04-09 11:25:05 +0300
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:94
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:34
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mFamily Load (1.6ms)[0m  [1m[34mSELECT "families".* FROM "families" INNER JOIN "families_users" ON "families"."id" = "families_users"."family_id" WHERE "families_users"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/users/show.html.erb:12
+  Rendered users/show.html.erb within layouts/application (5.7ms)
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered layouts/_navbar.html.erb (1.3ms)
+  Rendered layouts/_messages.html.erb (0.5ms)
+Completed 200 OK in 42ms (Views: 35.6ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/families/show/1" for 127.0.0.1 at 2019-04-09 11:25:06 +0300
+Processing by FamiliesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFamily Load (0.5ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/families_controller.rb:33
+  Rendering families/show.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "families_users" ON "users"."id" = "families_users"."user_id" WHERE "families_users"."family_id" = $1[0m  [["family_id", 1]]
+  ↳ app/views/families/show.html.erb:4
+  [1m[36mShoppingList Load (0.9ms)[0m  [1m[34mSELECT "shopping_lists".* FROM "shopping_lists" WHERE "shopping_lists"."family_id" = $1[0m  [["family_id", 1]]
+  ↳ app/views/families/show.html.erb:11
+  Rendered families/show.html.erb within layouts/application (17.0ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered layouts/_navbar.html.erb (3.1ms)
+  Rendered layouts/_messages.html.erb (1.1ms)
+Completed 200 OK in 61ms (Views: 51.6ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/families/edit/1" for 127.0.0.1 at 2019-04-09 11:25:10 +0300
+Processing by FamiliesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFamily Load (0.7ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/families_controller.rb:21
+  Rendering families/edit.html.erb within layouts/application
+  Rendered families/edit.html.erb within layouts/application (2.6ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered layouts/_navbar.html.erb (2.7ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 42ms (Views: 37.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/families/1/shopping_lists/new" for 127.0.0.1 at 2019-04-09 11:25:12 +0300
+Processing by ShoppingListsController#new as HTML
+  Parameters: {"family_id"=>"1"}
+  Rendering shopping_lists/new.html.erb within layouts/application
+  Rendered shopping_lists/new.html.erb within layouts/application (1.8ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered layouts/_navbar.html.erb (2.7ms)
+  Rendered layouts/_messages.html.erb (0.7ms)
+Completed 200 OK in 53ms (Views: 52.0ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/families/1/shopping_lists/new?method=POST" for 127.0.0.1 at 2019-04-09 11:25:16 +0300
+Processing by ShoppingListsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5wENbNJEDy+F1eP0bmwhlDdzmVlPGFmDV32MbnzvtIPNn4ZU5ZNfQAnVpumaESiTbXVVbX+NYwezD4M5JBBUGQ==", "shopping_list"=>{"name"=>"esteban"}, "commit"=>"Submit", "method"=>"POST", "family_id"=>"1"}
+  [1m[36mFamily Load (0.5ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:14
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/shopping_lists_controller.rb:16
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/shopping_lists_controller.rb:16
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/shopping_lists_controller.rb:16
+  [1m[36mShoppingList Create (1.0ms)[0m  [1m[32mINSERT INTO "shopping_lists" ("name", "family_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "esteban"], ["family_id", 1], ["created_at", "2019-04-09 08:25:16.215186"], ["updated_at", "2019-04-09 08:25:16.215186"]]
+  ↳ app/controllers/shopping_lists_controller.rb:16
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/shopping_lists_controller.rb:16
+Redirected to http://localhost:3000/families/show/1
+Completed 302 Found in 28ms (ActiveRecord: 7.8ms)
+
+
+Started GET "/families/show/1" for 127.0.0.1 at 2019-04-09 11:25:16 +0300
+Processing by FamiliesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFamily Load (0.7ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/families_controller.rb:33
+  Rendering families/show.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" INNER JOIN "families_users" ON "users"."id" = "families_users"."user_id" WHERE "families_users"."family_id" = $1[0m  [["family_id", 1]]
+  ↳ app/views/families/show.html.erb:4
+  [1m[36mShoppingList Load (0.4ms)[0m  [1m[34mSELECT "shopping_lists".* FROM "shopping_lists" WHERE "shopping_lists"."family_id" = $1[0m  [["family_id", 1]]
+  ↳ app/views/families/show.html.erb:11
+  Rendered families/show.html.erb within layouts/application (5.2ms)
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered layouts/_navbar.html.erb (2.9ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 48ms (Views: 42.7ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/families/1/shopping_lists/1" for 127.0.0.1 at 2019-04-09 11:25:18 +0300
+Processing by ShoppingListsController#index as HTML
+  Parameters: {"family_id"=>"1", "id"=>"1"}
+  [1m[36mFamily Load (0.5ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:3
+  [1m[36mCACHE Family Load (0.0ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:4
+  [1m[36mShoppingList Load (0.6ms)[0m  [1m[34mSELECT "shopping_lists".* FROM "shopping_lists" WHERE "shopping_lists"."family_id" = $1[0m  [["family_id", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:4
+  Rendering shopping_lists/index.html.erb within layouts/application
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."shopping_list_id" = $1[0m  [["shopping_list_id", 1]]
+  ↳ app/views/shopping_lists/index.html.erb:11
+  Rendered shopping_lists/index.html.erb within layouts/application (24.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered layouts/_navbar.html.erb (2.2ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 63ms (Views: 50.8ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/families/1/shopping_lists/1/edit" for 127.0.0.1 at 2019-04-09 11:25:21 +0300
+Processing by ShoppingListsController#edit as HTML
+  Parameters: {"family_id"=>"1", "id"=>"1"}
+  [1m[36mFamily Load (0.6ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:26
+  [1m[36mCACHE Family Load (0.0ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:28
+  [1m[36mShoppingList Load (0.5ms)[0m  [1m[34mSELECT "shopping_lists".* FROM "shopping_lists" WHERE "shopping_lists"."family_id" = $1[0m  [["family_id", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:28
+  Rendering shopping_lists/edit.html.erb within layouts/application
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT "items".* FROM "items"[0m
+  ↳ app/views/shopping_lists/edit.html.erb:9
+  Rendered shopping_lists/edit.html.erb within layouts/application (1.9ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered layouts/_navbar.html.erb (3.7ms)
+  Rendered layouts/_messages.html.erb (1.6ms)
+Completed 200 OK in 42ms (Views: 35.6ms | ActiveRecord: 2.2ms)
+
+
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5735346160239392655)[0m
+  ↳ /home/nicksot/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/nicksot/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to CreateItemsEnums (20190409083035)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(5735346160239392655)[0m
+  ↳ /home/nicksot/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5735346160239392655)[0m
+  ↳ /home/nicksot/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/nicksot/.rvm/gems/ruby-2.5.1/bin/rake:23
+Migrating to CreateItemsEnums (20190409083035)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/nicksot/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (7.7ms)[0m  [1m[35mCREATE TABLE "items_enums" ("id" bigserial primary key, "name" character varying, "price" decimal(10,2), "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20190409083035_create_items_enums.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20190409083035"]]
+  ↳ /home/nicksot/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/nicksot/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/nicksot/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /home/nicksot/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /home/nicksot/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(5735346160239392655)[0m
+  ↳ /home/nicksot/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/nicksot/.rvm/gems/ruby-2.5.1/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mItemsEnum Create (1.2ms)[0m  [1m[32mINSERT INTO "items_enums" ("name", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Chees"], ["price", "3.14"], ["created_at", "2019-04-09 08:32:39.041491"], ["updated_at", "2019-04-09 08:32:39.041491"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mItemsEnum Create (0.8ms)[0m  [1m[32mINSERT INTO "items_enums" ("name", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Chocolate"], ["price", "1.5"], ["created_at", "2019-04-09 08:32:51.449235"], ["updated_at", "2019-04-09 08:32:51.449235"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/families/1/shopping_lists/1/edit" for 127.0.0.1 at 2019-04-09 11:36:44 +0300
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/nicksot/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+Processing by ShoppingListsController#edit as HTML
+  Parameters: {"family_id"=>"1", "id"=>"1"}
+  [1m[36mFamily Load (0.7ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:26
+  [1m[36mCACHE Family Load (0.0ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:28
+  [1m[36mShoppingList Load (0.3ms)[0m  [1m[34mSELECT "shopping_lists".* FROM "shopping_lists" WHERE "shopping_lists"."family_id" = $1[0m  [["family_id", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:28
+  Rendering shopping_lists/edit.html.erb within layouts/application
+  Rendered shopping_lists/edit.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 71ms (ActiveRecord: 11.7ms)
+
+
+
+NoMethodError - undefined method `each' for nil:NilClass:
+  app/views/shopping_lists/edit.html.erb:15:in `_app_views_shopping_lists_edit_html_erb__111028293454441812_15149920'
+  app/controllers/shopping_lists_controller.rb:32:in `edit'
+
+Started POST "/__better_errors/2fcf4994aa87767f/variables" for 127.0.0.1 at 2019-04-09 11:36:44 +0300
+  [1m[36mItem Load (1.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/nicksot/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+Started GET "/families/1/shopping_lists/1/edit" for 127.0.0.1 at 2019-04-09 11:37:10 +0300
+Processing by ShoppingListsController#edit as HTML
+  Parameters: {"family_id"=>"1", "id"=>"1"}
+  [1m[36mFamily Load (0.5ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:26
+  [1m[36mCACHE Family Load (0.0ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:28
+  [1m[36mShoppingList Load (0.5ms)[0m  [1m[34mSELECT "shopping_lists".* FROM "shopping_lists" WHERE "shopping_lists"."family_id" = $1[0m  [["family_id", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:28
+  Rendering shopping_lists/edit.html.erb within layouts/application
+  Rendered shopping_lists/edit.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 10.5ms)
+
+
+
+NoMethodError - undefined method `each' for nil:NilClass:
+  app/views/shopping_lists/edit.html.erb:15:in `_app_views_shopping_lists_edit_html_erb__111028293454441812_69881837153360'
+  app/controllers/shopping_lists_controller.rb:32:in `edit'
+
+Started POST "/__better_errors/cf85bc318db3b7e2/variables" for 127.0.0.1 at 2019-04-09 11:37:10 +0300
+  [1m[36mItemsEnum Load (0.7ms)[0m  [1m[34mSELECT  "items_enums".* FROM "items_enums" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ /home/nicksot/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+Started GET "/families/1/shopping_lists/1/edit" for 127.0.0.1 at 2019-04-09 11:37:18 +0300
+Processing by ShoppingListsController#edit as HTML
+  Parameters: {"family_id"=>"1", "id"=>"1"}
+  [1m[36mFamily Load (0.5ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:26
+  [1m[36mCACHE Family Load (0.0ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:28
+  [1m[36mShoppingList Load (0.5ms)[0m  [1m[34mSELECT "shopping_lists".* FROM "shopping_lists" WHERE "shopping_lists"."family_id" = $1[0m  [["family_id", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:28
+  Rendering shopping_lists/edit.html.erb within layouts/application
+  [1m[36mItemsEnum Load (0.6ms)[0m  [1m[34mSELECT "items_enums".* FROM "items_enums"[0m
+  ↳ app/views/shopping_lists/edit.html.erb:9
+  Rendered shopping_lists/edit.html.erb within layouts/application (13.5ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered layouts/_navbar.html.erb (25.4ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 423ms (Views: 368.2ms | ActiveRecord: 19.8ms)
+
+
+Started GET "/families/1/shopping_lists/1/add_item/1" for 127.0.0.1 at 2019-04-09 11:37:23 +0300
+Processing by ShoppingListsController#add_item as HTML
+  Parameters: {"family_id"=>"1", "sl_id"=>"1", "item_id"=>"1"}
+  [1m[36mFamily Load (0.7ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:36
+  [1m[36mCACHE Family Load (0.0ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:38
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.7ms)
+
+
+
+TypeError - can't convert nil into Integer:
+  app/controllers/shopping_lists_controller.rb:38:in `Integer'
+  app/controllers/shopping_lists_controller.rb:38:in `add_item'
+
+Started POST "/__better_errors/bcd1b61bce1b6d33/variables" for 127.0.0.1 at 2019-04-09 11:37:23 +0300
+Started GET "/families/1/shopping_lists/1/add_item/1" for 127.0.0.1 at 2019-04-09 11:38:19 +0300
+Processing by ShoppingListsController#add_item as HTML
+  Parameters: {"family_id"=>"1", "sl_id"=>"1", "item_id"=>"1"}
+  [1m[36mFamily Load (0.4ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:38
+  [1m[36mCACHE Family Load (0.0ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:40
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 5.4ms)
+
+
+
+TypeError - can't convert nil into Integer:
+  app/controllers/shopping_lists_controller.rb:40:in `Integer'
+  app/controllers/shopping_lists_controller.rb:40:in `add_item'
+
+Started POST "/__better_errors/0321767447dde357/variables" for 127.0.0.1 at 2019-04-09 11:38:19 +0300
+Started GET "/families/1/shopping_lists/1/add_item/1" for 127.0.0.1 at 2019-04-09 11:38:42 +0300
+Processing by ShoppingListsController#add_item as HTML
+  Parameters: {"family_id"=>"1", "sl_id"=>"1", "item_id"=>"1"}
+  [1m[36mFamily Load (0.5ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:38
+  [1m[36mCACHE Family Load (0.0ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:40
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 5.0ms)
+
+
+
+TypeError - can't convert nil into Integer:
+  app/controllers/shopping_lists_controller.rb:40:in `Integer'
+  app/controllers/shopping_lists_controller.rb:40:in `add_item'
+
+Started POST "/__better_errors/55e8b5973b8d3891/variables" for 127.0.0.1 at 2019-04-09 11:38:42 +0300
+Started GET "/families/1/shopping_lists/1/add_item/1" for 127.0.0.1 at 2019-04-09 11:38:47 +0300
+Processing by ShoppingListsController#add_item as HTML
+  Parameters: {"family_id"=>"1", "sl_id"=>"1", "item_id"=>"1"}
+  [1m[36mFamily Load (0.6ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:38
+  [1m[36mCACHE Family Load (0.0ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:40
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.6ms)
+
+
+
+TypeError - can't convert nil into Integer:
+  app/controllers/shopping_lists_controller.rb:40:in `Integer'
+  app/controllers/shopping_lists_controller.rb:40:in `add_item'
+
+Started POST "/__better_errors/5bed8447d9712df4/variables" for 127.0.0.1 at 2019-04-09 11:38:47 +0300
+Started GET "/families/1/shopping_lists/1/add_item/1" for 127.0.0.1 at 2019-04-09 11:39:15 +0300
+Processing by ShoppingListsController#add_item as HTML
+  Parameters: {"family_id"=>"1", "sl_id"=>"1", "item_id"=>"1"}
+  [1m[36mFamily Load (0.6ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:38
+  [1m[36mCACHE Family Load (0.0ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:40
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 5.3ms)
+
+
+
+TypeError - can't convert nil into Integer:
+  app/controllers/shopping_lists_controller.rb:40:in `Integer'
+  app/controllers/shopping_lists_controller.rb:40:in `add_item'
+
+Started POST "/__better_errors/b88c6a82ecb0c0ac/variables" for 127.0.0.1 at 2019-04-09 11:39:15 +0300
+Started GET "/families/1/shopping_lists/1/add_item/1" for 127.0.0.1 at 2019-04-09 11:39:28 +0300
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/nicksot/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+Processing by ShoppingListsController#add_item as HTML
+  Parameters: {"family_id"=>"1", "sl_id"=>"1", "item_id"=>"1"}
+  [1m[36mFamily Load (0.5ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:38
+  [1m[36mCACHE Family Load (0.0ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:40
+Completed 500 Internal Server Error in 45ms (ActiveRecord: 6.3ms)
+
+
+
+TypeError - can't convert nil into Integer:
+  app/controllers/shopping_lists_controller.rb:40:in `Integer'
+  app/controllers/shopping_lists_controller.rb:40:in `add_item'
+
+Started POST "/__better_errors/6a058805c0d11642/variables" for 127.0.0.1 at 2019-04-09 11:39:28 +0300
+Started GET "/families/1/shopping_lists/1/add_item/1" for 127.0.0.1 at 2019-04-09 11:39:53 +0300
+Processing by ShoppingListsController#add_item as HTML
+  Parameters: {"family_id"=>"1", "sl_id"=>"1", "item_id"=>"1"}
+  [1m[36mFamily Load (0.4ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:36
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 4.9ms)
+
+
+
+TypeError - no implicit conversion of nil into String:
+  app/controllers/shopping_lists_controller.rb:38:in `+'
+  app/controllers/shopping_lists_controller.rb:38:in `add_item'
+
+Started POST "/__better_errors/8c3e0522fd955418/variables" for 127.0.0.1 at 2019-04-09 11:39:53 +0300
+Started GET "/families/1/shopping_lists/1/add_item/1" for 127.0.0.1 at 2019-04-09 11:40:11 +0300
+Processing by ShoppingListsController#add_item as HTML
+  Parameters: {"family_id"=>"1", "sl_id"=>"1", "item_id"=>"1"}
+  [1m[36mFamily Load (0.3ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:36
+  [1m[36mCACHE Family Load (0.0ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:40
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 6.3ms)
+
+
+
+TypeError - can't convert nil into Integer:
+  app/controllers/shopping_lists_controller.rb:40:in `Integer'
+  app/controllers/shopping_lists_controller.rb:40:in `add_item'
+
+Started POST "/__better_errors/93c7bc3532d6424e/variables" for 127.0.0.1 at 2019-04-09 11:40:11 +0300
+Started GET "/families/1/shopping_lists/1/add_item/1" for 127.0.0.1 at 2019-04-09 11:40:40 +0300
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/nicksot/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+Processing by ShoppingListsController#add_item as HTML
+  Parameters: {"family_id"=>"1", "sl_id"=>"1", "item_id"=>"1"}
+  [1m[36mFamily Load (0.5ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:36
+  [1m[36mCACHE Family Load (0.0ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:40
+Completed 500 Internal Server Error in 51ms (ActiveRecord: 6.9ms)
+
+
+
+TypeError - can't convert nil into Integer:
+  app/controllers/shopping_lists_controller.rb:40:in `Integer'
+  app/controllers/shopping_lists_controller.rb:40:in `add_item'
+
+Started POST "/__better_errors/6a40551ccbb74386/variables" for 127.0.0.1 at 2019-04-09 11:40:40 +0300
+Started GET "/families/1/shopping_lists/1/add_item/1" for 127.0.0.1 at 2019-04-09 11:40:49 +0300
+Processing by ShoppingListsController#add_item as HTML
+  Parameters: {"family_id"=>"1", "sl_id"=>"1", "item_id"=>"1"}
+  [1m[36mFamily Load (0.3ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:36
+  [1m[36mCACHE Family Load (0.1ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:40
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 4.5ms)
+
+
+
+TypeError - can't convert nil into Integer:
+  app/controllers/shopping_lists_controller.rb:40:in `Integer'
+  app/controllers/shopping_lists_controller.rb:40:in `add_item'
+
+Started POST "/__better_errors/8109a17090ca3dd5/variables" for 127.0.0.1 at 2019-04-09 11:40:49 +0300
+Started GET "/families/1/shopping_lists/1/add_item/1" for 127.0.0.1 at 2019-04-09 11:41:49 +0300
+Processing by ShoppingListsController#add_item as HTML
+  Parameters: {"family_id"=>"1", "sl_id"=>"1", "item_id"=>"1"}
+  [1m[36mFamily Load (0.4ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:36
+  [1m[36mCACHE Family Load (0.1ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:40
+  [1m[36mShoppingList Load (0.6ms)[0m  [1m[34mSELECT "shopping_lists".* FROM "shopping_lists" WHERE "shopping_lists"."family_id" = $1[0m  [["family_id", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:40
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:44
+Completed 404 Not Found in 76ms (ActiveRecord: 17.3ms)
+
+
+
+ActiveRecord::RecordNotFound - Couldn't find Item with 'id'=1:
+  app/controllers/shopping_lists_controller.rb:44:in `add_item'
+
+Started POST "/__better_errors/16218abd0dec8c04/variables" for 127.0.0.1 at 2019-04-09 11:41:49 +0300
+Started GET "/families/1/shopping_lists/1/add_item/1" for 127.0.0.1 at 2019-04-09 11:42:08 +0300
+Processing by ShoppingListsController#add_item as HTML
+  Parameters: {"family_id"=>"1", "sl_id"=>"1", "item_id"=>"1"}
+  [1m[36mFamily Load (0.4ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:36
+  [1m[36mCACHE Family Load (0.0ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:40
+  [1m[36mShoppingList Load (0.4ms)[0m  [1m[34mSELECT "shopping_lists".* FROM "shopping_lists" WHERE "shopping_lists"."family_id" = $1[0m  [["family_id", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:40
+  [1m[36mItemsEnum Load (0.4ms)[0m  [1m[34mSELECT  "items_enums".* FROM "items_enums" WHERE "items_enums"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:42
+Completed 500 Internal Server Error in 72ms (ActiveRecord: 14.8ms)
+
+
+
+NoMethodError - undefined method `shopping_lists' for #<ShoppingList:0x00007f29bc06a3f0>:
+  app/controllers/shopping_lists_controller.rb:44:in `add_item'
+
+Started POST "/__better_errors/ecc4291f23f33ffd/variables" for 127.0.0.1 at 2019-04-09 11:42:08 +0300
+Started GET "/families/1/shopping_lists/1/add_item/1" for 127.0.0.1 at 2019-04-09 11:42:20 +0300
+Processing by ShoppingListsController#add_item as HTML
+  Parameters: {"family_id"=>"1", "sl_id"=>"1", "item_id"=>"1"}
+  [1m[36mFamily Load (0.4ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:36
+  [1m[36mCACHE Family Load (0.0ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:40
+  [1m[36mShoppingList Load (0.4ms)[0m  [1m[34mSELECT "shopping_lists".* FROM "shopping_lists" WHERE "shopping_lists"."family_id" = $1[0m  [["family_id", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:40
+  [1m[36mItemsEnum Load (0.3ms)[0m  [1m[34mSELECT  "items_enums".* FROM "items_enums" WHERE "items_enums"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:42
+Completed 500 Internal Server Error in 74ms (ActiveRecord: 13.0ms)
+
+
+
+NoMethodError - undefined method `<<' for #<ShoppingList:0x00007f29a0b3fa08>:
+  app/controllers/shopping_lists_controller.rb:44:in `add_item'
+
+Started POST "/__better_errors/c6d88e2b6331e1d1/variables" for 127.0.0.1 at 2019-04-09 11:42:20 +0300
+Started GET "/families/1/shopping_lists/1/add_item/1" for 127.0.0.1 at 2019-04-09 11:42:27 +0300
+
+SyntaxError - syntax error, unexpected <<, expecting '='
+		@list,items << item
+		            ^~:
+  app/controllers/shopping_lists_controller.rb:44:in `'
+
+Started POST "/__better_errors/4760bb6ecac347ee/variables" for 127.0.0.1 at 2019-04-09 11:42:27 +0300
+Started GET "/families/1/shopping_lists/1/add_item/1" for 127.0.0.1 at 2019-04-09 11:42:36 +0300
+Processing by ShoppingListsController#add_item as HTML
+  Parameters: {"family_id"=>"1", "sl_id"=>"1", "item_id"=>"1"}
+  [1m[36mFamily Load (0.6ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:36
+  [1m[36mCACHE Family Load (0.0ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:40
+  [1m[36mShoppingList Load (0.5ms)[0m  [1m[34mSELECT "shopping_lists".* FROM "shopping_lists" WHERE "shopping_lists"."family_id" = $1[0m  [["family_id", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:40
+  [1m[36mItemsEnum Load (0.4ms)[0m  [1m[34mSELECT  "items_enums".* FROM "items_enums" WHERE "items_enums"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:42
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/shopping_lists_controller.rb:44
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/shopping_lists_controller.rb:44
+Completed 500 Internal Server Error in 78ms (ActiveRecord: 17.2ms)
+
+
+
+ActiveRecord::AssociationTypeMismatch - Item(#69908278022060) expected, got #<ItemsEnum id: 1, name: "Chees", price: 0.314e1, created_at: "2019-04-09 08:32:39", updated_at: "2019-04-09 08:32:39"> which is an instance of ItemsEnum(#69908278393880):
+  app/controllers/shopping_lists_controller.rb:44:in `add_item'
+
+Started POST "/__better_errors/0dea9800c0faa05b/variables" for 127.0.0.1 at 2019-04-09 11:42:37 +0300
+Started GET "/families/1/shopping_lists/1/add_item/1" for 127.0.0.1 at 2019-04-09 11:42:54 +0300
+Processing by ShoppingListsController#add_item as HTML
+  Parameters: {"family_id"=>"1", "sl_id"=>"1", "item_id"=>"1"}
+  [1m[36mFamily Load (0.5ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:36
+  [1m[36mCACHE Family Load (0.0ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:40
+  [1m[36mShoppingList Load (0.5ms)[0m  [1m[34mSELECT "shopping_lists".* FROM "shopping_lists" WHERE "shopping_lists"."family_id" = $1[0m  [["family_id", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:40
+  [1m[36mItemsEnum Load (0.4ms)[0m  [1m[34mSELECT  "items_enums".* FROM "items_enums" WHERE "items_enums"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:42
+Completed 500 Internal Server Error in 194ms (ActiveRecord: 16.6ms)
+
+
+
+NoMethodError - undefined method `Item' for #<ShoppingListsController:0x00007f29a0e67a78>:
+  app/controllers/shopping_lists_controller.rb:42:in `add_item'
+
+Started POST "/__better_errors/985875c6bb74c7b5/variables" for 127.0.0.1 at 2019-04-09 11:42:54 +0300
+Started GET "/families/1/shopping_lists/1/add_item/1" for 127.0.0.1 at 2019-04-09 11:43:52 +0300
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/nicksot/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+Processing by ShoppingListsController#add_item as HTML
+  Parameters: {"family_id"=>"1", "sl_id"=>"1", "item_id"=>"1"}
+  [1m[36mFamily Load (0.5ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:36
+  [1m[36mCACHE Family Load (0.0ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:40
+  [1m[36mShoppingList Load (0.5ms)[0m  [1m[34mSELECT "shopping_lists".* FROM "shopping_lists" WHERE "shopping_lists"."family_id" = $1[0m  [["family_id", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:40
+  [1m[36mItemsEnum Load (0.3ms)[0m  [1m[34mSELECT  "items_enums".* FROM "items_enums" WHERE "items_enums"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:42
+Completed 500 Internal Server Error in 109ms (ActiveRecord: 19.2ms)
+
+
+
+NoMethodError - undefined method `becomes' for #<Class:0x00000000024d4458>:
+  app/controllers/shopping_lists_controller.rb:42:in `add_item'
+
+Started POST "/__better_errors/e2c3ba8e2e903a3f/variables" for 127.0.0.1 at 2019-04-09 11:43:52 +0300
+Started GET "/families/1/shopping_lists/1/add_item/1" for 127.0.0.1 at 2019-04-09 11:44:43 +0300
+Processing by ShoppingListsController#add_item as HTML
+  Parameters: {"family_id"=>"1", "sl_id"=>"1", "item_id"=>"1"}
+  [1m[36mFamily Load (0.5ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:36
+  [1m[36mCACHE Family Load (0.0ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:40
+  [1m[36mShoppingList Load (0.4ms)[0m  [1m[34mSELECT "shopping_lists".* FROM "shopping_lists" WHERE "shopping_lists"."family_id" = $1[0m  [["family_id", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:40
+  [1m[36mItemsEnum Load (0.4ms)[0m  [1m[34mSELECT  "items_enums".* FROM "items_enums" WHERE "items_enums"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:42
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/shopping_lists_controller.rb:44
+  [1m[36mItem Create (1.1ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "shopping_list_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Chees"], ["price", "3.14"], ["shopping_list_id", 1], ["created_at", "2019-04-09 08:44:44.004682"], ["updated_at", "2019-04-09 08:44:44.004682"]]
+  ↳ app/controllers/shopping_lists_controller.rb:44
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/shopping_lists_controller.rb:44
+Completed 500 Internal Server Error in 94ms (ActiveRecord: 21.5ms)
+
+
+
+TypeError - no implicit conversion of Integer into String:
+  app/controllers/shopping_lists_controller.rb:46:in `+'
+  app/controllers/shopping_lists_controller.rb:46:in `add_item'
+
+Started POST "/__better_errors/b16bcb43a0bc1e37/variables" for 127.0.0.1 at 2019-04-09 11:44:44 +0300
+Started GET "/families/1/shopping_lists/1/add_item/1" for 127.0.0.1 at 2019-04-09 11:44:59 +0300
+Processing by ShoppingListsController#add_item as HTML
+  Parameters: {"family_id"=>"1", "sl_id"=>"1", "item_id"=>"1"}
+  [1m[36mFamily Load (0.6ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:36
+  [1m[36mCACHE Family Load (0.0ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:40
+  [1m[36mShoppingList Load (0.6ms)[0m  [1m[34mSELECT "shopping_lists".* FROM "shopping_lists" WHERE "shopping_lists"."family_id" = $1[0m  [["family_id", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:40
+  [1m[36mItemsEnum Load (0.5ms)[0m  [1m[34mSELECT  "items_enums".* FROM "items_enums" WHERE "items_enums"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:42
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/shopping_lists_controller.rb:44
+  [1m[36mItem Create (0.8ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "shopping_list_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Chees"], ["price", "3.14"], ["shopping_list_id", 1], ["created_at", "2019-04-09 08:44:59.975239"], ["updated_at", "2019-04-09 08:44:59.975239"]]
+  ↳ app/controllers/shopping_lists_controller.rb:44
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/shopping_lists_controller.rb:44
+Redirected to http://localhost:3000families/1/shopping_lists/1
+Completed 302 Found in 83ms (ActiveRecord: 22.4ms)
+
+
+Started GET "/families/1/shopping_lists/1/add_item/1" for 127.0.0.1 at 2019-04-09 11:45:00 +0300
+Processing by ShoppingListsController#add_item as HTML
+  Parameters: {"family_id"=>"1", "sl_id"=>"1", "item_id"=>"1"}
+  [1m[36mFamily Load (0.6ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:36
+  [1m[36mCACHE Family Load (0.0ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:40
+  [1m[36mShoppingList Load (0.6ms)[0m  [1m[34mSELECT "shopping_lists".* FROM "shopping_lists" WHERE "shopping_lists"."family_id" = $1[0m  [["family_id", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:40
+  [1m[36mItemsEnum Load (0.5ms)[0m  [1m[34mSELECT  "items_enums".* FROM "items_enums" WHERE "items_enums"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:42
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/shopping_lists_controller.rb:44
+  [1m[36mItem Create (0.8ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "shopping_list_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Chees"], ["price", "3.14"], ["shopping_list_id", 1], ["created_at", "2019-04-09 08:45:00.152960"], ["updated_at", "2019-04-09 08:45:00.152960"]]
+  ↳ app/controllers/shopping_lists_controller.rb:44
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/shopping_lists_controller.rb:44
+Redirected to http://localhost:3000families/1/shopping_lists/1
+Completed 302 Found in 15ms (ActiveRecord: 4.9ms)
+
+
+Started GET "/families/1/shopping_lists/1/" for 127.0.0.1 at 2019-04-09 11:45:04 +0300
+Processing by ShoppingListsController#index as HTML
+  Parameters: {"family_id"=>"1", "id"=>"1"}
+  [1m[36mFamily Load (0.6ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:3
+  [1m[36mCACHE Family Load (0.0ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:4
+  [1m[36mShoppingList Load (0.7ms)[0m  [1m[34mSELECT "shopping_lists".* FROM "shopping_lists" WHERE "shopping_lists"."family_id" = $1[0m  [["family_id", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:4
+  Rendering shopping_lists/index.html.erb within layouts/application
+  [1m[36mItem Load (0.4ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."shopping_list_id" = $1[0m  [["shopping_list_id", 1]]
+  ↳ app/views/shopping_lists/index.html.erb:11
+  Rendered shopping_lists/index.html.erb within layouts/application (5.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered layouts/_navbar.html.erb (28.4ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 384ms (Views: 372.1ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/families/1/shopping_lists/1/edit" for 127.0.0.1 at 2019-04-09 11:45:15 +0300
+Processing by ShoppingListsController#edit as HTML
+  Parameters: {"family_id"=>"1", "id"=>"1"}
+  [1m[36mFamily Load (0.6ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:26
+  [1m[36mCACHE Family Load (0.0ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:28
+  [1m[36mShoppingList Load (0.4ms)[0m  [1m[34mSELECT "shopping_lists".* FROM "shopping_lists" WHERE "shopping_lists"."family_id" = $1[0m  [["family_id", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:28
+  Rendering shopping_lists/edit.html.erb within layouts/application
+  [1m[36mItemsEnum Load (0.5ms)[0m  [1m[34mSELECT "items_enums".* FROM "items_enums"[0m
+  ↳ app/views/shopping_lists/edit.html.erb:9
+  Rendered shopping_lists/edit.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered layouts/_navbar.html.erb (3.4ms)
+  Rendered layouts/_messages.html.erb (1.1ms)
+Completed 200 OK in 49ms (Views: 42.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/families/1/shopping_lists/1/add_item/2" for 127.0.0.1 at 2019-04-09 11:45:17 +0300
+Processing by ShoppingListsController#add_item as HTML
+  Parameters: {"family_id"=>"1", "sl_id"=>"1", "item_id"=>"2"}
+  [1m[36mFamily Load (0.4ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:36
+  [1m[36mCACHE Family Load (0.0ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:40
+  [1m[36mShoppingList Load (0.4ms)[0m  [1m[34mSELECT "shopping_lists".* FROM "shopping_lists" WHERE "shopping_lists"."family_id" = $1[0m  [["family_id", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:40
+  [1m[36mItemsEnum Load (1.7ms)[0m  [1m[34mSELECT  "items_enums".* FROM "items_enums" WHERE "items_enums"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:42
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/shopping_lists_controller.rb:44
+  [1m[36mItem Create (0.8ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "shopping_list_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Chocolate"], ["price", "1.5"], ["shopping_list_id", 1], ["created_at", "2019-04-09 08:45:17.114409"], ["updated_at", "2019-04-09 08:45:17.114409"]]
+  ↳ app/controllers/shopping_lists_controller.rb:44
+  [1m[35m (3.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/shopping_lists_controller.rb:44
+Redirected to http://localhost:3000families/1/shopping_lists/1
+Completed 302 Found in 18ms (ActiveRecord: 7.4ms)
+
+
+Started GET "/families/1/shopping_lists/1/add_item/2" for 127.0.0.1 at 2019-04-09 11:45:17 +0300
+Processing by ShoppingListsController#add_item as HTML
+  Parameters: {"family_id"=>"1", "sl_id"=>"1", "item_id"=>"2"}
+  [1m[36mFamily Load (0.5ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:36
+  [1m[36mCACHE Family Load (0.1ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:40
+  [1m[36mShoppingList Load (0.6ms)[0m  [1m[34mSELECT "shopping_lists".* FROM "shopping_lists" WHERE "shopping_lists"."family_id" = $1[0m  [["family_id", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:40
+  [1m[36mItemsEnum Load (0.8ms)[0m  [1m[34mSELECT  "items_enums".* FROM "items_enums" WHERE "items_enums"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:42
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/shopping_lists_controller.rb:44
+  [1m[36mItem Create (1.3ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "shopping_list_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Chocolate"], ["price", "1.5"], ["shopping_list_id", 1], ["created_at", "2019-04-09 08:45:17.156298"], ["updated_at", "2019-04-09 08:45:17.156298"]]
+  ↳ app/controllers/shopping_lists_controller.rb:44
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/shopping_lists_controller.rb:44
+Redirected to http://localhost:3000families/1/shopping_lists/1
+Completed 302 Found in 19ms (ActiveRecord: 5.4ms)
+
+
+Started GET "/families/1/shopping_lists/1/add_item/2" for 127.0.0.1 at 2019-04-09 11:45:17 +0300
+Processing by ShoppingListsController#add_item as HTML
+  Parameters: {"family_id"=>"1", "sl_id"=>"1", "item_id"=>"2"}
+  [1m[36mFamily Load (0.5ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:36
+  [1m[36mCACHE Family Load (0.0ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:40
+  [1m[36mShoppingList Load (0.5ms)[0m  [1m[34mSELECT "shopping_lists".* FROM "shopping_lists" WHERE "shopping_lists"."family_id" = $1[0m  [["family_id", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:40
+  [1m[36mItemsEnum Load (0.4ms)[0m  [1m[34mSELECT  "items_enums".* FROM "items_enums" WHERE "items_enums"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:42
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/shopping_lists_controller.rb:44
+  [1m[36mItem Create (0.7ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "shopping_list_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Chocolate"], ["price", "1.5"], ["shopping_list_id", 1], ["created_at", "2019-04-09 08:45:17.329236"], ["updated_at", "2019-04-09 08:45:17.329236"]]
+  ↳ app/controllers/shopping_lists_controller.rb:44
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/shopping_lists_controller.rb:44
+Redirected to http://localhost:3000families/1/shopping_lists/1
+Completed 302 Found in 16ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/families/1/shopping_lists/1/add_item/2" for 127.0.0.1 at 2019-04-09 11:45:22 +0300
+Processing by ShoppingListsController#add_item as HTML
+  Parameters: {"family_id"=>"1", "sl_id"=>"1", "item_id"=>"2"}
+  [1m[36mFamily Load (0.7ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:36
+  [1m[36mCACHE Family Load (0.0ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:40
+  [1m[36mShoppingList Load (0.5ms)[0m  [1m[34mSELECT "shopping_lists".* FROM "shopping_lists" WHERE "shopping_lists"."family_id" = $1[0m  [["family_id", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:40
+  [1m[36mItemsEnum Load (0.3ms)[0m  [1m[34mSELECT  "items_enums".* FROM "items_enums" WHERE "items_enums"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:42
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/shopping_lists_controller.rb:44
+  [1m[36mItem Create (0.9ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "shopping_list_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Chocolate"], ["price", "1.5"], ["shopping_list_id", 1], ["created_at", "2019-04-09 08:45:22.378343"], ["updated_at", "2019-04-09 08:45:22.378343"]]
+  ↳ app/controllers/shopping_lists_controller.rb:44
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/shopping_lists_controller.rb:44
+Redirected to http://localhost:3000families/1/shopping_lists/1
+Completed 302 Found in 14ms (ActiveRecord: 4.8ms)
+
+
+Started GET "/families/1/shopping_lists/1" for 127.0.0.1 at 2019-04-09 11:45:24 +0300
+Processing by ShoppingListsController#index as HTML
+  Parameters: {"family_id"=>"1", "id"=>"1"}
+  [1m[36mFamily Load (0.5ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:3
+  [1m[36mCACHE Family Load (0.1ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:4
+  [1m[36mShoppingList Load (0.4ms)[0m  [1m[34mSELECT "shopping_lists".* FROM "shopping_lists" WHERE "shopping_lists"."family_id" = $1[0m  [["family_id", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:4
+  Rendering shopping_lists/index.html.erb within layouts/application
+  [1m[36mItem Load (0.7ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."shopping_list_id" = $1[0m  [["shopping_list_id", 1]]
+  ↳ app/views/shopping_lists/index.html.erb:11
+  Rendered shopping_lists/index.html.erb within layouts/application (5.6ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered layouts/_navbar.html.erb (2.4ms)
+  Rendered layouts/_messages.html.erb (0.9ms)
+Completed 200 OK in 55ms (Views: 48.2ms | ActiveRecord: 2.3ms)
+
+
+  [1m[36mShoppingList Load (0.7ms)[0m  [1m[34mSELECT  "shopping_lists".* FROM "shopping_lists" WHERE "shopping_lists"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mItem Update All (2.3ms)[0m  [1m[33mUPDATE "items" SET "shopping_list_id" = NULL WHERE "items"."shopping_list_id" = $1[0m  [["shopping_list_id", 1]]
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT  "items".* FROM "items" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mItem Destroy (2.9ms)[0m  [1m[31mDELETE FROM "items"[0m
+Started GET "/families/1/shopping_lists/1" for 127.0.0.1 at 2019-04-09 11:48:50 +0300
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/nicksot/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+Processing by ShoppingListsController#index as HTML
+  Parameters: {"family_id"=>"1", "id"=>"1"}
+  [1m[36mFamily Load (0.6ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:3
+  [1m[36mCACHE Family Load (0.0ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:4
+  [1m[36mShoppingList Load (0.5ms)[0m  [1m[34mSELECT "shopping_lists".* FROM "shopping_lists" WHERE "shopping_lists"."family_id" = $1[0m  [["family_id", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:4
+  Rendering shopping_lists/index.html.erb within layouts/application
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."shopping_list_id" = $1[0m  [["shopping_list_id", 1]]
+  ↳ app/views/shopping_lists/index.html.erb:11
+  Rendered shopping_lists/index.html.erb within layouts/application (21.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered layouts/_navbar.html.erb (29.8ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 383ms (Views: 315.3ms | ActiveRecord: 20.3ms)
+
+
+Started GET "/families/1/shopping_lists/1/edit" for 127.0.0.1 at 2019-04-09 11:48:52 +0300
+Processing by ShoppingListsController#edit as HTML
+  Parameters: {"family_id"=>"1", "id"=>"1"}
+  [1m[36mFamily Load (0.7ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:26
+  [1m[36mCACHE Family Load (0.0ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:28
+  [1m[36mShoppingList Load (0.5ms)[0m  [1m[34mSELECT "shopping_lists".* FROM "shopping_lists" WHERE "shopping_lists"."family_id" = $1[0m  [["family_id", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:28
+  Rendering shopping_lists/edit.html.erb within layouts/application
+  [1m[36mItemsEnum Load (1.3ms)[0m  [1m[34mSELECT "items_enums".* FROM "items_enums"[0m
+  ↳ app/views/shopping_lists/edit.html.erb:9
+  Rendered shopping_lists/edit.html.erb within layouts/application (20.1ms)
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered layouts/_navbar.html.erb (4.5ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 66ms (Views: 48.3ms | ActiveRecord: 11.1ms)
+
+
+Started GET "/families/1/shopping_lists/1/add_item/1" for 127.0.0.1 at 2019-04-09 11:48:54 +0300
+Processing by ShoppingListsController#add_item as HTML
+  Parameters: {"family_id"=>"1", "sl_id"=>"1", "item_id"=>"1"}
+  [1m[36mFamily Load (0.7ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:36
+  [1m[36mCACHE Family Load (0.0ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:40
+  [1m[36mShoppingList Load (1.6ms)[0m  [1m[34mSELECT "shopping_lists".* FROM "shopping_lists" WHERE "shopping_lists"."family_id" = $1[0m  [["family_id", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:40
+  [1m[36mItemsEnum Load (0.6ms)[0m  [1m[34mSELECT  "items_enums".* FROM "items_enums" WHERE "items_enums"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:42
+  [1m[36mItem Load (1.5ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."name" = $1 AND "items"."price" = $2 LIMIT $3[0m  [["name", "Chees"], ["price", "3.14"], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:44
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/shopping_lists_controller.rb:44
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/shopping_lists_controller.rb:44
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/shopping_lists_controller.rb:44
+  [1m[36mItem Create (0.7ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "shopping_list_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Chees"], ["price", "3.14"], ["shopping_list_id", 1], ["created_at", "2019-04-09 08:48:54.211148"], ["updated_at", "2019-04-09 08:48:54.211148"]]
+  ↳ app/controllers/shopping_lists_controller.rb:44
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/shopping_lists_controller.rb:44
+Redirected to http://localhost:3000families/1/shopping_lists/1
+Completed 302 Found in 39ms (ActiveRecord: 10.6ms)
+
+
+Started GET "/families/1/shopping_lists/1/add_item/1" for 127.0.0.1 at 2019-04-09 11:48:54 +0300
+Processing by ShoppingListsController#add_item as HTML
+  Parameters: {"family_id"=>"1", "sl_id"=>"1", "item_id"=>"1"}
+  [1m[36mFamily Load (0.9ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:36
+  [1m[36mCACHE Family Load (0.0ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:40
+  [1m[36mShoppingList Load (0.7ms)[0m  [1m[34mSELECT "shopping_lists".* FROM "shopping_lists" WHERE "shopping_lists"."family_id" = $1[0m  [["family_id", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:40
+  [1m[36mItemsEnum Load (0.6ms)[0m  [1m[34mSELECT  "items_enums".* FROM "items_enums" WHERE "items_enums"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:42
+  [1m[36mItem Load (2.2ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."name" = $1 AND "items"."price" = $2 LIMIT $3[0m  [["name", "Chees"], ["price", "3.14"], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:44
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/shopping_lists_controller.rb:44
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/shopping_lists_controller.rb:44
+Redirected to http://localhost:3000families/1/shopping_lists/1
+Completed 302 Found in 17ms (ActiveRecord: 5.0ms)
+
+
+Started GET "/families/1/shopping_lists/1/add_item/1" for 127.0.0.1 at 2019-04-09 11:48:54 +0300
+Processing by ShoppingListsController#add_item as HTML
+  Parameters: {"family_id"=>"1", "sl_id"=>"1", "item_id"=>"1"}
+  [1m[36mFamily Load (0.7ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:36
+  [1m[36mCACHE Family Load (0.0ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:40
+  [1m[36mShoppingList Load (0.6ms)[0m  [1m[34mSELECT "shopping_lists".* FROM "shopping_lists" WHERE "shopping_lists"."family_id" = $1[0m  [["family_id", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:40
+  [1m[36mItemsEnum Load (0.4ms)[0m  [1m[34mSELECT  "items_enums".* FROM "items_enums" WHERE "items_enums"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:42
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."name" = $1 AND "items"."price" = $2 LIMIT $3[0m  [["name", "Chees"], ["price", "3.14"], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:44
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/shopping_lists_controller.rb:44
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/shopping_lists_controller.rb:44
+Redirected to http://localhost:3000families/1/shopping_lists/1
+Completed 302 Found in 13ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/families/1/shopping_lists/1/add_item/1" for 127.0.0.1 at 2019-04-09 11:48:59 +0300
+Processing by ShoppingListsController#add_item as HTML
+  Parameters: {"family_id"=>"1", "sl_id"=>"1", "item_id"=>"1"}
+  [1m[36mFamily Load (0.6ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:36
+  [1m[36mCACHE Family Load (0.0ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:40
+  [1m[36mShoppingList Load (0.7ms)[0m  [1m[34mSELECT "shopping_lists".* FROM "shopping_lists" WHERE "shopping_lists"."family_id" = $1[0m  [["family_id", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:40
+  [1m[36mItemsEnum Load (0.8ms)[0m  [1m[34mSELECT  "items_enums".* FROM "items_enums" WHERE "items_enums"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:42
+  [1m[36mItem Load (1.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."name" = $1 AND "items"."price" = $2 LIMIT $3[0m  [["name", "Chees"], ["price", "3.14"], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:44
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/shopping_lists_controller.rb:44
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/shopping_lists_controller.rb:44
+Redirected to http://localhost:3000families/1/shopping_lists/1
+Completed 302 Found in 16ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/families/1/shopping_lists/1" for 127.0.0.1 at 2019-04-09 11:49:02 +0300
+Processing by ShoppingListsController#index as HTML
+  Parameters: {"family_id"=>"1", "id"=>"1"}
+  [1m[36mFamily Load (0.5ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:3
+  [1m[36mCACHE Family Load (0.0ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:4
+  [1m[36mShoppingList Load (0.9ms)[0m  [1m[34mSELECT "shopping_lists".* FROM "shopping_lists" WHERE "shopping_lists"."family_id" = $1[0m  [["family_id", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:4
+  Rendering shopping_lists/index.html.erb within layouts/application
+  [1m[36mItem Load (0.8ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."shopping_list_id" = $1[0m  [["shopping_list_id", 1]]
+  ↳ app/views/shopping_lists/index.html.erb:11
+  Rendered shopping_lists/index.html.erb within layouts/application (4.1ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered layouts/_navbar.html.erb (2.9ms)
+  Rendered layouts/_messages.html.erb (1.0ms)
+Completed 200 OK in 55ms (Views: 46.9ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/families/1/shopping_lists/1/edit" for 127.0.0.1 at 2019-04-09 11:49:05 +0300
+Processing by ShoppingListsController#edit as HTML
+  Parameters: {"family_id"=>"1", "id"=>"1"}
+  [1m[36mFamily Load (0.5ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:26
+  [1m[36mCACHE Family Load (0.0ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:28
+  [1m[36mShoppingList Load (0.4ms)[0m  [1m[34mSELECT "shopping_lists".* FROM "shopping_lists" WHERE "shopping_lists"."family_id" = $1[0m  [["family_id", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:28
+  Rendering shopping_lists/edit.html.erb within layouts/application
+  [1m[36mItemsEnum Load (0.7ms)[0m  [1m[34mSELECT "items_enums".* FROM "items_enums"[0m
+  ↳ app/views/shopping_lists/edit.html.erb:9
+  Rendered shopping_lists/edit.html.erb within layouts/application (3.2ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered layouts/_navbar.html.erb (2.2ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 79ms (Views: 71.4ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/families/1/shopping_lists/1/add_item/2" for 127.0.0.1 at 2019-04-09 11:49:06 +0300
+Processing by ShoppingListsController#add_item as HTML
+  Parameters: {"family_id"=>"1", "sl_id"=>"1", "item_id"=>"2"}
+  [1m[36mFamily Load (0.5ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:36
+  [1m[36mCACHE Family Load (0.0ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:40
+  [1m[36mShoppingList Load (0.6ms)[0m  [1m[34mSELECT "shopping_lists".* FROM "shopping_lists" WHERE "shopping_lists"."family_id" = $1[0m  [["family_id", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:40
+  [1m[36mItemsEnum Load (0.7ms)[0m  [1m[34mSELECT  "items_enums".* FROM "items_enums" WHERE "items_enums"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:42
+  [1m[36mItem Load (0.8ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."name" = $1 AND "items"."price" = $2 LIMIT $3[0m  [["name", "Chocolate"], ["price", "1.5"], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:44
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/shopping_lists_controller.rb:44
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/shopping_lists_controller.rb:44
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/shopping_lists_controller.rb:44
+  [1m[36mItem Create (0.6ms)[0m  [1m[32mINSERT INTO "items" ("name", "price", "shopping_list_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Chocolate"], ["price", "1.5"], ["shopping_list_id", 1], ["created_at", "2019-04-09 08:49:06.276425"], ["updated_at", "2019-04-09 08:49:06.276425"]]
+  ↳ app/controllers/shopping_lists_controller.rb:44
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/shopping_lists_controller.rb:44
+Redirected to http://localhost:3000families/1/shopping_lists/1
+Completed 302 Found in 21ms (ActiveRecord: 5.6ms)
+
+
+Started GET "/families/1/shopping_lists/1/add_item/2" for 127.0.0.1 at 2019-04-09 11:49:06 +0300
+Processing by ShoppingListsController#add_item as HTML
+  Parameters: {"family_id"=>"1", "sl_id"=>"1", "item_id"=>"2"}
+  [1m[36mFamily Load (0.5ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:36
+  [1m[36mCACHE Family Load (0.0ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:40
+  [1m[36mShoppingList Load (0.5ms)[0m  [1m[34mSELECT "shopping_lists".* FROM "shopping_lists" WHERE "shopping_lists"."family_id" = $1[0m  [["family_id", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:40
+  [1m[36mItemsEnum Load (0.8ms)[0m  [1m[34mSELECT  "items_enums".* FROM "items_enums" WHERE "items_enums"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:42
+  [1m[36mItem Load (1.0ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."name" = $1 AND "items"."price" = $2 LIMIT $3[0m  [["name", "Chocolate"], ["price", "1.5"], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:44
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/shopping_lists_controller.rb:44
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/shopping_lists_controller.rb:44
+Redirected to http://localhost:3000families/1/shopping_lists/1
+Completed 302 Found in 17ms (ActiveRecord: 3.5ms)
+
+
+Started GET "/families/1/shopping_lists/1/add_item/2" for 127.0.0.1 at 2019-04-09 11:49:06 +0300
+Processing by ShoppingListsController#add_item as HTML
+  Parameters: {"family_id"=>"1", "sl_id"=>"1", "item_id"=>"2"}
+  [1m[36mFamily Load (0.7ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:36
+  [1m[36mCACHE Family Load (0.0ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:40
+  [1m[36mShoppingList Load (0.4ms)[0m  [1m[34mSELECT "shopping_lists".* FROM "shopping_lists" WHERE "shopping_lists"."family_id" = $1[0m  [["family_id", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:40
+  [1m[36mItemsEnum Load (0.5ms)[0m  [1m[34mSELECT  "items_enums".* FROM "items_enums" WHERE "items_enums"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:42
+  [1m[36mItem Load (0.7ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."name" = $1 AND "items"."price" = $2 LIMIT $3[0m  [["name", "Chocolate"], ["price", "1.5"], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:44
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/shopping_lists_controller.rb:44
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/shopping_lists_controller.rb:44
+Redirected to http://localhost:3000families/1/shopping_lists/1
+Completed 302 Found in 13ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/families/1/shopping_lists/1" for 127.0.0.1 at 2019-04-09 11:49:09 +0300
+Processing by ShoppingListsController#index as HTML
+  Parameters: {"family_id"=>"1", "id"=>"1"}
+  [1m[36mFamily Load (0.5ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:3
+  [1m[36mCACHE Family Load (0.0ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:4
+  [1m[36mShoppingList Load (0.4ms)[0m  [1m[34mSELECT "shopping_lists".* FROM "shopping_lists" WHERE "shopping_lists"."family_id" = $1[0m  [["family_id", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:4
+  Rendering shopping_lists/index.html.erb within layouts/application
+  [1m[36mItem Load (0.8ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."shopping_list_id" = $1[0m  [["shopping_list_id", 1]]
+  ↳ app/views/shopping_lists/index.html.erb:11
+  Rendered shopping_lists/index.html.erb within layouts/application (4.0ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered layouts/_navbar.html.erb (3.4ms)
+  Rendered layouts/_messages.html.erb (1.5ms)
+Completed 200 OK in 58ms (Views: 50.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/families/1/shopping_lists/1" for 127.0.0.1 at 2019-04-09 11:50:57 +0300
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/nicksot/.rvm/gems/ruby-2.5.1/gems/activerecord-5.2.2.1/lib/active_record/log_subscriber.rb:98
+Processing by ShoppingListsController#index as HTML
+  Parameters: {"family_id"=>"1", "id"=>"1"}
+  [1m[36mFamily Load (0.7ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:3
+  [1m[36mCACHE Family Load (0.0ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:4
+  [1m[36mShoppingList Load (0.7ms)[0m  [1m[34mSELECT "shopping_lists".* FROM "shopping_lists" WHERE "shopping_lists"."family_id" = $1[0m  [["family_id", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:4
+  Rendering shopping_lists/index.html.erb within layouts/application
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."shopping_list_id" = $1[0m  [["shopping_list_id", 1]]
+  ↳ app/views/shopping_lists/index.html.erb:11
+  Rendered shopping_lists/index.html.erb within layouts/application (33.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered layouts/_navbar.html.erb (26.3ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 394ms (Views: 316.5ms | ActiveRecord: 23.2ms)
+
+
+Started GET "/families/1/shopping_lists/1/edit" for 127.0.0.1 at 2019-04-09 11:50:59 +0300
+Processing by ShoppingListsController#edit as HTML
+  Parameters: {"family_id"=>"1", "id"=>"1"}
+  [1m[36mFamily Load (0.8ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:26
+  [1m[36mCACHE Family Load (0.0ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:28
+  [1m[36mShoppingList Load (0.6ms)[0m  [1m[34mSELECT "shopping_lists".* FROM "shopping_lists" WHERE "shopping_lists"."family_id" = $1[0m  [["family_id", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:28
+  Rendering shopping_lists/edit.html.erb within layouts/application
+  [1m[36mItemsEnum Load (0.6ms)[0m  [1m[34mSELECT "items_enums".* FROM "items_enums"[0m
+  ↳ app/views/shopping_lists/edit.html.erb:9
+  Rendered shopping_lists/edit.html.erb within layouts/application (14.3ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered layouts/_navbar.html.erb (2.5ms)
+  Rendered layouts/_messages.html.erb (0.6ms)
+Completed 200 OK in 56ms (Views: 43.8ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/families/1/shopping_lists/1/add_item/1" for 127.0.0.1 at 2019-04-09 11:51:00 +0300
+Processing by ShoppingListsController#add_item as HTML
+  Parameters: {"family_id"=>"1", "sl_id"=>"1", "item_id"=>"1"}
+  [1m[36mFamily Load (0.6ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:36
+  [1m[36mCACHE Family Load (0.0ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:40
+  [1m[36mShoppingList Load (0.4ms)[0m  [1m[34mSELECT "shopping_lists".* FROM "shopping_lists" WHERE "shopping_lists"."family_id" = $1[0m  [["family_id", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:40
+  [1m[36mItemsEnum Load (0.3ms)[0m  [1m[34mSELECT  "items_enums".* FROM "items_enums" WHERE "items_enums"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:42
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 1.3ms)
+
+
+
+NoMethodError - undefined method `include?' for #<ShoppingList:0x00007f8bd8027518>:
+  app/controllers/shopping_lists_controller.rb:44:in `add_item'
+
+Started POST "/__better_errors/7ae6b5753b943f20/variables" for 127.0.0.1 at 2019-04-09 11:51:01 +0300
+Started GET "/families/1/shopping_lists/1/add_item/1" for 127.0.0.1 at 2019-04-09 11:51:38 +0300
+Processing by ShoppingListsController#add_item as HTML
+  Parameters: {"family_id"=>"1", "sl_id"=>"1", "item_id"=>"1"}
+  [1m[36mFamily Load (0.7ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:36
+  [1m[36mCACHE Family Load (0.0ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:40
+  [1m[36mShoppingList Load (0.4ms)[0m  [1m[34mSELECT "shopping_lists".* FROM "shopping_lists" WHERE "shopping_lists"."family_id" = $1[0m  [["family_id", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:40
+  [1m[36mItemsEnum Load (0.5ms)[0m  [1m[34mSELECT  "items_enums".* FROM "items_enums" WHERE "items_enums"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:42
+  [1m[36mItem Load (0.9ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."name" = $1 AND "items"."price" = $2 LIMIT $3[0m  [["name", "Chees"], ["price", "3.14"], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:49
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/shopping_lists_controller.rb:49
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/shopping_lists_controller.rb:49
+Redirected to http://localhost:3000/families/1/shopping_lists/1
+Completed 302 Found in 98ms (ActiveRecord: 19.6ms)
+
+
+Started GET "/families/1/shopping_lists/1" for 127.0.0.1 at 2019-04-09 11:51:38 +0300
+Processing by ShoppingListsController#index as HTML
+  Parameters: {"family_id"=>"1", "id"=>"1"}
+  [1m[36mFamily Load (0.6ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:3
+  [1m[36mCACHE Family Load (0.0ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:4
+  [1m[36mShoppingList Load (0.7ms)[0m  [1m[34mSELECT "shopping_lists".* FROM "shopping_lists" WHERE "shopping_lists"."family_id" = $1[0m  [["family_id", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:4
+  Rendering shopping_lists/index.html.erb within layouts/application
+  [1m[36mItem Load (0.5ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."shopping_list_id" = $1[0m  [["shopping_list_id", 1]]
+  ↳ app/views/shopping_lists/index.html.erb:11
+  Rendered shopping_lists/index.html.erb within layouts/application (3.3ms)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered layouts/_navbar.html.erb (36.8ms)
+  Rendered layouts/_messages.html.erb (1.2ms)
+Completed 200 OK in 88ms (Views: 75.5ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/families/1/shopping_lists/1/edit" for 127.0.0.1 at 2019-04-09 11:51:40 +0300
+Processing by ShoppingListsController#edit as HTML
+  Parameters: {"family_id"=>"1", "id"=>"1"}
+  [1m[36mFamily Load (0.8ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:26
+  [1m[36mCACHE Family Load (0.0ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:28
+  [1m[36mShoppingList Load (0.7ms)[0m  [1m[34mSELECT "shopping_lists".* FROM "shopping_lists" WHERE "shopping_lists"."family_id" = $1[0m  [["family_id", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:28
+  Rendering shopping_lists/edit.html.erb within layouts/application
+  [1m[36mItemsEnum Load (0.7ms)[0m  [1m[34mSELECT "items_enums".* FROM "items_enums"[0m
+  ↳ app/views/shopping_lists/edit.html.erb:9
+  Rendered shopping_lists/edit.html.erb within layouts/application (4.0ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered layouts/_navbar.html.erb (2.5ms)
+  Rendered layouts/_messages.html.erb (0.8ms)
+Completed 200 OK in 73ms (Views: 62.3ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/families/1/shopping_lists/1/add_item/1" for 127.0.0.1 at 2019-04-09 11:51:41 +0300
+Processing by ShoppingListsController#add_item as HTML
+  Parameters: {"family_id"=>"1", "sl_id"=>"1", "item_id"=>"1"}
+  [1m[36mFamily Load (0.4ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:36
+  [1m[36mCACHE Family Load (0.0ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:40
+  [1m[36mShoppingList Load (0.5ms)[0m  [1m[34mSELECT "shopping_lists".* FROM "shopping_lists" WHERE "shopping_lists"."family_id" = $1[0m  [["family_id", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:40
+  [1m[36mItemsEnum Load (0.7ms)[0m  [1m[34mSELECT  "items_enums".* FROM "items_enums" WHERE "items_enums"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:42
+  [1m[36mItem Load (2.1ms)[0m  [1m[34mSELECT  "items".* FROM "items" WHERE "items"."name" = $1 AND "items"."price" = $2 LIMIT $3[0m  [["name", "Chees"], ["price", "3.14"], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:49
+  [1m[35m (0.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/shopping_lists_controller.rb:49
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/shopping_lists_controller.rb:49
+Redirected to http://localhost:3000/families/1/shopping_lists/1
+Completed 302 Found in 19ms (ActiveRecord: 4.9ms)
+
+
+Started GET "/families/1/shopping_lists/1" for 127.0.0.1 at 2019-04-09 11:51:41 +0300
+Processing by ShoppingListsController#index as HTML
+  Parameters: {"family_id"=>"1", "id"=>"1"}
+  [1m[36mFamily Load (0.7ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:3
+  [1m[36mCACHE Family Load (0.0ms)[0m  [1m[34mSELECT  "families".* FROM "families" WHERE "families"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:4
+  [1m[36mShoppingList Load (0.6ms)[0m  [1m[34mSELECT "shopping_lists".* FROM "shopping_lists" WHERE "shopping_lists"."family_id" = $1[0m  [["family_id", 1]]
+  ↳ app/controllers/shopping_lists_controller.rb:4
+  Rendering shopping_lists/index.html.erb within layouts/application
+  [1m[36mItem Load (0.6ms)[0m  [1m[34mSELECT "items".* FROM "items" WHERE "items"."shopping_list_id" = $1[0m  [["shopping_list_id", 1]]
+  ↳ app/views/shopping_lists/index.html.erb:11
+  Rendered shopping_lists/index.html.erb within layouts/application (4.7ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:7
+  Rendered layouts/_navbar.html.erb (2.5ms)
+  Rendered layouts/_messages.html.erb (1.2ms)
+Completed 200 OK in 60ms (Views: 49.4ms | ActiveRecord: 2.4ms)
+
+
