@@ -1,29 +1,33 @@
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
+<div>
+	<h2>
+ 		<strong style = "font-size: 150%;"> <%= @user.username %> </strong>
+	</h2>
+</div>
 
-<p>
-  <strong>Username:</strong>
-  <%= @user.username %>
-</p>
 
-<%if @families != []%>
-	<ul>
-		<%@families.each do |f|%>
-			<li>
-				<%= link_to f.name, '/families/show/' + String(f.id)%>
-			</li>
-		<%end%>
-	</ul>
-<%end%>
-<%if @show%>
-	<%= link_to 'Edit', edit_user_path(@user) %> |
-<%else%>
-	<%if session[:user_id] != nil%>
-		<%= link_to 'Add to your family!', '/families/add_member/' + String(@user.id)%>
+<div>
+	<h3>Families: </h3>
+	<%if @families != []%>
+		<ul>
+			<%@families.each do |f|%>
+				<li>
+					<%= link_to f.name, '/families/show/' + String(f.id)%>
+				</li>
+			<%end%>
+		</ul>
 	<%end%>
-<%end%>
+	<p><a href = "/families/new">Create a family</a></p>
+</div>
 
-<%= link_to 'Back', users_path %>
+<div>
+	<%if @show%>
+		<%= link_to 'Edit', edit_user_path(@user) %>
+	<%else%>
+		<%if session[:user_id] != nil%>
+
+			| <%= link_to 'Add to your family!', '/families/add_member/' + String(@user.id)%>
+		<%end%>
+	<%end%>
+</div>
+<%= link_to 'Back', root_path %>

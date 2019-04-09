@@ -20,23 +20,22 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
-
-    @show = false
-    if session[:user_id] != nil
-      if Integer(session[:user_id]) == Integer(params[:id])
-        @show = true
-      end
-    end
-
+    
     @families = []
+    @show = false
 
-    if session[:user_id] != nil
-      user = User.find session[:user_id]
-
-      puts user.email
-
-      @families = user.families
+    if ((session[:user_id] != nil) && (Integer(session[:user_id]) == Integer(params[:id])))
+        @show = true
+        
+        user = User.find session[:user_id]
+        puts user.email
+        @families = user.families  
+    else
+      flash[:error] = "You can't access that url!"
+      redirect_to root_path
     end
+
+
   end
 
   # GET /users/new

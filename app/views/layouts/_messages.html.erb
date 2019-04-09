@@ -2,16 +2,11 @@
 
 
 <% flash.each do |key, value| %>
+  <% puts("On the flash part...\n") %>
     <div class="alert alert-<%= key %>"><%= value %></div>
 <% end %>
 
 
-<% if notice %>
-    <div class = "alert alert-success"><%= notice %> </div>
-<% end %>
-<% if alert %>
-    <div class = "alert alert-error"><%= alert %> </div>
-<% end  %> 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script>

@@ -1,19 +1,42 @@
-<h1>Families#show</h1>
+<div class = "row">
+	<div class = "col-12">
+	<h1> <%= @family.name %> </h1>
+	</div>
 
-<ul>
-	<%@members.each do |m|%>
-		<%=link_to m.username, '/users/' + String(m.id)%>
-	<%end%>
-</ul>
 
-<%=link_to 'Edit the family', '/families/edit/' + String(@family.id)%>
+	<div class= "col-12">
+		<div class = "row">
+				<%@members.each do |m|%>
+					<div class = "col-10"><%=link_to m.username, '/users/' + String(m.id)%></div>
 
-<%if @family.shopping_lists != []%>
-	<ul>
-		<%@family.shopping_lists.each do |sl|%>
-			<li>
-				<%=link_to sl.name, "/families/" + String(@family.id) + "/shopping_lists/" + String(sl.id)%>
-			</li>
-		<%end%>	
-	</ul>
-<%end%>
+					<%if m.id != current_user.id %>
+						<div class = "col"> <%= link_to "Kick", family_kick_path(@family.id, m.id) %> </div>
+					<% end %>
+				<%end%>
+		</div>
+	</div>
+
+	<div class = "col-12">
+		<h2> shopping lists </h2>
+		<% if @family.shopping_lists != [] %>
+			<ul>
+				<%@family.shopping_lists.each do |sl|%>
+					<li>
+						<%=link_to sl.name, "/families/" + String(@family.id) + "/shopping_lists/" + String(sl.id)%>
+					</li>
+				<%end%>	
+			</ul>
+		<% else %>
+			<h4> No shopping lists yet!</h4>
+		<% end %>
+	</div>
+	<br>
+
+	<div class = "col-12">
+		<%=link_to 'Add members', add_members_path( String(@family.id) ) %><br>
+
+		<%=link_to 'Add shopping list', '/families/' + String(@family.id) + '/shopping_lists/new'%> <br>
+
+		<%=link_to 'Change the family name', '/families/edit/' + String(@family.id)%>
+	<div class = "col-12">
+</div>

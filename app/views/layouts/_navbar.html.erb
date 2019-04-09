@@ -6,7 +6,7 @@
 
         <span id="nav-center">
             <li class = "nav-item">
-                <a href="#" >Shopping List</a>
+                <a href="/families/index" >Shopping List</a>
             </li>
             <li class = "nav-item" id="home-span">
                 <a href="/" id="home">Home</a>
@@ -19,7 +19,7 @@
         <span id="nav-user-control">
             <% if(current_user) %>
                 <li class = "nav-item">
-                    <a href="#" id="username"><%= current_user.username %></a>
+                    <a href="/users/<%=current_user.id%>" id="username"><%= current_user.username %></a>
                 </li>
                 <li class = "nav-item">
                     <a href="/logout">Logout</a>

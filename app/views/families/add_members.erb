@@ -1,0 +1,13 @@
+<div>
+
+	<ul>
+		<% @users.each do |user| %>
+			<% unless @family.users.include? user  %>
+				<li>
+					<%=link_to user.username, '/families/do_add_member/' + String(user.id) + '/' + String(@family.id)
+					%>
+				</li>
+			<% end %>
+		<% end  %>
+	</ul>
+</div>

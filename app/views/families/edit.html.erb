@@ -1,20 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
-	<h1>Families#edit</h1>
+<h1> <%= @family.name %> </h1>
 
-	<h2>Alter the name of the family!</h2>
 
-	<%=form_for @family, url: {action: 'edit', method: 'PATCH'} do |f|%>
-		Name: <%=f.text_field :name%>
-		<%=f.submit 'Submit'%>
-	<%end%>
-
-	<h2><%=link_to 'Add members!', users_path%></h2>
-
-	<h2><%=link_to 'Add shopping list!', '/families/' + String(@family.id) + '/shopping_lists/new'%></h2>
-</body>
-</html>
+<%=form_for @family, url: {action: 'edit', method: 'PATCH'} do |f|%>
+	Name: <%=f.text_field :name%>
+	<%=f.submit 'Submit'%>
+<%end%>

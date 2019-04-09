@@ -1,20 +1,18 @@
 class ShoppingListsController < ApplicationController
 	def index
 		@family = Family.find(params[:family_id])
-		@list = Family.find(params[:family_id]).shopping_lists[Integer(params[:id]) - 1]
-
-		render 'index'
+		puts()
+		@list = Family.find(params[:family_id]).shopping_lists.find(params[:id])
 	end
 
 	def new
-		render 'new'
 	end
 
 	def create
 		family = Family.find(params[:family_id])
 
-		family.shopping_lists << ShoppingList.create(sl_params)
-
+		family.shopping_lists << ShoppingList.new(sl_params)
+	
 		redirect_to '/families/show/' + String(family.id)
 	end
 
@@ -25,11 +23,9 @@ class ShoppingListsController < ApplicationController
 	def edit
 		@family = Family.find(params[:family_id])
 
-		@list = Family.find(params[:family_id]).shopping_lists[Integer(params[:id]) - 1]
+		@list = @family.shopping_lists.find(params[:id])
 
 		@items_enum = ItemsEnum.all
-		
-		render 'edit'
 	end
 
 	def add_item
@@ -37,7 +33,7 @@ class ShoppingListsController < ApplicationController
 
 		puts "List id: " + String(params[:family_id])
 
-		@list = Family.find(params[:family_id]).shopping_lists[Integer(params[:sl_id]) - 1]
+		@list = Family.find(params[:family_id]).shopping_lists.find(params[:sl_id])
 
 		item = ItemsEnum.find(params[:item_id])
 

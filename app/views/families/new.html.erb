@@ -1,6 +1,6 @@
 <h1>Create your family!</h1>
 
 <%=form_for @family, url: {action: 'new', method: 'POST'} do |f|%>
-	Name: <%=f.text_field :name%>
+	Name: <%= f.text_field :name %>
 	<%=f.submit 'Submit'%>
 <%end%>

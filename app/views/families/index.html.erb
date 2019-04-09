@@ -1,1 +1,18 @@
-<h1>Families#index</h1>
+
+
+<%# <div class = "row"> %>
+    <h1> Choose a Family </h1>
+<%# <div> %>
+
+<div class = "row">
+    <div class = "col-12">
+    <% if @families.length > 0 %>
+        <% @families.each do |family| %>
+            <%= link_to  family.name, "show/" + String(family.id) %> <br>        
+        <% end %>   
+    <% else %>
+        <h2> You don't participate in any families...</h2>
+    <% end  %>
+    </div>
+    <%= link_to "Create a family",  "/families/new" %>
+</div>

@@ -1,26 +1,19 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
-	<%=@list.name%>
 
-	<%=link_to 'Add items to shopping list!', '/families/' + String(@family.id) + '/shopping_lists/' + String(@list.id) + '/edit'%>
+<h1><%=@list.name%></h1>
 
-	<%if @list.items != []%>
-		<h1>Items of shopping list:</h1>
-		
-		<%@list.items.each do |item|%>
-			<ul>
-				<li>
-					<%=item.name%> - <%=item.price%>
-				</li>
-			</ul>
-		<%end%>
-
-	<%else%>
-		<h1>There are not items in this list yet...</h1>
+<%if @list.items != []%>
+	<h1>Items of shopping list:</h1>
+	
+	<%@list.items.each do |item|%>
+		<ul>
+			<li>
+				<%=item.name%> - <%=item.price%>
+			</li>
+		</ul>
 	<%end%>
-</body>
-</html>
+
+<%else%>
+	<h4>There are no items in this list yet...</h4>
+<%end%>
+
+<%=link_to 'Add items to shopping list!', '/families/' + String(@family.id) + '/shopping_lists/' + String(@list.id) + '/edit'%>
