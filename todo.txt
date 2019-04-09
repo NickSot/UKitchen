@@ -3,7 +3,7 @@
 	->Relations(1 user, many families) x
 
 2. Shopping list:
-	-> CRUD
+	-> CRUD x
 	-> belongs to family x
 	-> Many lists
 
