@@ -14,3 +14,14 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+
+function showNavOnClick(){
+    if($(".dropdown").hasClass("show")){
+        $(".dropdown").removeClass("show");
+        $(".dropdown-menu").removeClass("show");
+    }else{
+        $(".dropdown").addClass("show");
+        $(".dropdown-menu").addClass("show");
+    }
+}

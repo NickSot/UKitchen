@@ -4,13 +4,18 @@
             <div class = "row">
                 <div class = "col center-flex">
                     <div class = "dropdown">
-                        <button class="btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <button class="btn" type="button" id="dropdownMenuButton" aria-haspopup="true" onclick="showNavOnClick()" aria-expanded="false">
                             <i class = "fas fa-bars"></i>
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Action</a>
-                            <a class="dropdown-item" href="#">Another action</a>
-                            <a class="dropdown-item" href="#">Something else here</a>
+                            <% if current_user %>
+                                <%= link_to "Profile", user_path(current_user.id), class: "dropdown-item" %>
+                                <div class = "dropdown-divider"> </div>
+                                <%= link_to "Your families", families_index_path, class: "dropdown-item" %>
+                                <%= link_to "Budget", "#" , class: "dropdown-item" %>
+                            <% end %>
+
+                            <%= link_to "Color theme", "#" , class: "dropdown-item" %>
                         </div>
                     </div>
                 </div>
@@ -18,7 +23,15 @@
                     LOGO
                 </div>
                 <div class = "col center-flex">
-                    <i class="fas fa-sign-out-alt"></i>
+                    <% if current_user %>
+                        <%= link_to logout_path do %>
+                            <i class="fas fa-sign-out-alt"></i>
+                        <% end %>
+                    <% else  %>
+                        <%= link_to login_path do %>
+                            <i class="fas fa-sign-in-alt"></i>
+                        <% end %>
+                    <% end %>
                 </div>
             </div>
         </div>
@@ -30,13 +43,13 @@
 
             <span id="nav-center">
                 <li class = "nav-item">
-                    <a href="/families/index" >Shopping List</a>
+                    <a href="/families/index" >Familiy</a>
                 </li>
                 <li class = "nav-item" id="home-span">
                     <a href="/" id="home">Home</a>
                 </li>
                 <li class = "nav-item">
-                    <a href="#">Let's Cook</a>
+                    <a href="#">Cook</a>
                 </li>
             </span>
 

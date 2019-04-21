@@ -9,10 +9,21 @@ $navbar-corners-size: 15%;
     background-color: $navbar_background_color;
     border-radius: 40px;        
     display: block;
- 
+    
+    a{
+        background: $gradient-color;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 150% !important;
+    }
+
     div.dropdown{
         width: fit-content;
     }
+    div.dropdown-menu{
+        border: 5px solid yellowgreen;
+    }
+    
     i{
         background: $gradient-color;
         -webkit-background-clip: text;
@@ -36,10 +47,7 @@ nav{
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    
-    &:hover{
-        padding: $navbar-padding+30px;
-    }
+
     
     ul{
         line-height: 1;
@@ -131,10 +139,13 @@ nav{
 @media (min-width: 991.98px){
    
     nav{
+        transition: padding 0.5s;
+        &:hover{
+            padding: $navbar-padding+30px;
+        }
         ul.nav{
             display: flex !important;
         }
-        transition: padding 0.5s;
     }
     .small-nav{
         display: none;
