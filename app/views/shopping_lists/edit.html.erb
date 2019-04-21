@@ -10,7 +10,7 @@
         <%@items_enum.each do |item|%>
             <li>
                 <%=link_to item.name, "/families/" + String(@family.id) + "/shopping_lists/" + String(@list.id) + "/add_item/" + String(item.id)%>
-            </li>
+            </li>   
         <%end%>
     </ul>
 <%end%>

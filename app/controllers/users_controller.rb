@@ -22,18 +22,12 @@ class UsersController < ApplicationController
   def show
     
     @families = []
-    @show = false
 
-    if ((session[:user_id] != nil) && (Integer(session[:user_id]) == Integer(params[:id])))
-        @show = true
-        
-        user = User.find session[:user_id]
-        puts user.email
-        @families = user.families  
-    else
-      flash[:error] = "You can't access that url!"
-      redirect_to root_path
-    end
+    @show = true
+    
+    user = User.find params[:id]
+    puts user.email
+    @families = user.families  
 
 
   end

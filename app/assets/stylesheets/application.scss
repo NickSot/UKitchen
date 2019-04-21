@@ -7,3 +7,9 @@ div#body{
     min-height: 100%;
     width: auto;
 }
+
+.center-flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

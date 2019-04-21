@@ -1,37 +1,63 @@
 <nav>
-    <ul class = "nav">
-        <span id="nav-logo">
-            <p>LOGO</p>
-        </span>
+    <div class = "container-fluid">
+        <div class = "container small-nav">
+            <div class = "row">
+                <div class = "col center-flex">
+                    <div class = "dropdown">
+                        <button class="btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class = "fas fa-bars"></i>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                        </div>
+                    </div>
+                </div>
+                <div class = "col center-flex">
+                    LOGO
+                </div>
+                <div class = "col center-flex">
+                    <i class="fas fa-sign-out-alt"></i>
+                </div>
+            </div>
+        </div>
 
-        <span id="nav-center">
-            <li class = "nav-item">
-                <a href="/families/index" >Shopping List</a>
-            </li>
-            <li class = "nav-item" id="home-span">
-                <a href="/" id="home">Home</a>
-            </li>
-            <li class = "nav-item">
-                <a href="#">Let's Cook</a>
-            </li>
-        </span>
+        <ul class = "nav">
+            <span id="nav-logo">
+                <p>LOGO</p>
+            </span>
 
-        <span id="nav-user-control">
-            <% if(current_user) %>
+            <span id="nav-center">
                 <li class = "nav-item">
-                    <a href="/users/<%=current_user.id%>" id="username"><%= current_user.username %></a>
+                    <a href="/families/index" >Shopping List</a>
+                </li>
+                <li class = "nav-item" id="home-span">
+                    <a href="/" id="home">Home</a>
                 </li>
                 <li class = "nav-item">
-                    <a href="/logout">Logout</a>
+                    <a href="#">Let's Cook</a>
                 </li>
-            <% else %>
-                <li class = "nav-item">
-                    <a href="/register">Register</a>
-                </li>
-                <li class = "nav-item">
-                    <a href="/login">Login</a>
-                </li>
-            <% end %>
-        </span>
-    </ul>
+            </span>
+
+            <span id="nav-user-control">
+                <% if(current_user) %>
+                    <li class = "nav-item">
+                        <a href="/users/<%=current_user.id%>" id="username"><%= current_user.username %></a>
+                    </li>
+                    <li class = "nav-item">
+                        <a href="/logout">Logout</a>
+                    </li>
+                <% else %>
+                    <li class = "nav-item">
+                        <a href="/register">Register</a>
+                    </li>
+                    <li class = "nav-item">
+                        <a href="/login">Login</a>
+                    </li>
+                <% end %>
+            </span>
+        </ul>
+
+    </div>
 </nav>
