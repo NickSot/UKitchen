@@ -12,9 +12,15 @@ class FamiliesController < ApplicationController
   end
 
   def create
-  	@family = Family.create family_params
+  	@family = Family.new family_params
 
     user = User.find session[:user_id]
+
+    admin = Administrator.create(user_id: user.id)
+
+    @family.administrator = admin
+
+    @family.save
 
     user.families << @family
 
@@ -64,10 +70,14 @@ class FamiliesController < ApplicationController
     user = User.find params[:user_id]
     family = Family.find params[:family_id]
 
-    family.users.delete(user)
-    redirect_to '/families/show/' + String(family.id), notice: 'Successfully kicked' + user.username + 'from your family!'
-    
+    if session[:user_id] == family.administrator.user_id
+      family.users.delete(user)
+      redirect_to '/families/show/' + String(family.id), notice: 'Successfully kicked ' + user.username + ' from your family!'
+    else
+      redirect_to '/families/show/' + String(family.id), notice: 'Cannot kick from a family if you are not the creator!'
     end
+
+  end
 
   private
  

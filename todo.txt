@@ -19,3 +19,13 @@
 4. Mailers:
 	-> Family member notification mailer
 	-> User authentication mailer
+
+
+5.Budget
+	-> Adding general value of item
+	-> expected total value of shopping list
+	-> history of previous transfers
+
+6. Product categories
+
+7. Annual summary of purchased product
