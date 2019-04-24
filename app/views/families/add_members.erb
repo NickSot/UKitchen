@@ -1,13 +1,35 @@
-<div>
+<div class = "container">
+	<div class = "row">
+		<div class = "search-container">
+			<div class = "col"> 
 
-	<ul>
-		<% @users.each do |user| %>
-			<% unless @family.users.include? user  %>
-				<li>
-					<%=link_to user.username, '/families/do_add_member/' + String(user.id) + '/' + String(@family.id)
-					%>
-				</li>
-			<% end %>
-		<% end  %>
-	</ul>
+				<%= form_tag({controller: "families", action: "search"}, method: "get") do %>
+					<div class="input-group mb-3">
+						<div class="input-group-prepend">
+							<%= button_tag(type: "submit") do %>
+								<i class="fas fa-search"></i>
+							<% end %>
+						</div>
+						<%= hidden_field_tag :family_id, @family.id %>
+						<%= text_field_tag :q %>
+					</div>
+
+				<% end %>
+
+				
+			</div>
+		</div>
+	</div>
+	<div class = "row">
+		<ul>
+			<% @users.each do |user| %>
+				<% unless @family.users.include? user  %>
+					<li>
+						<%=link_to user.username, '/families/do_add_member/' + String(user.id) + '/' + String(@family.id)
+						%>
+					</li>
+				<% end %>
+			<% end  %>
+		</ul>
+	</div>
 </div>

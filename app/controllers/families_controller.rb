@@ -79,7 +79,16 @@ class FamiliesController < ApplicationController
 
   end
 
-  private
+  def search
+    s = params[:q]
+    # @users = User.all
+    @users = User.where("username LIKE '%#{s}%'")
+
+    @family = Family.find params[:family_id] 
+    render "add_members"
+  end
+
+private
  
   def require_login
     unless session[:user_id] != nil
