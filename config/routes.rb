@@ -11,7 +11,9 @@ Rails.application.routes.draw do
   get 'families/add_members/:family_id' => 'families#add_members', as: 'add_members'
   get 'families/do_add_member/:user_id/:family_id' => 'families#do_add_member'
   get 'families/:family_id/kick/:user_id' => 'families#kick', as: "family_kick"
-  
+  get 'families/search' => 'families#search'
+
+
   get 'families/:family_id/shopping_lists/new' => 'shopping_lists#new'
   post 'families/:family_id/shopping_lists/new' => 'shopping_lists#create'
   get 'families/:family_id/shopping_lists/:id' => 'shopping_lists#index'
