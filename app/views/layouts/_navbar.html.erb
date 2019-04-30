@@ -41,9 +41,25 @@
                 <img src='/logo.png' alt='LOGO' style='border-radius: 15px; width: 100px; height:100px;'>
             </span>
 
+            <div class = "dropdown">
+                        <button class="btn" type="button" id="dropdownMenuButton" aria-haspopup="true" onclick="showNavOnClick()" aria-expanded="false">
+                            <i class = "fas fa-bars"></i>
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <% if current_user %>
+                                <%= link_to "Profile", user_path(current_user.id), class: "dropdown-item" %>
+                                <div class = "dropdown-divider"> </div>
+                                <%= link_to "Your families", families_index_path, class: "dropdown-item" %>
+                                <%= link_to "Budget", "#" , class: "dropdown-item" %>
+                            <% end %>
+
+                            <%= link_to "Color theme", "#" , class: "dropdown-item" %>
+                        </div>
+                    </div>
+
             <span id="nav-center">
                 <li class = "nav-item">
-                    <a href="/families/index" >Familiy</a>
+                    <a href="/families/index" >Family</a>
                 </li>
                 <li class = "nav-item" id="home-span">
                     <a href="/" id="home">Home</a>

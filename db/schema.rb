@@ -36,6 +36,13 @@ ActiveRecord::Schema.define(version: 2019_04_30_090700) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "family_users", id: false, force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "family_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "items", force: :cascade do |t|
     t.string "name"
     t.decimal "price", precision: 10, scale: 2
