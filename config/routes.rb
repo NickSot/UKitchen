@@ -21,8 +21,6 @@ Rails.application.routes.draw do
   get 'families/:family_id/shopping_lists/:id' => 'shopping_lists#index'
   get 'families/:family_id/shopping_lists/:id/edit' => 'shopping_lists#edit'
   get 'families/:family_id/shopping_lists/:sl_id/add_item/:item_id' => 'shopping_lists#add_item'
-
-  # get 'users/show/:id' => 'users#show'
   
   resources :users
   # SESSION MANAGEMENT
