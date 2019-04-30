@@ -9,8 +9,8 @@
 
 2.1 Item:
 	-> belongs to shopping list x
-	-> CRUD
-	-> many, many items
+	-> CRUD x
+	-> many, many items x
 
 3. Inner site notifications or mail confirmations ???
 	Marto: -> mail confirmation - po-lesno e
@@ -20,8 +20,10 @@
 	-> Family member notification mailer
 	-> User authentication mailer
 
-
 5.Budget
+	->Every family has a Budget
+		-> decrement everytime someone buys something
+		-> delete item from shopping list
 	-> Adding general value of item
 	-> expected total value of shopping list
 	-> history of previous transfers

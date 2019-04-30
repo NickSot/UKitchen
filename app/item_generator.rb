@@ -3,7 +3,7 @@ require '../config/environment.rb'
 listOfItems = []
 if ARGV != []
     ARGV.each do |arg|
-        name = arg.split(',')[0]
+        name = arg.replace(' ', '').split(',')[0]
         price = Float(arg.split(',')[1])
         puts price
 

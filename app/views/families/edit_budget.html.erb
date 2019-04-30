@@ -1,0 +1,7 @@
+<h1> <%= @family.name %> </h1>
+
+
+<%=form_for @family, url: {action: 'do_edit_budget', method: 'PATCH'} do |f|%>
+	Budget: <%=f.text_field :budget%>
+	<%=f.submit 'Submit'%>
+<%end%>

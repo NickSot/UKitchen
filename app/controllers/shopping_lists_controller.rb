@@ -20,6 +20,10 @@ class ShoppingListsController < ApplicationController
 
 	end
 
+	def buy_item
+		
+	end
+
 	def edit
 		@family = Family.find(params[:family_id])
 

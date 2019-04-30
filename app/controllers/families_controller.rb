@@ -40,10 +40,23 @@ class FamiliesController < ApplicationController
     redirect_to '/families/edit/' + String(family.id)
   end
 
+  def edit_budget
+    @family = Family.find params[:family_id]
+
+    render 'edit_budget'
+  end
+
+  def do_edit_budget
+    family = Family.find params[:family_id]
+
+    family.update_attributes family_params
+
+    redirect_to '/families/show/' + String(family.id)
+  end
+
   def show
   	@family = Family.find params[:id]
     
-
   	@members = @family.users
 
   	render 'show'
@@ -51,9 +64,7 @@ class FamiliesController < ApplicationController
 
   def add_members
     @users = User.all
-    # @user_to_add = User.find params[:user_id]
     @family = Family.find params[:family_id]
-
   end
 
   def do_add_member
@@ -98,6 +109,6 @@ private
   end
 
   def family_params
-  	return params.require(:family).permit(:name)
+  	return params.require(:family).permit(:name, :budget)
   end
 end

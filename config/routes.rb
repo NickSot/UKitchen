@@ -12,6 +12,8 @@ Rails.application.routes.draw do
   get 'families/do_add_member/:user_id/:family_id' => 'families#do_add_member'
   get 'families/:family_id/kick/:user_id' => 'families#kick', as: "family_kick"
   get 'families/search' => 'families#search'
+  get 'families/edit_budget/:family_id' => 'families#edit_budget'
+  patch 'families/do_edit_budget/:family_id' => 'families#do_edit_budget'
 
 
   get 'families/:family_id/shopping_lists/new' => 'shopping_lists#new'
