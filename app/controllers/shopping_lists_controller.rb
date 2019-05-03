@@ -41,12 +41,12 @@ class ShoppingListsController < ApplicationController
 
 		item = ItemsEnum.find(params[:item_id])
 
-		if @list.items.include? Item.all.where(name: item.name, price: item.price)
+		if @list.items.include? Item.all.where(name: item.name)
 			redirect_to "/families/" + String(@family.id) + "/shopping_lists/" + String(@list.id)
 			return
 		end
 
-		@list.items << Item.find_or_create_by(name:item.name, price: item.price)
+		@list.items << Item.find_or_create_by(name:item.name)
 
 		redirect_to "/families/" + String(@family.id) + "/shopping_lists/" + String(@list.id)
 	end

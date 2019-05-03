@@ -3,11 +3,9 @@ require '../config/environment.rb'
 listOfItems = []
 if ARGV != []
     ARGV.each do |arg|
-        name = arg.replace(' ', '').split(',')[0]
-        price = Float(arg.split(',')[1])
-        puts price
+        name = arg.replace(' ', '')
 
-        listOfItems << {'name' => name, 'price' => price}
+        listOfItems << {'name' => name}
 
         
     end
@@ -15,13 +13,12 @@ else
     file = File.open('./items.txt').read
 
     file.each_line do |line|
-        name = line.split(',')[0]
-        price = Float(line.split(',')[1])
+        name = line
 
-        listOfItems << {'name' => name, 'price' => price}
+        listOfItems << {'name' => name}
     end
 end
 
-File.truncate('./items.txt', 0)
+# File.truncate('./items.txt', 0)
 
 ItemsEnum.create listOfItems
