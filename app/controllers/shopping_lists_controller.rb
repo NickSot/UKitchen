@@ -41,7 +41,18 @@ class ShoppingListsController < ApplicationController
 
 		item = ItemsEnum.find(params[:item_id])
 
+		if @family.budget > item.price
+			@family.budget -= item.price
+
+			@family.save
+		else
+			redirect_to '/families/show/' + String(@family.id), notice: 'You have insufficient funds!'
+
+			return
+		end
+
 		if @list.items.include? Item.all.where(name: item.name)
+
 			redirect_to "/families/" + String(@family.id) + "/shopping_lists/" + String(@list.id)
 			return
 		end
