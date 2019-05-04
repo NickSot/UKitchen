@@ -1,5 +1,5 @@
 
-<%= form_tag('/login', method: :post) do %>
+<%= form_tag('/login', method: :post, class: "form") do %>
     <%= label_tag(:username, "Enter Username") %>
     <%= text_field_tag(:username) %>
     <%= label_tag(:password, "Enter Password") %>

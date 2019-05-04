@@ -1,8 +1,8 @@
 
 
-function something(path){
-    console.log("path");
-    // console.log(itemId);
-    // console.log("dude");
-    // $(".add_item").attr("action", path+String(itemId));
+function passToModal(familyId, shoppingListId, itemId, itemName){
+    path = '/families/' + familyId + '/shopping_lists/' + shoppingListId + '/add_item/' + itemId;
+    $(".add-item").attr("action", path);
+    console.log(itemName);
+    $("#modal-lable").text(itemName)
 }

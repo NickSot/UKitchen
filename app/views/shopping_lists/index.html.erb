@@ -7,7 +7,7 @@
 	<%@list.items.each do |item|%>
 		<ul>
 			<li>
-				<%=item.name%> - <%=item.price%>
+				<%=item.items_enum.name%> - <%= String(item.quantity) + " " + item.quantity_unit %>
 			</li>
 		</ul>
 	<%end%>

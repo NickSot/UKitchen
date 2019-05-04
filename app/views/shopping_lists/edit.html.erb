@@ -1,7 +1,5 @@
-
+<%= stylesheet_link_tag "shopping_lists" %>
 <h1> <%= @list.name %> </h1>
-<%= path = String('/families/' + String(@family.id) + '/shopping_lists/' + String(@list.id) + '/add_item/') %>
-<%= puts(path) %>
 <%if @items_enum != []%>
     <h2>
         Items to add to the shopping list!
@@ -9,9 +7,7 @@
     <ul>
         <%@items_enum.each do |item|%>
             <li>
-                <% currentPath = path + String(item.id) %>
-                <% puts("DUUDDEEE:" + currentPath) %>
-                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" onclick=`something(<%=path%>)`>
+                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#quantityModal" onclick='passToModal(<%= @family.id %>, <%= @list.id%>, <%= item.id %>, "<%= "" + item.name.strip.capitalize %>")'>
                    <%= item.name %>
                 </button>
                
@@ -22,24 +18,24 @@
    
 
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="quantityModal" tabindex="-1" role="dialog" aria-labelledby="quantityModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                        <h5 class="modal-title" id="modal-lable"></h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <%= form_tag('', :class => "add-item") do %>
+                    <%= form_tag '', :class => "add-item" do %>
                         <div class="modal-body" style = "color: blue;">
-                            <input type="number" placeholder = "quantity">
-                            <input type="text" placeholder = "unit">
+                            <input type="number" name="quantity" placeholder = "quantity">
+                            <input type="text" name="quantity_unit" placeholder = "unit(eg. grams, kilos, litres, meters)">
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                             <%# <button type="button" class="btn btn-primary">Save changes</button> %>
-                            <button type="submit" >Add</button>
+                            <button type="submit" class = "stunning-button">Add</button>
                         </div>
                     <% end %>
                 </div>

@@ -62,23 +62,10 @@ h1{
 div.form-label{
     text-align: center;
 }
-
-form{
-    background-color: rgba(0, 0, 0, 0.560);
-    border: 5px solid yellowgreen;
-    border-radius: 25px;
-    padding: 2%;
-    
-    input[type=text], input[type=password] {
-        font-size: 150%;
-        width: 100%;
-        margin-bottom: 1%;
-    } 
-    input[type=submit]{
+input[type=submit], button.stunning-button{
         color: white;
         font-size: 125%;
         font-weight: 600;
-        margin-top: 20px;
         width: 100px;
         padding: 7px;
 
@@ -93,16 +80,32 @@ form{
         -webkit-transition: all .4s ease-in-out;
         transition: all .4s ease-in-out;
 
-        &:hover{
-            background-position: 100% 0;
-            moz-transition: all .4s ease-in-out;
-            -o-transition: all .4s ease-in-out;
-            -webkit-transition: all .4s ease-in-out;
-            transition: all .4s ease-in-out;
-        }
-        &:focus{
-            outline: none;
-        }
+    &:hover{
+        background-position: 100% 0;
+        moz-transition: all .4s ease-in-out;
+        -o-transition: all .4s ease-in-out;
+        -webkit-transition: all .4s ease-in-out;
+        transition: all .4s ease-in-out;
+    }
+    &:focus{
+        outline: none;
+    }
+}
+
+form.form{
+    background-color: rgba(0, 0, 0, 0.560);
+    border: 5px solid yellowgreen;
+    border-radius: 25px;
+    padding: 2%;
+    
+    input[type=text], input[type=password] {
+        font-size: 150%;
+        width: 100%;
+        margin-bottom: 1%;
+    } 
+
+    input[type=submit]{
+        margin-top: 20px;   
     }
 }
 

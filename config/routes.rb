@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   post 'families/:family_id/shopping_lists/new' => 'shopping_lists#create'
   get 'families/:family_id/shopping_lists/:id' => 'shopping_lists#index'
   get 'families/:family_id/shopping_lists/:id/edit' => 'shopping_lists#edit'
-  get 'families/:family_id/shopping_lists/:sl_id/add_item/:item_id' => 'shopping_lists#add_item'
+  post 'families/:family_id/shopping_lists/:sl_id/add_item/:item_id' => 'shopping_lists#add_item'
   
   resources :users
   # SESSION MANAGEMENT

@@ -1,5 +1,5 @@
 
-<%=form_for :shopping_list, url: {action: 'new', method: 'POST'} do |f|
+<%=form_for :shopping_list, url: {action: 'new', method: 'POST'}, :html => {class: "form"} do |f|
 %>
 	Shopping list name: <%=f.text_field :name%>
 	<br>

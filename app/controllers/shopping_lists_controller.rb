@@ -1,4 +1,6 @@
 class ShoppingListsController < ApplicationController
+	skip_before_action :verify_authenticity_token, only: [:add_item]  
+
 	def index
 		@family = Family.find(params[:family_id])
 		puts()
@@ -38,26 +40,20 @@ class ShoppingListsController < ApplicationController
 		puts "List id: " + String(params[:family_id])
 
 		@list = Family.find(params[:family_id]).shopping_lists.find(params[:sl_id])
-
-		item = ItemsEnum.find(params[:item_id])
-
-		if @family.budget > item.price
-			@family.budget -= item.price
-
-			@family.save
-		else
-			redirect_to '/families/show/' + String(@family.id), notice: 'You have insufficient funds!'
-
-			return
+		quantity = params[:quantity]
+		
+		if !quantity
+			quantity = 1;
 		end
+		quantity_unit = params[:quantity_unit]
+		
+		puts("STATS: \n")
+		puts(quantity + " " + quantity_unit)
+		itemToBeCreated = ItemsEnum.find(params[:item_id])
+		puts(itemToBeCreated.name)
+		item = Item.new(items_enum: itemToBeCreated, shopping_list: @list, family: @family, price: nil, quantity: quantity, quantity_unit: quantity_unit)
 
-		if @list.items.include? Item.all.where(name: item.name)
-
-			redirect_to "/families/" + String(@family.id) + "/shopping_lists/" + String(@list.id)
-			return
-		end
-
-		@list.items << Item.find_or_create_by(name:item.name)
+		item.save
 
 		redirect_to "/families/" + String(@family.id) + "/shopping_lists/" + String(@list.id)
 	end
