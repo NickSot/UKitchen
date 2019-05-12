@@ -18,10 +18,12 @@ Rails.application.routes.draw do
 
   get 'families/:family_id/shopping_lists/new' => 'shopping_lists#new'
   post 'families/:family_id/shopping_lists/new' => 'shopping_lists#create'
-  get 'families/:family_id/shopping_lists/:id' => 'shopping_lists#index'
+  get 'families/:family_id/shopping_lists/:id' => 'shopping_lists#index', as: 'shopping_list'
   get 'families/:family_id/shopping_lists/:id/edit' => 'shopping_lists#edit'
   post 'families/:family_id/shopping_lists/:sl_id/add_item/:item_id' => 'shopping_lists#add_item'
-  
+  delete 'families/:family_id/shopping_lists/:sl_id/:item_id' => 'shopping_lists#delete_item', as: "delete_item"
+  patch 'families/:family_id/shopping_lists/:sl_id/buy/:item_id' => "shopping_lists#buy_item", as: "buy_item"
+
   resources :users
   # SESSION MANAGEMENT
   get 'login', to: 'session#new', as: "login" 

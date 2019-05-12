@@ -15,6 +15,9 @@
 //= require turbolinks
 //= require_tree .
 
+// $(document).ready(function () {
+//     $('[data-toggle="tooltip"]').tooltip();
+// });
 
 function showNavOnClick(){
     if($(".dropdown").hasClass("show")){

@@ -21,7 +21,7 @@
 	</div>
 
 	<div class = "col-12">
-		<h2> shopping lists </h2>
+		<h2> Shopping lists </h2>
 		<% if @family.shopping_lists != [] %>
 			<ul>
 				<%@family.shopping_lists.each do |sl|%>
@@ -35,6 +35,21 @@
 		<% end %>
 	</div>
 	<br>
+	
+	<div class = "col-12">
+		<h2> Current stock </h2>
+		<% if @items != [] %>
+			<ul>
+				<%@items.each do |item|%>
+					<li>
+						<p> <%= item.items_enum.name %> - <%= item.quantity %> <%= item.quantity_unit %></p>
+					</li>
+				<%end%>	
+			</ul>
+		<% else %>
+			<h4> No items yet!</h4>
+		<% end %>
+	</div>
 
 	<div class = "col-12">
 		<%=link_to 'Add members', add_members_path( String(@family.id) ) %><br>
