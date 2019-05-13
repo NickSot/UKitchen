@@ -87,7 +87,7 @@ class FamiliesController < ApplicationController
       family.users.delete(user)
       redirect_to '/families/show/' + String(family.id), notice: 'Successfully kicked ' + user.username + ' from your family!'
     else
-      redirect_to '/families/show/' + String(family.id), notice: 'Cannot kick from a family if you are not the creator!'
+      redirect_to '/families/show/' + String(family.id), alert: 'Cannot kick from a family if you are not the creator!'
     end
 
   end

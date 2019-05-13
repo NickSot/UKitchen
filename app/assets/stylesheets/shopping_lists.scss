@@ -6,3 +6,19 @@
     color: black;    
 }
 
+
+a.admin-member-view{
+    
+    color: yellowgreen;
+    font-weight: 900;
+    font-size: 120%;
+    &:visited{
+        color: yellowgreen;
+    }
+}
+
+#budget-announce{
+    font-weight: 600;
+    color: yellowgreen;
+    font-size: 150% !important; 
+}

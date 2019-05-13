@@ -1,8 +1,8 @@
 
-
-
 <% flash.each do |key, value| %>
-  <% puts("On the flash part...\n") %>
+    <% if key == "alert" %>
+      <% key = "error" %>
+    <% end %>
     <div class="alert alert-<%= key %>"><%= value %></div>
 <% end %>
 
