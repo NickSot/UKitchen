@@ -1,7 +1,7 @@
 <h1> <%= @family.name %> </h1>
 
 
-<%=form_for @family, url: {action: 'edit', method: 'PATCH'} do |f|%>
+<%=form_for @family, url: {action: 'edit', method: 'PATCH'}, html: {class: "form"} do |f|%>
 	Name: <%=f.text_field :name%>
 	<%=f.submit 'Submit'%>
 <%end%>
