@@ -1,5 +1,5 @@
 class ShoppingListsController < ApplicationController
-	skip_before_action :verify_authenticity_token, only: [:add_item]  
+	skip_before_action :verify_authenticity_token, only: [:add_item, :buy_item]  
 
 	def index
 		@family = Family.find(params[:family_id])
@@ -41,10 +41,32 @@ class ShoppingListsController < ApplicationController
 		family = Family.find(params[:family_id])
 		list = family.shopping_lists.find(params[:sl_id])
 		item = list.items.find(params[:item_id])
-		item.bought = true
-		item.save
-		redirect_to shopping_list_path(family.id, list.id), notice: "Successfully added item " + item.items_enum.name + " to " + family.name + "'s current stock"
+		item_name = item.items_enum.name
 		
+		quantity = params[:quantity].to_i
+		existingItem = Item.find_by items_enum: item.items_enum, quantity_unit: item.quantity_unit, bought: true
+		
+		if !quantity
+			quantity = item.quantity
+		end
+		if not existingItem
+			if quantity < item.quantity
+				newItemQuantity = item.quantity - quantity
+				item.quantity = quantity
+
+				newItem = Item.new(items_enum: item.items_enum, shopping_list: list, family: family, price: nil, quantity: newItemQuantity, quantity_unit: item.quantity_unit)
+				newItem.save				
+			end
+			item.bought = true
+			item.save
+
+		else
+			existingItem.quantity += item.quantity
+			existingItem.save
+			item.destroy
+		end
+
+		redirect_to shopping_list_path(family.id, list.id), notice: "Successfully added item " + item_name + " to " + family.name + "'s current stock"
 	end
 
 	def edit
@@ -65,16 +87,14 @@ class ShoppingListsController < ApplicationController
 		end
 
 		if @list.items
-			.map{|item| [item.items_enum, item.quantity_unit]}
-			.include?([itemToBeCreated, quantity_unit])
+			.map{|item| [item.items_enum, item.quantity_unit, item.bought]}
+			.include?([itemToBeCreated, quantity_unit, false])
 			item = Item.find_by items_enum: itemToBeCreated, quantity_unit: quantity_unit
 			item.quantity += quantity.to_i
-			item.save
 		else
 			item = Item.new(items_enum: itemToBeCreated, shopping_list: @list, family: @family, price: nil, quantity: quantity, quantity_unit: quantity_unit)
-
-			item.save
 		end
+		item.save
 
 		redirect_to "/families/" + String(@family.id) + "/shopping_lists/" + String(@list.id)
 	end

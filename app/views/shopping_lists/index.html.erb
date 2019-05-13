@@ -1,3 +1,4 @@
+<%= stylesheet_link_tag "shopping_lists" %>
 
 <div class = "row">
 	<div class = "col-12">	
@@ -8,8 +9,7 @@
 		<div class = "col-12">
 			<h3>Items of shopping list:</h3>
 		</div>
-
-		
+	
 		<div class = "col-12">
 			<ul>
 				<%@items.each do |item|%>
@@ -19,14 +19,11 @@
 								<%=item.items_enum.name%> - <%= String(item.quantity) + " " + item.quantity_unit %>
 							</div>
 							<div class="col">
-							<!--
-								<button class="btn" onclick = "passItemToBuyToModal('<%= buy_item_path(@family.id, @list.id, item.id)%>', '<%= item.quantity_unit %>')" data-toggle = "modal" data-target="#quantityAndPriceModal">
-									<i class="fas fa-shopping-cart"></i>
-								</button>
-							-->
-								<%= link_to buy_item_path(@family.id, @list.id, item.id), {'data-toggle' => 'tooltip', 'data-placement'=>'top', :title => "Buy", :method => "PATCH"} do %>
-									<i class="fas fa-shopping-cart"></i>
-								<% end %>
+								<span data-toggle = 'tooltip' data-placement = 'top' title = "Buy">
+									<button class="btn" onclick = "passItemToBuyToModal('<%= buy_item_path(@family.id, @list.id, item.id)%>', '<%= item.quantity_unit %>')" data-toggle = "modal" data-target="#quantityAndPriceModal">
+										<i class="fas fa-shopping-cart"></i>
+									</button>
+								</span>
 							</div>
 							<div class="col">
 								<%= link_to delete_item_path(@family.id, @list.id, item.id), {'data-toggle' => 'tooltip', 'data-placement'=>'top', :title => "Delete", :method => :delete} do %>
@@ -56,7 +53,7 @@
                         <span aria-hidden="true">&times;</span>
                         </button>
                     </div>
-                    <%= form_tag '', :class => "add-item" do %>
+                    <%= form_tag '', :class => "add-item", :method => "PATCH" do %>
                         <div class="modal-body" style = "color: blue;">
                             <input type="number" name="price" placeholder = "price">
                             <input type="number" name="quantity">
