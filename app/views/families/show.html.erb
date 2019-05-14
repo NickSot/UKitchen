@@ -9,6 +9,13 @@
 			Current budget:</br> <span id="budget-announce"><%= @family.budget %></span>
 		</h2>
 	</div>
+	<%if @transaction%>
+		<div class = "col-5 center-flex">
+			<h2 class = "text-center text-italic">
+				Most bought by category:</br> <span id="statistics-announce"><%= @transaction.category_name + " : " +  @transaction.price.to_s + " " + @transaction.price_unit%></span>
+			</h2>
+		</div>
+	<%end%>
 
 
 	<div class= "col-12">
