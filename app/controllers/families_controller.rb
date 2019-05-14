@@ -50,7 +50,8 @@ class FamiliesController < ApplicationController
     family = Family.find params[:family_id]
 
     family.update_attributes family_params
-
+    family.current_budget_state = family.weekly_budget
+    family.save
     redirect_to '/families/show/' + String(family.id)
   end
 
@@ -60,12 +61,12 @@ class FamiliesController < ApplicationController
     @members = @family.users
     
     @items = @family.items.where(bought:true)
-
+    if is_beginning_of_week()
+      @family.current_budget_state = @family.weekly_budget
+    end 
     transactions = Transaction.having("family_id = " + @family.id.to_s).group(:category_name, :id)
 
     @transaction = transactions.order(price: :desc).first
-
-  	render 'show'
   end
 
   def add_members
@@ -114,7 +115,11 @@ private
     end
   end
 
+  def is_beginning_of_week
+		return Date.today.strftime("%a").include?("Mon")
+	end
+
   def family_params
-  	return params.require(:family).permit(:name, :budget)
+  	return params.require(:family).permit(:name, :weekly_budget)
   end
 end

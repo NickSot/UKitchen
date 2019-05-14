@@ -1,7 +1,7 @@
 <h1> <%= @family.name %> </h1>
 
 
-<%=form_for @family, url: {action: 'do_edit_budget', method: 'PATCH'} do |f|%>
-	Budget: <%=f.text_field :budget%>
+<%=form_for @family, url: {action: 'do_edit_budget', method: 'PATCH'},  html: {class: "form"} do |f|%>
+	Weekly Budget: <%=f.text_field :weekly_budget%>
 	<%=f.submit 'Submit'%>
 <%end%>

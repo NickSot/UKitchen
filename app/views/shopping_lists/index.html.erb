@@ -55,14 +55,14 @@
                     </div>
                     <%= form_tag '', :class => "add-item", :method => "PATCH" do %>
                         <div class="modal-body" style = "color: blue;">
-                            <input type="number" name="price" placeholder = "price">
+                            <input type="decimal" name="price" placeholder = "price(a unit)">
                             <input type="number" name="quantity">
-                            <input type="text" name="price_unit" placeholder = "currency(eg.levs, euro, dollars, pounds etc.)">
+                            <%# <input type="text" name="price_unit" placeholder = "currency(eg.levs, euro, dollars, pounds etc.)"> %>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                             <%# <button type="button" class="btn btn-primary">Save changes</button> %>
-                            <button type="submit" class = "stunning-button">Buy</button>
+                            <button type="submit" class="stunning-button">Buy</button>
                         </div>
                     <% end %>
                 </div>

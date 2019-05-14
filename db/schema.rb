@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_14_064426) do
+ActiveRecord::Schema.define(version: 2019_05_14_083052) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,9 +24,10 @@ ActiveRecord::Schema.define(version: 2019_05_14_064426) do
   create_table "families", force: :cascade do |t|
     t.string "name"
     t.integer "administrator_id"
-    t.decimal "budget", precision: 10, scale: 2
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.decimal "weekly_budget", precision: 10, scale: 2, default: "0.0"
+    t.decimal "current_budget_state", precision: 10, scale: 2, default: "0.0"
   end
 
   create_table "families_users", force: :cascade do |t|
@@ -70,10 +71,10 @@ ActiveRecord::Schema.define(version: 2019_05_14_064426) do
   end
 
   create_table "transactions", force: :cascade do |t|
+    t.integer "family_id"
     t.string "category_name"
     t.decimal "price", precision: 10, scale: 2
     t.string "price_unit"
-    t.integer "family_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

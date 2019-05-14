@@ -1,12 +1,18 @@
-<%= stylesheet_link_tag "shopping_lists" %>
+<%= stylesheet_link_tag "families" %>
 <div class = "row">
-	<div class = "col-7">
+	<div class = "col-7 center-vertically-flex">
 	<h1> <%= @family.name %> </h1>
 	</div>
 	
-	<div class = "col-5 center-flex">
+	<div class = "col-5 center-flex budget-plan-view">
+		<p style = "margin:0;"> Weekly budget:  <%= @family.weekly_budget %></p>
 		<h2 class = "text-center text-italic">
-			Current budget:</br> <span id="budget-announce"><%= @family.budget %></span>
+			Weekly budget state:</br> 
+			<% if @family.current_budget_state < 0 %>
+				<span id="budget-announce" class="bad-notice"><%= @family.current_budget_state %></span>
+			<% else %>
+				<span id="budget-announce" class="good-notice"><%= @family.current_budget_state %></span>
+			<% end %>
 		</h2>
 	</div>
 	<%if @transaction%>
