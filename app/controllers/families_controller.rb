@@ -61,6 +61,10 @@ class FamiliesController < ApplicationController
     
     @items = @family.items.where(bought:true)
 
+    transactions = Transaction.having("family_id = " + @family.id.to_s).group(:category_name, :id)
+
+    @transaction = transactions.order(price: :desc).first
+
   	render 'show'
   end
 

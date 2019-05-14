@@ -54,11 +54,33 @@ class ShoppingListsController < ApplicationController
 				newItemQuantity = item.quantity - quantity
 				item.quantity = quantity
 
-				newItem = Item.new(items_enum: item.items_enum, shopping_list: list, family: family, price: nil, quantity: newItemQuantity, quantity_unit: item.quantity_unit)
+				newItem = Item.new(items_enum: item.items_enum, shopping_list: list, family: family, price: params[:price].to_i, quantity: newItemQuantity, quantity_unit: item.quantity_unit)
 				newItem.save				
 			end
+
 			item.bought = true
 			item.save
+
+			puts item
+
+			transaction = Transaction.new
+
+			transaction.category_name = item.items_enum.category_name
+			transaction.price = params[:price].to_f * params[:quantity].to_i
+			transaction.price_unit = params[:price_unit]
+			transaction.family_id = family.id
+			
+			transaction.save
+
+			puts 'HERE'
+
+			puts transaction
+
+			puts family
+
+			family.budget -= transaction.price
+
+			family.save
 
 		else
 			existingItem.quantity += item.quantity

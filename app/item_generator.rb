@@ -13,13 +13,15 @@ else
 
     file.each_line do |line|
         line.delete!("\n")
-        name = line
+        line = line.split(' ')
+        name = line[0]
+        category = line[1]
         found = false;
         
         currentItems.each{|item| item['name'].include?(name) ? found = true : nil  }
 
         if !found
-            newItems << {'name' => name}
+            newItems << {'name' => name.gsub('_', ' '), 'category_name' => category}
         end
     end
     puts(newItems.empty? ? "Nothing to be done...\n" : newItems )

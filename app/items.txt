@@ -1,7 +1,7 @@
-meat
-bread
-sweatbread
-milk
-chedar
-yellow cheese
-tomato soup
+пуйка meat
+bread grain
+sweatbread grain
+milk milk
+chedar milk
+yellow_cheese milk
+tomato_soup soups
