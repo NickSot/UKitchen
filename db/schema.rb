@@ -71,10 +71,10 @@ ActiveRecord::Schema.define(version: 2019_05_14_083052) do
   end
 
   create_table "transactions", force: :cascade do |t|
-    t.integer "family_id"
     t.string "category_name"
     t.decimal "price", precision: 10, scale: 2
     t.string "price_unit"
+    t.integer "family_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
