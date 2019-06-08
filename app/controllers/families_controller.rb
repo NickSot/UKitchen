@@ -48,7 +48,7 @@ class FamiliesController < ApplicationController
 
   def do_edit_budget
     family = Family.find params[:family_id]
-
+    family.budget_duedate = find_last_day_of_week()
     family.update_attributes family_params
     family.current_budget_state = family.weekly_budget
     family.save
@@ -61,8 +61,10 @@ class FamiliesController < ApplicationController
     @members = @family.users
     
     @items = @family.items.where(bought:true)
-    if is_beginning_of_week()
+    if has_one_week_passed(@family.budget_duedate)
       @family.current_budget_state = @family.weekly_budget
+      @family.budget_duedate = find_last_day_of_week()
+      @family.save
     end 
     transactions = Transaction.having("family_id = " + @family.id.to_s).group(:category_name, :id)
 
@@ -115,9 +117,14 @@ private
     end
   end
 
-  def is_beginning_of_week
-		return Date.today.strftime("%a").include?("Mon")
+  def has_one_week_passed(budget_duedate)
+    return Date.today > budget_duedate
 	end
+
+  def find_last_day_of_week
+    date = Date.today();
+    return date.at_end_of_week;
+  end
 
   def family_params
   	return params.require(:family).permit(:name, :weekly_budget)

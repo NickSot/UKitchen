@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_05_14_083052) do
+ActiveRecord::Schema.define(version: 2019_06_08_165906) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 2019_05_14_083052) do
     t.datetime "updated_at", null: false
     t.decimal "weekly_budget", precision: 10, scale: 2, default: "0.0"
     t.decimal "current_budget_state", precision: 10, scale: 2, default: "0.0"
+    t.date "budget_duedate", default: DateTime.now.to_date
   end
 
   create_table "families_users", force: :cascade do |t|

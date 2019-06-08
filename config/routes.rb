@@ -31,6 +31,10 @@ Rails.application.routes.draw do
   get 'logout', to: 'session#destroy', as: 'logout' 
   get 'register', to: 'users#new', as: 'register'
   
+
+  get 'cooking', to: 'cooking#show'
+
+
   # root 'users#index'
   root 'welcome#show', as: 'root'
 end
