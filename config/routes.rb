@@ -34,6 +34,7 @@ Rails.application.routes.draw do
   get 'cooking', to: 'cooking#show'
 
   get 'recipes' => 'recipes#index'
+  get 'recipes/:id' => 'recipes#show'
 
   # root 'users#index'
   root 'welcome#show', as: 'root'

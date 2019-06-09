@@ -6,7 +6,13 @@ class RecipesController < ApplicationController
     end
 
     def show
+        id = params[:id]
 
+        @recipe = Recipe.find id
+
+        @details = ItemsRecipe.where(recipe_id: id)
+
+        render 'show'
     end
 
 end

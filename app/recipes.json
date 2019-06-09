@@ -1,8 +1,29 @@
 {
-    "recipe" :
-        [
+    "recipe1" :
+        {
+            "name": "sample recipe",
+            "ingredients": [
+                {
+                    "id": 1,
+                    "quantity": 1,
+                    "quantity_unit": "litre"
+                },
+                {
+                    "id": 2,
+                    "quantity": 2,
+                    "quantity_unit": "kg"
+                }
+            ]
+        },
+    "recipe2":
+    {
+        "name": "sample_recipe1",
+        "ingredients": [
             {
-                "name": "sample_name"
+                "id": 2,
+                "quantity": 1,
+                "quantity_unit": "kg"
             }
         ]
+    }
 }
