@@ -4,8 +4,18 @@
 
 </h1>
 
+<form action="/recipes/", method="GET">
+    Search by recipe name: <input type="text", name="recipe_name">
+    <input type="submit" value="Submit">
+</form>
+
+<br>
+<br>
+
+<h3>Recipes:</h3>
+
 <ul>
-    <%Recipe.all.each do |recipe|%>
+    <%@recipes.each do |recipe|%>
         <li>
             <%= link_to  recipe.name, '/recipes/' + String(recipe.id)%>
         </li>

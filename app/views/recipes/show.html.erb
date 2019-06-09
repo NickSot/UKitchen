@@ -3,11 +3,39 @@
 </h1>
 
 <ul>
+    <%counter = 0%>
+
     <%@recipe.ingredients.each do |ingredient|%>
         <li>
             <%=ingredient.name%>
 
-            <%="Quantity" + String(@details[0].quantity) + " " + @details[0].quantity_unit%>
+            <%="Quantity " + String(@details[counter].quantity) + " " + @details[counter].quantity_unit%>
+
+            <%counter+=1%>
         </li>
     <%end%>
 </ul>
+
+<%@families.each do |family|%>
+    <%=family.name + ":"%>
+    <br>
+
+    <%counter = 0%>
+
+    <%@recipe.ingredients.map{|ing| ing.name}.each do |ingredient|%>
+        <%if not family.items.map{|item| item.items_enum.name}.include?(ingredient)%>
+            <%=ingredient + " is missing in your stock!"%>
+            <br>
+        <%else%>
+            <%family.items.each do |item|%>
+                <%if ingredient == item.items_enum.name and @details[counter].quantity > item.quantity and @details[counter].quantity_unit == item.quantity_unit%>
+                    <%=item.quantity%>
+                    <%="#{@details[counter].quantity - item.quantity} #{@details[counter].quantity_unit} of #{ingredient} is missing in your stock!"%>
+                    <br>
+                <%end%>
+            <%end%>
+        <%end%>
+
+        <%counter+=1%>
+    <%end%>
+<%end%>
