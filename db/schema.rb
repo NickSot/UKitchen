@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_08_165906) do
+ActiveRecord::Schema.define(version: 2019_06_09_105342) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 2019_06_08_165906) do
     t.datetime "updated_at", null: false
     t.decimal "weekly_budget", precision: 10, scale: 2, default: "0.0"
     t.decimal "current_budget_state", precision: 10, scale: 2, default: "0.0"
-    t.date "budget_duedate", default: DateTime.now.to_date
+    t.date "budget_duedate", default: "2019-06-09"
   end
 
   create_table "families_users", force: :cascade do |t|
@@ -60,6 +60,20 @@ ActiveRecord::Schema.define(version: 2019_06_08_165906) do
   create_table "items_enums", force: :cascade do |t|
     t.string "name"
     t.string "category_name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "items_recipes", force: :cascade do |t|
+    t.integer "recipe_id"
+    t.integer "item_id"
+    t.decimal "quantity", precision: 10, scale: 2
+    t.string "quantity_unit"
+  end
+
+  create_table "recipes", force: :cascade do |t|
+    t.string "name"
+    t.binary "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
