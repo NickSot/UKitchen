@@ -53,12 +53,12 @@ ActiveRecord::Schema.define(version: 2019_06_09_123602) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.decimal "quantity", precision: 10, scale: 2
-    t.string "quantity_unit"
     t.integer "items_enum_id"
   end
 
   create_table "items_enums", force: :cascade do |t|
     t.string "name"
+    t.string "quantity_unit"
     t.string "category_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false

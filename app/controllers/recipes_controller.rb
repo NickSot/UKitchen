@@ -7,20 +7,13 @@ class RecipesController < ApplicationController
         else
             @recipes = Recipe.where("name like ?", "%#{params[:recipe_name]}%")
         end
-
-        render 'index'
     end
 
     def show
         id = params[:id]
-
         @recipe = Recipe.find id
-
         @details = ItemsRecipe.where(recipe_id: id)
-
         @families = User.find(session[:user_id]).families
-
-        render 'show'
     end
 
 end

@@ -46,7 +46,7 @@ class ShoppingListsController < ApplicationController
 		params_price = params[:price].to_f
 		params_quantity = params[:quantity].to_i
 
-		existingItem = Item.find_by items_enum: item.items_enum, quantity_unit: item.quantity_unit, bought: true
+		existingItem = Item.find_by items_enum: item.items_enum, bought: true
 		if params_quantity == 0
 			params_quantity = item.quantity
 		end
@@ -56,7 +56,7 @@ class ShoppingListsController < ApplicationController
 				newItemQuantity = item.quantity - params_quantity
 				item.quantity = params_quantity
 
-				newItem = Item.new(items_enum: item.items_enum, shopping_list: list, family: family, price: params[:price].to_i, quantity: newItemQuantity, quantity_unit: item.quantity_unit)
+				newItem = Item.new(items_enum: item.items_enum, shopping_list: list, family: family, price: params[:price].to_i, quantity: newItemQuantity)
 				newItem.save				
 			end
 
@@ -91,14 +91,13 @@ class ShoppingListsController < ApplicationController
 	def edit
 		@family = Family.find(params[:family_id])
 		@list = @family.shopping_lists.find(params[:id])
-		@items_enum = ItemsEnum.all
+		@items_enum = ItemsEnum.all.order("category_name")
 	end
 
 	def add_item
 		@family = Family.find(params[:family_id])
 		@list = Family.find(params[:family_id]).shopping_lists.find(params[:sl_id])
 		quantity = params[:quantity]
-		quantity_unit = params[:quantity_unit]
 		itemToBeCreated = ItemsEnum.find(params[:item_id])		
 		
 		if !quantity
@@ -106,12 +105,12 @@ class ShoppingListsController < ApplicationController
 		end
 
 		if @list.items
-			.map{|item| [item.items_enum, item.quantity_unit, item.bought]}
-			.include?([itemToBeCreated, quantity_unit, false])
-			item = Item.find_by items_enum: itemToBeCreated, quantity_unit: quantity_unit
+			.map{|item| [item.items_enum, item.bought]}
+			.include?([itemToBeCreated, false])
+			item = Item.find_by items_enum: itemToBeCreated
 			item.quantity += quantity.to_i
 		else
-			item = Item.new(items_enum: itemToBeCreated, shopping_list: @list, family: @family, price: nil, quantity: quantity, quantity_unit: quantity_unit)
+			item = Item.new(items_enum: itemToBeCreated, shopping_list: @list, family: @family, price: nil, quantity: quantity)
 		end
 		item.save
 

@@ -71,7 +71,7 @@
 			<ul>
 				<%@items.each do |item|%>
 					<li>
-						<p> <%= item.items_enum.name %> - <%= item.quantity %> <%= item.quantity_unit %></p>
+						<p> <%= item.items_enum.name %> - <%= item.quantity %> <%= item.items_enum.quantity_unit %></p>
 					</li>
 				<%end%>	
 			</ul>

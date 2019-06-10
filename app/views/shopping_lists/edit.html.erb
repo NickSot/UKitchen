@@ -5,17 +5,19 @@
         Items to add to the shopping list!
     </h2>
     <ul>
+        <%cur_category = ""  %>
         <%@items_enum.each do |item|%>
+            <% if(item.category_name != cur_category)%>
+                <h4><%= item.category_name.capitalize %>:</h4>
+                <% cur_category = item.category_name %>
+            <% end %>
             <li>
-                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#quantityModal" onclick='passItemToAddToModal(<%= @family.id %>, <%= @list.id%>, <%= item.id %>, "<%= "" + item.name.strip.capitalize %>")'>
+                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#quantityModal" onclick='passItemToAddToModal(<%= @family.id %>, <%= @list.id%>, <%= item.id %>, "<%= "" + item.name.strip.capitalize %>", "<%=item.quantity_unit%>")'>
                    <%= item.name %>
                 </button>
                
             </li>   
         <%end%>
-        <%# <li> %>
-            <%# input %>
-        <%# </li> %>
     </ul>
 
 
@@ -34,7 +36,7 @@
                     <%= form_tag '', :class => "add-item" do %>
                         <div class="modal-body" style = "color: blue;">
                             <input type="number" name="quantity" placeholder = "quantity">
-                            <input type="text" name="quantity_unit" placeholder = "unit(eg. grams, kilos, litres, meters)">
+                            <span id="quantity-placeholder"></span>
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

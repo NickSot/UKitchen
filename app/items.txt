@@ -1,7 +1,36 @@
-пуйка meat
-bread grain
-sweatbread grain
-milk milk
-chedar milk
-yellow_cheese milk
-tomato_soup soups
+onion vegetables kilos
+garlic vegetables kilos
+tomato vegetables kilos
+potato vegetables kilos
+carrot vegetables kilos
+bell vegetables kilos
+pepper vegetables kilos
+basil vegetables kilos
+parsley vegetables kilos
+broccoli vegetables kilos
+corn vegetables kilos
+spinach vegetables kilos
+mushroom vegetables kilos
+green vegetables kilos
+beans vegetables kilos
+ginger vegetables kilos
+chili vegetables kilos
+pepper vegetables kilos
+celery vegetables kilos
+rosemary vegetables kilos
+butter dairy grams
+egg dairy numbers
+milk dairy litres
+parmesan dairy grams
+cheddar dairy grams
+american dairy grams
+cheese dairy grams
+sour dairy grams
+cream dairy grams
+cream dairy grams
+cheese dairy grams
+mozzarella dairy grams
+yogurt dairy grams
+cream dairy grams
+evaporated_milk dairy litres 
+whipped_cream dairy grams

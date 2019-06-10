@@ -16,12 +16,13 @@ else
         line = line.split(' ')
         name = line[0]
         category = line[1]
+        quantity_unit = line[2]
         found = false;
         
-        currentItems.each{|item| item['name'].include?(name) ? found = true : nil  }
+        currentItems.each{|item| item['name'].include?(name) ? found = true : nil}
 
         if !found
-            newItems << {'name' => name.gsub('_', ' '), 'category_name' => category}
+            newItems << {'name' => name.gsub('_', ' '), 'category_name' => category, 'quantity_unit' => quantity_unit}
         end
     end
     puts(newItems.empty? ? "Nothing to be done...\n" : newItems )

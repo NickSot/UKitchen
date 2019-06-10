@@ -16,11 +16,11 @@
 					<li>
 						<div class="row">
 							<div class="col">
-								<%=item.items_enum.name%> - <%= String(item.quantity) + " " + item.quantity_unit %>
+								<%=item.items_enum.name%> - <%= String(item.quantity) + " " + item.items_enum.quantity_unit %>
 							</div>
 							<div class="col">
 								<span data-toggle = 'tooltip' data-placement = 'top' title = "Buy">
-									<button class="btn" onclick = "passItemToBuyToModal('<%= buy_item_path(@family.id, @list.id, item.id)%>', '<%= item.quantity_unit %>')" data-toggle = "modal" data-target="#quantityAndPriceModal">
+									<button class="btn" onclick = "passItemToBuyToModal('<%= buy_item_path(@family.id, @list.id, item.id)%>', '<%= item.items_enum.quantity_unit %>')" data-toggle = "modal" data-target="#quantityAndPriceModal">
 										<i class="fas fa-shopping-cart"></i>
 									</button>
 								</span>
