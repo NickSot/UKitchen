@@ -5,13 +5,11 @@
             "ingredients": [
                 {
                     "id": 4,
-                    "quantity": 4,
-                    "quantity_unit": "litre"
+                    "quantity": 4
                 },
                 {
                     "id": 2,
-                    "quantity": 2,
-                    "quantity_unit": "kg"
+                    "quantity": 2
                 }
             ]
         },
@@ -21,8 +19,7 @@
         "ingredients": [
             {
                 "id": 2,
-                "quantity": 1,
-                "quantity_unit": "kg"
+                "quantity": 1
             }
         ]
     }

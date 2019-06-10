@@ -37,7 +37,7 @@ $navbar-corners-size: 15%;
 
 
 
-nav{
+nav.main-nav{
     font-weight: 900;
     color: $gradient-color;
     height: fit-content;
@@ -140,7 +140,7 @@ nav{
 
 @media (min-width: 991.98px){
    
-    nav{
+    nav.main-nav{
         transition: padding 0.5s;
         &:hover{
             padding: $navbar-padding+30px;

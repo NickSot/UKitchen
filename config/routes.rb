@@ -30,11 +30,11 @@ Rails.application.routes.draw do
   post 'login', to: 'session#create'
   get 'logout', to: 'session#destroy', as: 'logout' 
   get 'register', to: 'users#new', as: 'register'
+  
 
-  get 'cooking', to: 'cooking#show'
-
-  get 'recipes' => 'recipes#index'
-  get 'recipes/:id' => 'recipes#show'
+  #COOKING MANAGEMENT
+  get 'recipes', to: 'recipes#index', as: "recipes"
+  get 'recipes/:id', to: 'recipes#show', as: "recipe"
 
   # root 'users#index'
   root 'welcome#show', as: 'root'

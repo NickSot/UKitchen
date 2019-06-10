@@ -11,7 +11,6 @@ recipes.each do |recipe|
         ir.recipe_id = rec.id
         ir.items_enum_id = ingredient["id"]
         ir.quantity = ingredient["quantity"]
-        ir.quantity_unit = ingredient["quantity_unit"]
         ir.save
     end
     

@@ -128,3 +128,9 @@ div.alert-success, div.alert-notice{
     background-color: yellowgreen;
     border-color: rgb(31, 187, 31);
 }
+
+div.two-page-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}

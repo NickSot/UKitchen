@@ -4,6 +4,8 @@
 Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.precompile += %w( shopping_lists.scss )
 Rails.application.config.assets.precompile += %w( families.scss )
+Rails.application.config.assets.precompile += %w( recipes
+    .scss )
 
 
 # Add additional assets to the asset load path.
