@@ -44,19 +44,22 @@ class RecipesController < ApplicationController
                 to_add = Item.new items_enum: ing, shopping_list: shopping_list, family: family, price: nil, quantity: details[counter].quantity
                 shopping_list.items << to_add
             else
-                if family.items.map{|item| item.items_enum.name}.include?(ing.name)
-                    family.items.each do |item|
-                        if item.quantity < details[counter].quantity
-                            diff = details[counter].quantity - item.quantity
+                puts 'HERE'
+                # if family.items.map{|item| item.items_enum.name}.include?(ing.name)
+                family.items.each do |item|
+                    if item.quantity < details[counter].quantity
+                        diff = details[counter].quantity - item.quantity
 
-                            item.quantity += diff
+                        # puts 'quantity: ' + diff
 
-                            item.price = item.price*item.quantity/diff
+                        item.quantity = diff
 
-                            shopping_list.items << item
-                        end
+                        item.price = nil
+
+                        shopping_list.items << item
                     end
                 end
+                # end
             end
 
             shopping_list.save
