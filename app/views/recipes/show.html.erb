@@ -15,4 +15,6 @@
             <%counter+=1%>
         </li>
     <%end%>
+
+    <%=link_to "Add ingredients to shopping list!", "/recipes/" + String(@recipe.id) + "/add"%>
 </ul>

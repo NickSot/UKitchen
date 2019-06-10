@@ -1,0 +1,7 @@
+<%=form_for :recipe, url: {action: "add_ingredient", method: "POST"} do |f|%>
+    Family name: <%=f.collection_select :family, @families, :family_id, :name%>
+    <br>
+    Shopping list: <%=f.collection_select :shopping_list, @shopping_lists, :shopping_list_id, :name%>
+    <br>
+    <%=f.submit "Add"%>
+<%end%>
