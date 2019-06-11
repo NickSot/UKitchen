@@ -68,7 +68,7 @@ class FamiliesController < ApplicationController
     end 
     transactions = Transaction.having("family_id = " + @family.id.to_s).group(:category_name, :id)
 
-    @transaction = transactions.order(price: :desc).first
+    @transaction = transactions.where("created_at >= current_date - cast(extract(dow from current_date) as int) + 1").order(price: :desc).first
   end
 
   def add_members
