@@ -1,19 +1,22 @@
 class RecipesController < ApplicationController
     before_action :require_login
     def index
+        recipe_name = params[:recipe_name]
+        ingredient_name = params[:ingredient_name]
         family_id = params[:family_id]
         @family = Family.find_by id: family_id
         @family_id = @family ? @family.id : -1
-        
-        if !params[:ingredient_name]
+
+        if !ingredient_name
             @ingredients = ItemsEnum.all
         else
-            @ingredients = ItemsEnum.where("name like ? OR category_name like ?", "%#{params[:ingredient_name]}%", "%#{params[:ingredient_name].}%")
+            @ingredients = ItemsEnum.where("name like ? OR category_name like ?", "%#{ingredient_name}%", "%#{ingredient_name}%")
         end
-        if params[:recipe_name] == nil
+
+        if !recipe_name
             @recipes = Recipe.all
         else
-            @recipes = Recipe.where("name like ?", "%#{params[:recipe_name]}%")
+                @recipes = @recipes.where("recipe.name like ?", "%#{params[:recipe_name]}%")
         end
         @families = User.find(session[:user_id]).families
     end
@@ -23,6 +26,23 @@ class RecipesController < ApplicationController
         @recipe = Recipe.find id
         @details = ItemsRecipe.where(recipe_id: id)
         @families = User.find(session[:user_id]).families
+    end
+
+    def search_recipes
+        checkedItems = params[:checked];
+        puts("CHEEECKEEEED ITEMS"); 
+        puts(checkedItems);
+        if(checkedItems)
+            checkedItems = checkedItems.map{|item| item.to_i}
+            @recipes = Recipe.joins(:ingredients).where("items_enums.id IN (?)", checkedItems)
+            respond_to do |format|
+                format.json do
+                    render json: @recipes.to_json
+                end
+            end
+        else
+            render json: [{}]
+        end
     end
 
     def add

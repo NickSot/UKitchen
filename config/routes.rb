@@ -33,7 +33,9 @@ Rails.application.routes.draw do
   
 
   #COOKING MANAGEMENT
-  get 'recipes', to: 'recipes#index', as: "recipes"
+  get 'recipes/family', to: 'recipes#index'
+  get 'recipes/family/:family_id', to: 'recipes#index', as: "recipes"
+  get 'recipes/family/:family_id/search', to: 'recipes#search_recipes'
   get 'recipes/:id', to: 'recipes#show', as: "recipe"
   get 'recipes/:id/add' => 'recipes#add'
   post 'recipes/:id/add' => 'recipes#add_ingredient'

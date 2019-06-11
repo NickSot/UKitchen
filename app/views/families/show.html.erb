@@ -41,7 +41,7 @@
 					</div>
 
 					<%if m.id != current_user.id %>
-						<div class = "col"> <%= link_to "Kick", family_kick_path(@family.id, m.id) %> </div>
+						<div class = "col"> <%= link_to "Kick", family_kick_path(@family.id, m.id), data: { confirm: "Are you sure you want to kick that user?" } %> </div>
 					<% end %>
 				<%end%>
 		</div>

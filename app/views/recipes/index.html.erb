@@ -1,14 +1,21 @@
 <%= stylesheet_link_tag "recipes" %>
 
 <script>
-    var family_id = <%= @family_id %>;
-    if(family_id != -1){
-        makeCorespondingTabActive(family_id);
-    }
+    
+    $(document).ready(()=>{
+        var family_id = <%= @family_id %>;
+        if(family_id != -1){
+            makeCorespondingTabActive(family_id);
+        }
+    
+        init(family_id);
+
+    });
+    
 </script>
 
 <div class = "row wrapper">
-
+    <h1> <%=@checkedItems%></h1>
     <div class = "col-md-3 col-sm-12 search-section">
         <form action="/recipes/family/<%=@family_id%>", method="GET">
             Search for ingredient: <input type="text", name="ingredient_name">
@@ -22,7 +29,10 @@
                 <h4><%= ingredient.category_name.capitalize %>:</h4>
                 <% cur_category = ingredient.category_name %>
             <% end %>
-            <span class="ingredients" id="ingredient-<%= ingredient.id%>" ><input type="checkbox"> <%= ingredient.name %></span>
+            <span class="ingredients" id="ingredient-<%= ingredient.id%>" >
+                <input type="checkbox" id="<%=ingredient.id%>"> 
+                <span id="text-<%=ingredient.id%>" value="<%=ingredient.name%>"><%= ingredient.name %></span>
+            </span>
         <% end %>
     </div>
     <div class = "col-md-9 col-sm-12">
@@ -41,11 +51,11 @@
         </form>
 
 
-        <p id="selected-ingredients"></p>
+        <div id="selected-ingredients"></div>
         <% if !@family %>
             <center><h4> Choose a family to work with first. </h4></center>
         <% else %>
-            <ul>
+            <ul id = "recipes-holder">
                 <%@recipes.each do |recipe|%>
                     <li>
                         <%= link_to  recipe.name, '/recipes/' + String(recipe.id)%>
