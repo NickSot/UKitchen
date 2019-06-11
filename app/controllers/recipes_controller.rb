@@ -8,7 +8,7 @@ class RecipesController < ApplicationController
         if !params[:ingredient_name]
             @ingredients = ItemsEnum.all
         else
-            @ingredients = ItemsEnum.where("name like ? OR category_name like ?", "%#{params[:ingredient_name]}%", "%#{params[:ingredient_name].}%")
+            @ingredients = ItemsEnum.where("name like ? OR category_name like ?", "%#{params[:ingredient_name]}%", "%#{params[:ingredient_name]}%")
         end
         if params[:recipe_name] == nil
             @recipes = Recipe.all

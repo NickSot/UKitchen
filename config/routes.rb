@@ -30,7 +30,6 @@ Rails.application.routes.draw do
   post 'login', to: 'session#create'
   get 'logout', to: 'session#destroy', as: 'logout' 
   get 'register', to: 'users#new', as: 'register'
-  
 
   #COOKING MANAGEMENT
   get 'recipes', to: 'recipes#index', as: "recipes"
