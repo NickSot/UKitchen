@@ -35,9 +35,9 @@ Rails.application.routes.draw do
   get 'recipes/family', to: 'recipes#index'
   get 'recipes/family/:family_id', to: 'recipes#index', as: "recipes"
   get 'recipes/family/:family_id/search', to: 'recipes#search_recipes'
-  get 'recipes/:id', to: 'recipes#show', as: "recipe"
-  get 'recipes/:id/add' => 'recipes#add'
-  post 'recipes/:id/add' => 'recipes#add_ingredient'
+  get 'recipes/family/:family_id/:id', to: 'recipes#show', as: "recipe"
+  get 'recipes/family/:family_id/:id/add' => 'recipes#add'
+  post 'recipes/family/:family_id/:id/add' => 'recipes#add_ingredient'
 
   # root 'users#index'
   root 'welcome#show', as: 'root'

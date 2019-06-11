@@ -25,6 +25,7 @@ class RecipesController < ApplicationController
 
     def show
         id = params[:id]
+        @family = Family.find params[:family_id]
         @recipe = Recipe.find id
         @details = ItemsRecipe.where(recipe_id: id)
         @families = User.find(session[:user_id]).families
@@ -48,21 +49,13 @@ class RecipesController < ApplicationController
     end
 
     def add
-        @families = User.find(session[:user_id]).families
-
-        @shopping_lists = []
-
-        @families.each do |f|
-            f.shopping_lists.each do |sl|
-                @shopping_lists << sl
-            end
-        end
-
-        render 'add'
+        @family = Family.find(params[:family_id])
+        @shopping_lists = @family.shopping_lists
+        @recipe = Recipe.find(params[:id])
     end
 
     def add_ingredient
-        family = Family.find(params[:recipe][:family])
+        family = Family.find(params[:family_id])
 
         shopping_list = ShoppingList.find(params[:recipe][:shopping_list])
 
@@ -77,7 +70,6 @@ class RecipesController < ApplicationController
                 to_add = Item.new items_enum: ing, shopping_list: shopping_list, family: family, price: nil, quantity: details[counter].quantity
                 shopping_list.items << to_add
             else
-                puts 'HERE'
                 family.items.each do |item|
                     if item.quantity < details[counter].quantity
                         diff = details[counter].quantity - item.quantity
@@ -99,7 +91,7 @@ class RecipesController < ApplicationController
             counter+=1
         end
 
-        redirect_to '/recipes'
+        redirect_to '/recipes/family/' + String(family.id) + "/" + String(recipe.id)
     end
 
     def require_login

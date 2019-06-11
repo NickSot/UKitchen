@@ -58,7 +58,7 @@
             <ul id = "recipes-holder">
                 <%@recipes.each do |recipe|%>
                     <li>
-                        <%= link_to  recipe.name, '/recipes/' + String(recipe.id)%>
+                        <%= link_to  recipe.name, '/recipes/family/'+String(@family_id)+ "/" + String(recipe.id)%>
                     </li>
                 <%end%>
             </ul>

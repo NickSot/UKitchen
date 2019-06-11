@@ -35,4 +35,4 @@ cream dairy grams
 evaporated_milk dairy litres 
 whipped_cream dairy grams
 salt ingredients tsp
-olive ingredients oil
+olive_oil ingredients oil

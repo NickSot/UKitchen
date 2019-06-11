@@ -3,8 +3,6 @@
 </h1>
 
 <ul>
-    <%counter = 0%>
-
     <%@recipe.ingredients.each do |ingredient|%>
         <li>
             <%=ingredient.name%>
@@ -12,7 +10,6 @@
             <% ingredient_details = @details.find{|i| i.items_enum_id == ingredient.id} %>
             <%="Quantity " + String(ingredient_details.quantity) + " " + ingredient_details.items_enum.quantity_unit%>
 
-            <%counter+=1%>
         </li>
     <%end%>
 </ul>
@@ -25,4 +22,4 @@
     <%=@recipe.text%>
 </p>
 
-<%=link_to "Add ingredients to shopping list!", "/recipes/" + String(@recipe.id) + "/add"%>
+<%=link_to "Add ingredients to shopping list!", "/recipes/family/"+ String(@family.id) + "/" + String(@recipe.id) + "/add"%>

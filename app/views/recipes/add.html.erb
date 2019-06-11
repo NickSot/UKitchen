@@ -1,6 +1,12 @@
 <%=form_for :recipe, url: {action: "add_ingredient", method: "POST"} do |f|%>
-    Family name: <%=f.collection_select :family, @families, :id, :name%>
-    <br>
+    <% @recipe.ingredients.each do |ingr| %>
+        <%if !@family.items.map{|item| item.name}.include?(ingr.name)%>
+            
+        <% else %>
+
+        <% end %>
+        <p></p>
+    <% end  %>
     Shopping list: <%=f.collection_select :shopping_list, @shopping_lists, :id, :name%>
     <br>
     <%=f.submit "Add"%>

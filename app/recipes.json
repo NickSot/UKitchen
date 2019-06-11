@@ -24,5 +24,30 @@
             }
         ],
         "text": "Slice potatoes into coins about ¼” thick. In a large skillet over medium-high heat, heat oils. Add potatoes and season with rosemary, salt and pepper. Cook, undisturbed, until potatoes are golden and crusty underneath, 4 to 5 minutes. Flip potatoes and cook until golden on other sides, 4 to 5 minutes more.\nSprinkle with garlic powder and chili powder, and continue to cook, stirring occasionally, until potatoes are tender, about 2 minutes more. Serve warm."
+    },
+    "recipe3": {
+        "name": "Homemade butter in a blender",
+        "ingredients": [
+            {
+                "id": 33,
+                "quantity": 150
+            }
+        ],
+        "text": "Pour the cream into the blender container and cover. Blend on the lowest speed until the cream begins to thicken around the blades.While continuing to blend, pour the ice water through the opening in the lid.Raise the speed to the 4th lowest speed and blend until butter forms, about 2 minutes longer.Transfer the butter into a strainer to drain.Then pack it into a butter mold or form into squares and chill."
+    }, 
+    "recipe4": {
+        "name": "Oeufs Au Plat",
+        "ingredients": [
+            {
+                "id": 21,
+                "quantity": 10
+            },
+            {
+                "id" : 22,
+                "quantity": 2
+            } 
+        ],
+        "text": " Rub a room-temperature 9-inch skillet with the butter. Place the skillet on the burner without turning it on. Crack the eggs into the skillet on opposite sides of the pan from each other.Turn the heat on to medium-low and cook the eggs until the whites have coagulated and turned opaque. Season the eggs with salt and serve with Green Onion Sausage and Shrimp Gravy , if you like."
     }
+
 }
