@@ -1,33 +1,57 @@
 <%= stylesheet_link_tag "recipes" %>
 
+<script>
+    var family_id = <%= @family_id %>;
+    if(family_id != -1){
+        makeCorespondingTabActive(family_id);
+    }
+</script>
+
 <div class = "row wrapper">
-    <div class = "col-md-3 col-sm-12">
-        <form action="/recipes/", method="GET">
-            Search by recipe name: <input type="text", name="recipe_name">
-            <input type="submit" value="Submit">
+
+    <div class = "col-md-3 col-sm-12 search-section">
+        <form action="/recipes/family/<%=@family_id%>", method="GET">
+            Search for ingredient: <input type="text", name="ingredient_name">
+            <%# <input type="submit" value="Submit"> %>
+            <button type="submit"><i class="fas fa-search"></i></button>
         </form>
+
+        <%cur_category = ""%>
+        <% @ingredients.each do |ingredient| %>
+            <% if(ingredient.category_name != cur_category)%>
+                <h4><%= ingredient.category_name.capitalize %>:</h4>
+                <% cur_category = ingredient.category_name %>
+            <% end %>
+            <span class="ingredients" id="ingredient-<%= ingredient.id%>" ><input type="checkbox"> <%= ingredient.name %></span>
+        <% end %>
     </div>
     <div class = "col-md-9 col-sm-12">
         <nav>
             <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Home</a>
-                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Profile</a>
-                <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Contact</a>
+                <%@families.each do |family| %>
+                    <a class="nav-item nav-link" 
+                     href="/recipes/family/<%= family.id%>" ><%= family.name %></a>
+                <% end %>
             </div>
         </nav>
-        <div class="tab-content" id="nav-tabContent">
-            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">...</div>
-            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">...</div>
-            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">...</div>
-        </div>
-        <h3>Recipes:</h3>
 
-        <ul>
-            <%@recipes.each do |recipe|%>
-                <li>
-                    <%= link_to  recipe.name, '/recipes/' + String(recipe.id)%>
-                </li>
-            <%end%>
-        </ul>
+        <form action="/recipes/family/<%=@family_id%>", method="GET">
+            Search by recipe name: <input type="text", name="recipe_name">
+            <button type="submit"><i class="fas fa-search"></i></button>
+        </form>
+
+
+        <p id="selected-ingredients"></p>
+        <% if !@family %>
+            <center><h4> Choose a family to work with first. </h4></center>
+        <% else %>
+            <ul>
+                <%@recipes.each do |recipe|%>
+                    <li>
+                        <%= link_to  recipe.name, '/recipes/' + String(recipe.id)%>
+                    </li>
+                <%end%>
+            </ul>
+        <% end %>
     </div>
 </div>
