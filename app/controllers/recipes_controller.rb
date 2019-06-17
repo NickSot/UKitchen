@@ -13,10 +13,12 @@ class RecipesController < ApplicationController
             @ingredients = ItemsEnum.where("name like ? OR category_name like ?", "%#{ingredient_name}%", "%#{ingredient_name}%")
         end
 
+        @recipes = Recipe.all
+
         if !recipe_name
             @recipes = Recipe.all
         else
-                @recipes = @recipes.where("recipe.name like ?", "%#{params[:recipe_name]}%")
+                @recipes = @recipes.where("recipes.name like ?", "%#{params[:recipe_name]}%")
         end
         @families = User.find(session[:user_id]).families
     end
@@ -76,7 +78,6 @@ class RecipesController < ApplicationController
                 shopping_list.items << to_add
             else
                 puts 'HERE'
-                # if family.items.map{|item| item.items_enum.name}.include?(ing.name)
                 family.items.each do |item|
                     if item.quantity < details[counter].quantity
                         diff = details[counter].quantity - item.quantity
